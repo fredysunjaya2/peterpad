@@ -1,0 +1,63 @@
+name: peterpad
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  device_preview: ^1.2.0
+  responsive_framework: ^1.4.0
+  flutter_svg: ^2.0.10+1
+  flutter_animation_progress_bar: ^2.3.1
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  fonts:
+    - family: outfit-thin
+      fonts:
+      - asset: assets/fonts/Outfit-Thin.ttf
+    - family: outfit-extra-light
+      fonts:
+      - asset: assets/fonts/Outfit-ExtraLight.ttf
+    - family: outfit-light
+      fonts:
+      - asset: assets/fonts/Outfit-Light.ttf
+    - family: outfit-regular
+      fonts:
+      - asset: assets/fonts/Outfit-Regular.ttf
+    - family: outfit-medium
+      fonts:
+      - asset: assets/fonts/Outfit-Medium.ttf
+    - family: outfit-semibold
+      fonts:
+      - asset: assets/fonts/Outfit-SemiBold.ttf
+    - family: outfit-bold
+      fonts:
+      - asset: assets/fonts/Outfit-Bold.ttf
+    - family: outfit-extra-bold
+      fonts:
+      - asset: assets/fonts/Outfit-ExtraBold.ttf
+    - family: outfit-black
+      fonts:
+      - asset: assets/fonts/Outfit-Black.ttf
+  assets:
+    - assets/
+    - assets/LandingPage/
+    - assets/RegisterPage/
+    - assets/HomePage/
+    - assets/NotificationPage/
+    - assets/ExplorePage/
+    - assets/LibraryPage/
+    - assets/CollectionPage/
+    - assets/NovelPage/
+  uses-material-design: true
+    
