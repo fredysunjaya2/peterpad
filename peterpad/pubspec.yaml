@@ -60,5 +60,6 @@ flutter:
     - assets/CollectionPage/
     - assets/NovelPage/
     - assets/WritingPage/
+    - assets/WritePage/
   uses-material-design: true
     

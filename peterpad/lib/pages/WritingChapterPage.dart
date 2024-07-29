@@ -192,9 +192,9 @@ class _WritingchapterpageState extends State<WritingChapterPage> {
         onTap: () {},
         child: Image.asset(
           assetPath,
-          width: 24, 
-          height: 24, 
-          color: Colors.red, 
+          width: 24,
+          height: 24,
+          color: Colors.red,
         ),
       ),
     );

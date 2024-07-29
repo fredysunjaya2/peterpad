@@ -1,4 +1,5 @@
 import 'dart:ui';
+// import 'dart:ui_web';
 
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
@@ -27,9 +28,9 @@ class NovelPage extends StatefulWidget {
   State<NovelPage> createState() => NovelPageState();
 }
 
-class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixin {
+class NovelPageState extends State<NovelPage>
+    with SingleTickerProviderStateMixin {
   late Future<List<Map<String, dynamic>>?> futureNovelChapters;
-  late Future<List<Map<String, dynamic>>?> futureNovelComments;
   late Map<String, dynamic> novelDetail;
   late TabController _tabController;
 
@@ -41,16 +42,15 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
   // of the SliverAppBar
   final double _moreHeight = 450;
 
-  int tabIndex = 0;
+  double asd = 0;
 
   @override
   void initState() {
     super.initState();
 
     futureNovelChapters = Future.value(chapters);
-    futureNovelComments = Future.value(comments);
 
-    _tabController = new TabController(length: 3, vsync: this);
+    _tabController = new TabController(length: 2, vsync: this);
 
     // initialize and add scroll listener
     _scrollController = ScrollController();
@@ -90,11 +90,13 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
       // if offset is more height, disable expanded height
       setState(() {
         _expandedHeight = null;
+        asd = 0;
       });
     } else {
       // if offset is less, keep increasing the height to offset 0
       setState(() {
         _expandedHeight = _moreHeight - offset;
+        asd = offset;
       });
     }
   }
@@ -122,20 +124,12 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
               primary: false,
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
-                title: AnimatedOpacity(
-                  opacity: _expandedHeight != null
-                      ? 0
-                      : _expandedHeight == null
-                          ? 1
-                          : _expandedHeight! / _moreHeight,
-                  duration: const Duration(milliseconds: 300),
-                  child: Text(
-                    widget.title!,
-                    style: TextStyle(
-                      fontFamily: 'outfit-medium',
-                      fontSize: 24,
-                      color: Colors.black,
-                    ),
+                title: Text(
+                  asd.toString(),
+                  style: TextStyle(
+                    fontFamily: 'outfit-medium',
+                    fontSize: 24,
+                    color: Colors.black,
                   ),
                 ),
                 titlePadding: EdgeInsets.only(bottom: 25),
@@ -143,7 +137,9 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                   alignment: Alignment.topCenter,
                   children: [
                     AnimatedOpacity(
-                      opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                      opacity: _expandedHeight != null
+                          ? _expandedHeight! / _moreHeight
+                          : 0,
                       duration: const Duration(milliseconds: 300),
                       child: ResponsiveRowColumn(
                         layout: ResponsiveRowColumnType.COLUMN,
@@ -182,7 +178,9 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                     Positioned(
                       top: _expandedHeight! * 0.3,
                       child: AnimatedOpacity(
-                        opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                        opacity: _expandedHeight != null
+                            ? _expandedHeight! / _moreHeight
+                            : 0,
                         duration: const Duration(milliseconds: 300),
                         child: ResponsiveRowColumn(
                           layout: ResponsiveRowColumnType.COLUMN,
@@ -239,7 +237,8 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            NumberFormat.compact().format(widget.views),
+                                            NumberFormat.compact()
+                                                .format(widget.views),
                                             style: TextStyle(
                                               fontFamily: 'outfit-light',
                                               fontSize: 12,
@@ -308,7 +307,8 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            NumberFormat.compact().format(widget.comments),
+                                            NumberFormat.compact()
+                                                .format(widget.comments),
                                             style: TextStyle(
                                               fontFamily: 'outfit-light',
                                               fontSize: 12,
@@ -369,155 +369,70 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
             bottom: false,
             sliver: SliverPadding(
               padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-              sliver: SliverList(
-                delegate: SliverChildBuilderDelegate(
-                  (context, index) {
-                    return ResponsiveRowColumn(
-                      layout: ResponsiveRowColumnType.COLUMN,
-                      columnPadding: EdgeInsets.fromLTRB(25, 0, 25, 40),
-                      children: [
-                        ResponsiveRowColumnItem(
-                          child: TabBar(
-                            onTap: (value) {
-                              setState(() {
-                                tabIndex = _tabController.index;
-                              });
-                            },
-                            controller: _tabController,
-                            labelColor: red,
-                            unselectedLabelColor: Colors.black.withOpacity(0.5),
-                            labelStyle: TextStyle(
-                              fontFamily: 'outfit-semibold',
-                              fontSize: 16,
-                            ),
-                            unselectedLabelStyle: TextStyle(
-                              fontFamily: 'outfit-regular',
-                              fontSize: 14,
-                            ),
-                            indicator: BoxDecoration(
-                              border: BorderDirectional(
-                                bottom: BorderSide(
-                                  color: red,
-                                  width: 2,
-                                ),
-                              ),
-                            ),
-                            labelPadding: EdgeInsets.zero,
-                            padding: EdgeInsets.zero,
-                            indicatorPadding: EdgeInsets.only(bottom: 10),
-                            dividerColor: Colors.transparent,
-                            tabs: [
-                              Tab(
-                                child: Text('Synopsis'),
-                              ),
-                              Tab(
-                                child: Text('Chapters'),
-                              ),
-                              Tab(
-                                child: Text('Review'),
-                              ),
-                            ],
+              sliver: SliverToBoxAdapter(
+                child: SingleChildScrollView(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 25,
+                  ),
+                  child: ResponsiveRowColumn(
+                    layout: ResponsiveRowColumnType.COLUMN,
+                    children: [
+                      ResponsiveRowColumnItem(
+                        child: TabBar(
+                          controller: _tabController,
+                          labelColor: red,
+                          unselectedLabelColor: Colors.black.withOpacity(0.5),
+                          labelStyle: TextStyle(
+                            fontFamily: 'outfit-semibold',
+                            fontSize: 16,
                           ),
-                        ),
-                        ResponsiveRowColumnItem(
-                          child: SizedBox(
-                            height: 1,
-                            child: TabBarView(
-                              controller: _tabController,
-                              children: [
-                                SizedBox(),
-                                SizedBox(),
-                                SizedBox(),
-                              ],
+                          unselectedLabelStyle: TextStyle(
+                            fontFamily: 'outfit-regular',
+                            fontSize: 14,
+                          ),
+                          indicator: BoxDecoration(
+                            border: BorderDirectional(
+                              bottom: BorderSide(
+                                color: red,
+                                width: 2,
+                              ),
                             ),
                           ),
+                          labelPadding: EdgeInsets.zero,
+                          padding: EdgeInsets.zero,
+                          indicatorPadding: EdgeInsets.only(bottom: 10),
+                          dividerColor: Colors.transparent,
+                          tabs: [
+                            Tab(
+                              child: Text('Synopsis'),
+                            ),
+                            Tab(
+                              child: Text('Chapters'),
+                            ),
+                            Tab(
+                              child: Text('Review'),
+                            ),
+                          ],
                         ),
-                        ResponsiveRowColumnItem(
-                          child: ResponsiveRowColumn(
-                            layout: ResponsiveRowColumnType.COLUMN,
-                            children: [
-                              if (_tabController.index == 0) ...[
-                                ResponsiveRowColumnItem(
-                                  child: Text(
-                                    widget.synopsis!,
-                                    textAlign: TextAlign.justify,
-                                    style: TextStyle(
-                                      fontFamily: 'outfit-light',
-                                      fontSize: 14,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                ),
-                              ] else if (_tabController.index == 1) ...[
-                                ResponsiveRowColumnItem(
-                                  child: FutureBuilder(
-                                    future: futureNovelChapters!,
-                                    builder: (context, AsyncSnapshot snapshot) {
-                                      List<Map<String, dynamic>>? chapters;
-
-                                      if (snapshot.hasData) {
-                                        chapters = snapshot.data;
-
-                                        chapters = chapters!.firstWhere(
-                                          (element) {
-                                            return element['novelId'] == widget.id;
-                                          },
-                                        )["chapters"];
-                                        return Wrap(
-                                          runSpacing: 10,
-                                          children: chapters!.map(
-                                            (item) {
-                                              return ChapterItem(
-                                                name: item["name"],
-                                                date: item["date"],
-                                                rating: item["rating"],
-                                              );
-                                            },
-                                          ).toList(),
-                                        );
-                                      } else {
-                                        return CircularProgressIndicator();
-                                      }
-                                    },
-                                  ),
-                                ),
-                              ] else if (_tabController.index == 2) ...[
-                                ResponsiveRowColumnItem(
-                                  child: FutureBuilder(
-                                    future: futureNovelComments,
-                                    builder: (context, AsyncSnapshot snapshot) {
-                                      List<Map<String, dynamic>>? comments;
-
-                                      if (snapshot.hasData) {
-                                        comments = snapshot.data;
-
-                                        comments = comments!.firstWhere(
-                                          (element) {
-                                            return element['novelId'] == widget.id;
-                                          },
-                                        )["comments"];
-                                        return Wrap(
-                                          runSpacing: 10,
-                                          children: comments!.map(
-                                            (item) {
-                                              return SizedBox();
-                                            },
-                                          ).toList(),
-                                        );
-                                      } else {
-                                        return CircularProgressIndicator();
-                                      }
-                                    },
-                                  ),
-                                ),
-                              ]
-                            ],
-                          ),
+                      ),
+                      ResponsiveRowColumnItem(
+                        child: TabBarView(
+                          controller: _tabController,
+                          children: [
+                            Text(
+                              widget.synopsis!,
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                fontFamily: 'outfit-light',
+                                fontSize: 14,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    );
-                  },
-                  childCount: 1,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

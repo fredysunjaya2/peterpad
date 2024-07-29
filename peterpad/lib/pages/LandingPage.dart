@@ -110,7 +110,8 @@ class Landingpage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
-                          builder: (BuildContext context) => const RegisterPage(),
+                          builder: (BuildContext context) =>
+                              const RegisterPage(),
                         ),
                       );
                     },

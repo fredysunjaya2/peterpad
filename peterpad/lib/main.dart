@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
       home: WritingChapterPage(),
       // home: NovelPage(
       //   id: 1,
-      // ), 
+      // ),
     );
   }
 }
