@@ -1,5 +1,4 @@
 import 'dart:ui';
-import 'dart:ui_web';
 
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +48,7 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
 
     futureNovelChapters = Future.value(chapters);
 
-    _tabController = new TabController(length: 2, vsync: this);
+    _tabController = new TabController(length: 3, vsync: this);
 
     // initialize and add scroll listener
     _scrollController = ScrollController();
