@@ -307,6 +307,22 @@ List<Map<String, dynamic>> genres = [
     'name': 'Thriller',
     'imagePath': 'assets/ExplorePage/genre(4).png',
   },
+  {
+    'name': 'Non-Fiction',
+    'imagePath': 'assets/ExplorePage/genre(1).png',
+  },
+  {
+    'name': 'Romance',
+    'imagePath': 'assets/ExplorePage/genre(2).png',
+  },
+  {
+    'name': 'Science Fiction',
+    'imagePath': 'assets/ExplorePage/genre(3).png',
+  },
+  {
+    'name': 'Thriller',
+    'imagePath': 'assets/ExplorePage/genre(4).png',
+  },
 ];
 
 List<Map<String, dynamic>> histories = [
@@ -705,6 +721,99 @@ List<Map<String, dynamic>> chapters = [
         "name": "Chapter 5: Lorem Ipsum Dolor",
         "date": "18 Aug 2024",
         "rating": 4.5,
+      },
+    ],
+  },
+];
+
+List<Map<String, dynamic>> comments = [
+  {
+    "novelId": 1,
+    "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+    ],
+  },
+  {
+    "novelId": 2,
+    "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
       },
     ],
   },
