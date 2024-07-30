@@ -316,22 +316,6 @@ List<Map<String, dynamic>> genres = [
     'name': 'Thriller',
     'imagePath': 'assets/ExplorePage/genre(4).png',
   },
-  {
-    'name': 'Non-Fiction',
-    'imagePath': 'assets/ExplorePage/genre(1).png',
-  },
-  {
-    'name': 'Romance',
-    'imagePath': 'assets/ExplorePage/genre(2).png',
-  },
-  {
-    'name': 'Science Fiction',
-    'imagePath': 'assets/ExplorePage/genre(3).png',
-  },
-  {
-    'name': 'Thriller',
-    'imagePath': 'assets/ExplorePage/genre(4).png',
-  },
 ];
 
 List<Map<String, dynamic>> histories = [
@@ -742,95 +726,110 @@ List<Map<String, dynamic>> chapters = [
   },
 ];
 
-List<Map<String, dynamic>> comments = [
+List<Map<String, dynamic>> writes = [
   {
-    "novelId": 1,
-    "comments": [
-      {
-        "profilePic": "assets/NovelPage/profilepic.png",
-        "name": "Lofi Girl",
-        "date": "3d ago",
-        "comment": "Lorem Ipsum Dolor Sit Amet",
-        "replyCount": 6,
-        "likeCount": 100,
-      },
-      {
-        "profilePic": "assets/NovelPage/profilepic.png",
-        "name": "Lofi Girl",
-        "date": "3d ago",
-        "comment": "Lorem Ipsum Dolor Sit Amet",
-        "replyCount": 0,
-        "likeCount": 100,
-      },
-      {
-        "profilePic": "assets/NovelPage/profilepic.png",
-        "name": "Lofi Girl",
-        "date": "3d ago",
-        "comment": "Lorem Ipsum Dolor Sit Amet",
-        "replyCount": 0,
-        "likeCount": 100,
-      },
-      {
-        "profilePic": "assets/NovelPage/profilepic.png",
-        "name": "Lofi Girl",
-        "date": "3d ago",
-        "comment": "Lorem Ipsum Dolor Sit Amet",
-        "replyCount": 0,
-        "likeCount": 100,
-      },
-      {
-        "profilePic": "assets/NovelPage/profilepic.png",
-        "name": "Lofi Girl",
-        "date": "3d ago",
-        "comment": "Lorem Ipsum Dolor Sit Amet",
-        "replyCount": 6,
-        "likeCount": 100,
-      },
-    ],
+    "id": 1,
+    "details": {
+      "title": "Funiculi Funicula",
+      "chapterPublished": 2,
+      "totalChapters": 5,
+      "date": "23 Aug 2024",
+      "views": "300K",
+      "rating": 4.5,
+      "comments": "3.3K",
+      "imagePath": "assets/WritePage/image.png",
+    },
   },
   {
-    "novelId": 2,
-    "comments": [
-      {
-        "profilePic": "assets/NovelPage/profilepic.png",
-        "name": "Lofi Girl",
-        "date": "3d ago",
-        "comment": "Lorem Ipsum Dolor Sit Amet",
-        "replyCount": 6,
-        "likeCount": 100,
-      },
-      {
-        "profilePic": "assets/NovelPage/profilepic.png",
-        "name": "Lofi Girl",
-        "date": "3d ago",
-        "comment": "Lorem Ipsum Dolor Sit Amet",
-        "replyCount": 0,
-        "likeCount": 100,
-      },
-      {
-        "profilePic": "assets/NovelPage/profilepic.png",
-        "name": "Lofi Girl",
-        "date": "3d ago",
-        "comment": "Lorem Ipsum Dolor Sit Amet",
-        "replyCount": 0,
-        "likeCount": 100,
-      },
-      {
-        "profilePic": "assets/NovelPage/profilepic.png",
-        "name": "Lofi Girl",
-        "date": "3d ago",
-        "comment": "Lorem Ipsum Dolor Sit Amet",
-        "replyCount": 0,
-        "likeCount": 100,
-      },
-      {
-        "profilePic": "assets/NovelPage/profilepic.png",
-        "name": "Lofi Girl",
-        "date": "3d ago",
-        "comment": "Lorem Ipsum Dolor Sit Amet",
-        "replyCount": 6,
-        "likeCount": 100,
-      },
-    ],
+    "id": 2,
+    "details": {
+      "title": "Funiculi Funicula 2",
+      "chapterPublished": 3,
+      "totalChapters": 5,
+      "date": "23 Sept 2024",
+      "views": "400K",
+      "rating": 4.2,
+      "comments": "3.5K",
+      "imagePath": "assets/WritePage/image.png",
+    },
+  },
+];
+
+List<String> genresDropList = [
+  'Action',
+  'Adventure',
+  'Comedy',
+  'Drama',
+  'Fantasy',
+  'Horror'
+];
+
+List<String> languages = [
+  'Indonesian',
+  'English',
+  'Japanese'
+];
+
+List<Map<String, dynamic>> adds = [
+  {
+    "id": 1,
+    "details": {
+      "title": "Funiculi Funicula",
+      "chapter": 1,
+      "date": "23 Aug 2024",
+      "rating": 4.5,
+      "downloaded": false,
+    },
+  },
+  {
+    "id": 2,
+    "details": {
+      "title": "Funiculi Funicula 2",
+      "chapter": 2,
+      "date": "24 Aug 2024",
+      "rating": 4.2,
+      "downloaded": true,
+    },
+  },
+  {
+    "id": 3,
+    "details": {
+      "title": "Funiculi Funicula 3",
+      "chapter": 3,
+      "date": "25 Aug 2024",
+      "rating": 4.6,
+      "downloaded": false,
+    },
+  },
+  {
+    "id": 4,
+    "details": {
+      "title": "Funiculi Funicula 4",
+      "chapter": 4,
+      "date": "26 Aug 2024",
+      "rating": 4.6,
+      "downloaded": true,
+    },
+  },
+  {
+    "id": 5,
+    "details": {
+      "title": "Funiculi Funicula 5",
+      "chapter": 5,
+      "date": "28 Aug 2024",
+      "rating": 4.9,
+      "downloaded": false,
+    },
+  },
+];
+
+List<Map<String, dynamic>> edit = [
+  {
+    "details": {
+      "title": "Funiculi Funicula",
+      "sinopsis": "hai sayang",
+      "genre": "Fantasy",
+      "language": "Indonesian",
+    },
   },
 ];

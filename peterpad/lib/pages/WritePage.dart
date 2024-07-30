@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:peterpad/pages/AddChapterPage.dart';
+import 'package:peterpad/pages/EditChapterPage.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:peterpad/constants.dart';
 
@@ -129,7 +130,11 @@ class WritePageState extends State<WritePage> {
               ),
               GestureDetector(
                 onTap: () {
-                  // Edit action
+                  Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const EditChapterPage()),
+                      );
                 },
                 child: const Icon(Icons.edit, color: Colors.black),
               ),

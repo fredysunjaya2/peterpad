@@ -3,17 +3,26 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:peterpad/constants.dart';
 import 'package:peterpad/pages/WritePage.dart';
 
-class AddChapterPage extends StatefulWidget {
-  const AddChapterPage({super.key});
+class EditChapterPage extends StatefulWidget {
+  const EditChapterPage({super.key});
 
   @override
   _AddChapterPageState createState() => _AddChapterPageState();
 }
 
-class _AddChapterPageState extends State<AddChapterPage> {
+class _AddChapterPageState extends State<EditChapterPage> {
   final TextEditingController _synopsisController = TextEditingController();
+  final TextEditingController _titleController = TextEditingController();
+
   String? _selectedGenre;
   String? _selectedLanguage;
+
+  @override
+  void initState() {
+    super.initState();
+    _titleController.text = "Funicula Funicula";
+    _synopsisController.text = "Lorem, ipsum dolor sit amet consectetur.";
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +87,7 @@ class _AddChapterPageState extends State<AddChapterPage> {
                     children: [
                       // Title input
                       const Text(
-                        'Title',
+                        "Title",
                         style: TextStyle(
                           fontFamily: 'outfit-semibold',
                           fontSize: 20,
@@ -95,7 +104,7 @@ class _AddChapterPageState extends State<AddChapterPage> {
                       ),
                       const SizedBox(height: 55),
                       TextField(
-                        controller: _synopsisController,
+                        controller: _titleController,
                       ),
                     ],
                   ),
@@ -114,7 +123,7 @@ class _AddChapterPageState extends State<AddChapterPage> {
               ),
             ),
             Text(
-              'Type Description',
+              "Type Description",
               style: TextStyle(
                 fontFamily: 'outfit-regular',
                 fontSize: 12,
@@ -144,14 +153,14 @@ class _AddChapterPageState extends State<AddChapterPage> {
                         ),
                       ),
                       DropdownButtonFormField<String>(
-                        value: _selectedGenre,
+                        value: "Fantasy",
                         onChanged: (String? newValue) {
                           setState(() {
                             _selectedGenre = newValue;
                           });
                         },
                         decoration: InputDecoration(
-                          labelText: 'Choose Genre',
+                          labelText: '',
                           labelStyle: TextStyle(
                             fontFamily: 'outfit-regular',
                             fontSize: 12,
@@ -183,14 +192,14 @@ class _AddChapterPageState extends State<AddChapterPage> {
                         ),
                       ),
                       DropdownButtonFormField<String>(
-                        value: _selectedLanguage,
+                        value: "Japanese",
                         onChanged: (String? newValue) {
                           setState(() {
                             _selectedLanguage = newValue;
                           });
                         },
                         decoration: InputDecoration(
-                          labelText: 'Choose Language',
+                          labelText: '',
                           labelStyle: TextStyle(
                             fontFamily: 'outfit-regular',
                             fontSize: 12,

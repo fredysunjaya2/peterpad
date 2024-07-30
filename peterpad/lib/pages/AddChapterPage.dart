@@ -55,7 +55,7 @@ class _AddChapterPageState extends State<AddChapterPage> {
                     ),
                   ),
                 ],
-                A),
+                ),
           ),
         ),
       ),
