@@ -9,6 +9,7 @@ import 'package:peterpad/pages/LibraryPage.dart';
 import 'package:peterpad/pages/LoginPage.dart';
 import 'package:peterpad/pages/NotificationsPage.dart';
 import 'package:peterpad/pages/NovelPage.dart';
+import 'package:peterpad/pages/ReadingPage.dart';
 import 'package:peterpad/test.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
       ),
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: ExplorePage(),
+      home: ReadingPage(),
       // home: NovelPage(
       //   id: 1,
       // ), 
