@@ -1,4 +1,5 @@
 import 'dart:ui';
+// import 'dart:ui_web';
 
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class NovelPageState extends State<NovelPage>
   // of the SliverAppBar
   final double _moreHeight = 450;
 
-  int tabIndex = 0;
+  double asd = 0;
 
   @override
   void initState() {
@@ -75,11 +76,13 @@ class NovelPageState extends State<NovelPage>
       // if offset is more height, disable expanded height
       setState(() {
         _expandedHeight = null;
+        asd = 0;
       });
     } else {
       // if offset is less, keep increasing the height to offset 0
       setState(() {
         _expandedHeight = _moreHeight - offset;
+        asd = offset;
       });
     }
   }
@@ -371,11 +374,7 @@ class NovelPageState extends State<NovelPage>
                       children: [
                         ResponsiveRowColumnItem(
                           child: TabBar(
-                            onTap: (value) {
-                              setState(() {
-                                tabIndex = _tabController.index;
-                              });
-                            },
+                            onTap: (value) {},
                             controller: _tabController,
                             labelColor: red,
                             unselectedLabelColor: Colors.black.withOpacity(0.5),
@@ -446,7 +445,9 @@ class NovelPageState extends State<NovelPage>
                                   child: FutureBuilder(
                                     future: futureNovelChapters,
                                     builder: (context, AsyncSnapshot snapshot) {
-                                      List<Map<String, dynamic>>? chapters = snapshot.data;;
+                                      List<Map<String, dynamic>>? chapters =
+                                          snapshot.data;
+                                      ;
 
                                       if (chapters != null) {
                                         chapters = chapters!.firstWhere(
@@ -564,7 +565,8 @@ class NovelPageState extends State<NovelPage>
                                           builder: (context,
                                               AsyncSnapshot snapshot) {
                                             List<Map<String, dynamic>>?
-                                                comments = snapshot.data;;
+                                                comments = snapshot.data;
+                                            ;
 
                                             if (comments != null) {
                                               comments = comments!.firstWhere(

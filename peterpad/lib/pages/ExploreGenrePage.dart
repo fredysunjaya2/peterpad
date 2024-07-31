@@ -96,7 +96,8 @@ class ExploreGenrePageState extends State<ExploreGenrePage> {
                 scrollDirection: Axis.vertical,
                 slivers: [
                   SliverOverlapInjector(
-                    handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                    handle: NestedScrollView.sliverOverlapAbsorberHandleFor(
+                        context),
                   ),
                   SliverList(
                     delegate: SliverChildBuilderDelegate(
@@ -111,16 +112,19 @@ class ExploreGenrePageState extends State<ExploreGenrePage> {
                             ResponsiveRowColumnItem(
                               child: ResponsiveRowColumn(
                                 layout: ResponsiveRowColumnType.ROW,
-                                rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                rowMainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   ResponsiveRowColumnItem(
                                     child: ResponsiveRowColumn(
                                       layout: ResponsiveRowColumnType.ROW,
-                                      rowCrossAxisAlignment: CrossAxisAlignment.center,
+                                      rowCrossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       rowSpacing: 15,
                                       children: [
                                         ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset('assets/ExplorePage/filter.svg'),
+                                          child: SvgPicture.asset(
+                                              'assets/ExplorePage/filter.svg'),
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
@@ -138,11 +142,13 @@ class ExploreGenrePageState extends State<ExploreGenrePage> {
                                   ResponsiveRowColumnItem(
                                     child: ResponsiveRowColumn(
                                       layout: ResponsiveRowColumnType.ROW,
-                                      rowCrossAxisAlignment: CrossAxisAlignment.center,
+                                      rowCrossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       rowSpacing: 15,
                                       children: [
                                         ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset('assets/ExplorePage/sort.svg'),
+                                          child: SvgPicture.asset(
+                                              'assets/ExplorePage/sort.svg'),
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
@@ -165,14 +171,16 @@ class ExploreGenrePageState extends State<ExploreGenrePage> {
                               child: FutureBuilder(
                                 future: futureExploreGenre,
                                 builder: (context, snapshot) {
-                                  List<Map<String, dynamic>>? exploreGenreCatalogues = snapshot.data;
+                                  List<Map<String, dynamic>>?
+                                      exploreGenreCatalogues = snapshot.data;
 
                                   if (exploreGenreCatalogues != null) {
                                     return Wrap(
                                       direction: Axis.horizontal,
                                       spacing: 20,
                                       runSpacing: 20,
-                                      children: exploreGenreCatalogues.map((item) {
+                                      children:
+                                          exploreGenreCatalogues.map((item) {
                                         return CatalogueItem(
                                           title: item['title'],
                                           author: item['author'],

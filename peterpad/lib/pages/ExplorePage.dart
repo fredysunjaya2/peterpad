@@ -47,7 +47,8 @@ class ExplorePageState extends State<ExplorePage> {
             return [
               // ------------------- ------------------- App Bar ------------------- -------------------
               SliverOverlapAbsorber(
-                handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                handle:
+                    NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                 sliver: SliverSafeArea(
                   top: false,
                   sliver: SliverAppBar(
@@ -69,7 +70,8 @@ class ExplorePageState extends State<ExplorePage> {
                             ResponsiveRowColumnItem(
                               child: TabBar(
                                 labelColor: Colors.black,
-                                unselectedLabelColor: Colors.black.withOpacity(0.5),
+                                unselectedLabelColor:
+                                    Colors.black.withOpacity(0.5),
                                 dividerColor: Colors.transparent,
                                 indicator: BoxDecoration(),
                                 isScrollable: true,
@@ -124,11 +126,13 @@ class ExplorePageState extends State<ExplorePage> {
                                 onTap: () {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
-                                      builder: (BuildContext context) => NotificationsPage(),
+                                      builder: (BuildContext context) =>
+                                          NotificationsPage(),
                                     ),
                                   );
                                 },
-                                child: SvgPicture.asset('assets/HomePage/notification.svg'),
+                                child: SvgPicture.asset(
+                                    'assets/HomePage/notification.svg'),
                               ),
                             ),
                           ],
@@ -146,156 +150,167 @@ class ExplorePageState extends State<ExplorePage> {
               SafeArea(
                 top: false,
                 bottom: false,
-                child: Builder(
-                  builder: (context) {
-                    return CustomScrollView(
-                      scrollDirection: Axis.vertical,
-                      slivers: [
-                        SliverOverlapInjector(
-                          handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
-                        ),
-                        SliverList(
-                          delegate: SliverChildBuilderDelegate(
-                            (context, index) {
-                              return ResponsiveRowColumn(
-                                columnPadding: EdgeInsets.fromLTRB(25, 10, 25, 40),
-                                columnCrossAxisAlignment: CrossAxisAlignment.start,
-                                layout: ResponsiveRowColumnType.COLUMN,
-                                columnSpacing: 20,
-                                children: [
-                                  // ------------------- ------------------- Search Bar ------------------- -------------------
-                                  ResponsiveRowColumnItem(
-                                    child: TextField(
-                                      decoration: InputDecoration(
-                                        floatingLabelBehavior: FloatingLabelBehavior.never,
-                                        label: Row(
-                                          children: [
-                                            SvgPicture.asset('assets/HomePage/search.svg'),
-                                            SizedBox(
-                                              width: 15,
+                child: Builder(builder: (context) {
+                  return CustomScrollView(
+                    scrollDirection: Axis.vertical,
+                    slivers: [
+                      SliverOverlapInjector(
+                        handle: NestedScrollView.sliverOverlapAbsorberHandleFor(
+                            context),
+                      ),
+                      SliverList(
+                        delegate: SliverChildBuilderDelegate(
+                          (context, index) {
+                            return ResponsiveRowColumn(
+                              columnPadding:
+                                  EdgeInsets.fromLTRB(25, 10, 25, 40),
+                              columnCrossAxisAlignment:
+                                  CrossAxisAlignment.start,
+                              layout: ResponsiveRowColumnType.COLUMN,
+                              columnSpacing: 20,
+                              children: [
+                                // ------------------- ------------------- Search Bar ------------------- -------------------
+                                ResponsiveRowColumnItem(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      floatingLabelBehavior:
+                                          FloatingLabelBehavior.never,
+                                      label: Row(
+                                        children: [
+                                          SvgPicture.asset(
+                                              'assets/HomePage/search.svg'),
+                                          SizedBox(
+                                            width: 15,
+                                          ),
+                                          Text(
+                                            'Search Books',
+                                            style: TextStyle(
+                                              color:
+                                                  Colors.black.withOpacity(0.3),
+                                              fontFamily: 'outfit-light',
+                                              fontSize: 20,
                                             ),
-                                            Text(
-                                              'Search Books',
-                                              style: TextStyle(
-                                                color: Colors.black.withOpacity(0.3),
-                                                fontFamily: 'outfit-light',
-                                                fontSize: 20,
+                                          ),
+                                        ],
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                        borderSide: const BorderSide(
+                                          color: red,
+                                          width: 2,
+                                        ),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                        borderSide: const BorderSide(
+                                          color: red,
+                                          width: 2,
+                                        ),
+                                      ),
+                                      contentPadding:
+                                          EdgeInsets.fromLTRB(10, 0, 10, 0),
+                                      constraints: const BoxConstraints(
+                                        maxHeight: 50,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                // ------------------- ------------------- Filter Sort ------------------- -------------------
+                                ResponsiveRowColumnItem(
+                                  child: ResponsiveRowColumn(
+                                    layout: ResponsiveRowColumnType.ROW,
+                                    rowMainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      ResponsiveRowColumnItem(
+                                        child: ResponsiveRowColumn(
+                                          layout: ResponsiveRowColumnType.ROW,
+                                          rowCrossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          rowSpacing: 15,
+                                          children: [
+                                            ResponsiveRowColumnItem(
+                                              child: SvgPicture.asset(
+                                                  'assets/ExplorePage/filter.svg'),
+                                            ),
+                                            ResponsiveRowColumnItem(
+                                              child: Text(
+                                                'Filter',
+                                                style: TextStyle(
+                                                  fontFamily: 'outfit-light',
+                                                  fontSize: 16,
+                                                  color: Colors.black,
+                                                ),
                                               ),
                                             ),
                                           ],
                                         ),
-                                        enabledBorder: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10),
-                                          borderSide: const BorderSide(
-                                            color: red,
-                                            width: 2,
-                                          ),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10),
-                                          borderSide: const BorderSide(
-                                            color: red,
-                                            width: 2,
-                                          ),
-                                        ),
-                                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                                        constraints: const BoxConstraints(
-                                          maxHeight: 50,
+                                      ),
+                                      ResponsiveRowColumnItem(
+                                        child: ResponsiveRowColumn(
+                                          layout: ResponsiveRowColumnType.ROW,
+                                          rowCrossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          rowSpacing: 15,
+                                          children: [
+                                            ResponsiveRowColumnItem(
+                                              child: SvgPicture.asset(
+                                                  'assets/ExplorePage/sort.svg'),
+                                            ),
+                                            ResponsiveRowColumnItem(
+                                              child: Text(
+                                                'Sort',
+                                                style: TextStyle(
+                                                  fontFamily: 'outfit-light',
+                                                  fontSize: 16,
+                                                  color: Colors.black,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
-                                    ),
+                                    ],
                                   ),
-                                  // ------------------- ------------------- Filter Sort ------------------- -------------------
-                                  ResponsiveRowColumnItem(
-                                    child: ResponsiveRowColumn(
-                                      layout: ResponsiveRowColumnType.ROW,
-                                      rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        ResponsiveRowColumnItem(
-                                          child: ResponsiveRowColumn(
-                                            layout: ResponsiveRowColumnType.ROW,
-                                            rowCrossAxisAlignment: CrossAxisAlignment.center,
-                                            rowSpacing: 15,
-                                            children: [
-                                              ResponsiveRowColumnItem(
-                                                child: SvgPicture.asset('assets/ExplorePage/filter.svg'),
-                                              ),
-                                              ResponsiveRowColumnItem(
-                                                child: Text(
-                                                  'Filter',
-                                                  style: TextStyle(
-                                                    fontFamily: 'outfit-light',
-                                                    fontSize: 16,
-                                                    color: Colors.black,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        ResponsiveRowColumnItem(
-                                          child: ResponsiveRowColumn(
-                                            layout: ResponsiveRowColumnType.ROW,
-                                            rowCrossAxisAlignment: CrossAxisAlignment.center,
-                                            rowSpacing: 15,
-                                            children: [
-                                              ResponsiveRowColumnItem(
-                                                child: SvgPicture.asset('assets/ExplorePage/sort.svg'),
-                                              ),
-                                              ResponsiveRowColumnItem(
-                                                child: Text(
-                                                  'Sort',
-                                                  style: TextStyle(
-                                                    fontFamily: 'outfit-light',
-                                                    fontSize: 16,
-                                                    color: Colors.black,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  // ------------------- ------------------- Explore Catalogue ------------------- -------------------
-                                  ResponsiveRowColumnItem(
-                                    child: FutureBuilder(
-                                      future: futureExplore,
-                                      builder: (context, snapshot) {
-                                        List<Map<String, dynamic>>? novels = snapshot.data;
+                                ),
+                                // ------------------- ------------------- Explore Catalogue ------------------- -------------------
+                                ResponsiveRowColumnItem(
+                                  child: FutureBuilder(
+                                    future: futureExplore,
+                                    builder: (context, snapshot) {
+                                      List<Map<String, dynamic>>? novels =
+                                          snapshot.data;
 
-                                        if (novels != null) {
-                                          return Wrap(
-                                              spacing: 20,
-                                              runSpacing: 20,
-                                              direction: Axis.horizontal,
-                                              children: novels.map((item) {
-                                                return CatalogueItem(
-                                                  title: item['title'],
-                                                  author: item['author'],
-                                                  rating: item['rating'],
-                                                  imagePath: item['imagePath'],
-                                                );
-                                              }).toList());
-                                        } else {
-                                          return const Center(
-                                            child: CircularProgressIndicator(),
-                                          );
-                                        }
-                                      },
-                                    ),
+                                      if (novels != null) {
+                                        return Wrap(
+                                            spacing: 20,
+                                            runSpacing: 20,
+                                            direction: Axis.horizontal,
+                                            children: novels.map((item) {
+                                              return CatalogueItem(
+                                                title: item['title'],
+                                                author: item['author'],
+                                                rating: item['rating'],
+                                                imagePath: item['imagePath'],
+                                              );
+                                            }).toList());
+                                      } else {
+                                        return const Center(
+                                          child: CircularProgressIndicator(),
+                                        );
+                                      }
+                                    },
                                   ),
-                                ],
-                              );
-                            },
-                            childCount: 1,
-                          ),
+                                ),
+                              ],
+                            );
+                          },
+                          childCount: 1,
                         ),
-                      ],
-                    );
-                  },
-                ),
+                      ),
+                    ],
+                  );
+                }),
               ),
               // ------------------- ------------------- Genre Page ------------------- -------------------
               SafeArea(
@@ -308,21 +323,26 @@ class ExplorePageState extends State<ExplorePage> {
                       scrollDirection: Axis.vertical,
                       slivers: [
                         SliverOverlapInjector(
-                          handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                          handle:
+                              NestedScrollView.sliverOverlapAbsorberHandleFor(
+                                  context),
                         ),
                         SliverList(
                           delegate: SliverChildBuilderDelegate(
                             (context, index) {
                               return ResponsiveRowColumn(
-                                columnPadding: EdgeInsets.fromLTRB(25, 10, 25, 40),
-                                columnCrossAxisAlignment: CrossAxisAlignment.start,
+                                columnPadding:
+                                    EdgeInsets.fromLTRB(25, 10, 25, 40),
+                                columnCrossAxisAlignment:
+                                    CrossAxisAlignment.start,
                                 layout: ResponsiveRowColumnType.COLUMN,
                                 children: [
                                   ResponsiveRowColumnItem(
                                     child: FutureBuilder(
                                       future: futureGenre,
                                       builder: (context, snapshot) {
-                                        List<Map<String, dynamic>>? genres = snapshot.data;
+                                        List<Map<String, dynamic>>? genres =
+                                            snapshot.data;
 
                                         if (genres != null) {
                                           return Wrap(

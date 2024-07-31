@@ -67,8 +67,10 @@ class TrendingItem extends StatelessWidget {
                       context,
                       defaultValue: 200,
                       conditionalValues: [
-                        Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.25),
-                        Condition.equals(name: DESKTOP, value: screenWidth * 0.2),
+                        Condition.smallerThan(
+                            name: DESKTOP, value: screenWidth * 0.25),
+                        Condition.equals(
+                            name: DESKTOP, value: screenWidth * 0.2),
                       ],
                     ).value,
                   ),
