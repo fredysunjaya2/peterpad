@@ -9,12 +9,6 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 class CollectionPage extends StatefulWidget {
   int id;
-  String? name;
-  int? novelCount;
-  String? imagePath;
-  String? visibility;
-  String? owner;
-  String? desc;
 
   CollectionPage({
     super.key,
@@ -35,7 +29,7 @@ class CollectionPageState extends State<CollectionPage> {
 
   // constant more height that is given to the expandedHeight
   // of the SliverAppBar
-  final double _moreHeight = 500;
+  final double _moreHeight = 400;
 
   @override
   void initState() {
@@ -54,13 +48,6 @@ class CollectionPageState extends State<CollectionPage> {
     });
 
     collectionDetail = collectionDetail['details'];
-
-    widget.name = collectionDetail['name'];
-    widget.novelCount = collectionDetail['novelCount'];
-    widget.imagePath = collectionDetail['imagePath'];
-    widget.visibility = collectionDetail['visibility'];
-    widget.owner = collectionDetail['owner'];
-    widget.desc = collectionDetail['desc'];
   }
 
   @override
@@ -114,7 +101,7 @@ class CollectionPageState extends State<CollectionPage> {
                           : _expandedHeight! / _moreHeight,
                   duration: const Duration(milliseconds: 300),
                   child: Text(
-                    widget.name!,
+                    collectionDetail["name"],
                     style: TextStyle(
                       fontFamily: 'outfit-medium',
                       fontSize: 24,
@@ -128,7 +115,9 @@ class CollectionPageState extends State<CollectionPage> {
                   alignment: Alignment.center,
                   children: [
                     AnimatedOpacity(
-                      opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                      opacity: _expandedHeight != null
+                          ? _expandedHeight! / _moreHeight
+                          : 0,
                       duration: const Duration(milliseconds: 300),
                       child: ClipRRect(
                         borderRadius: BorderRadius.vertical(
@@ -147,7 +136,7 @@ class CollectionPageState extends State<CollectionPage> {
                             child: Transform.scale(
                               scale: 1.05,
                               child: Image.asset(
-                                widget.imagePath!,
+                                collectionDetail["imagePath"],
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -158,7 +147,9 @@ class CollectionPageState extends State<CollectionPage> {
                     Positioned(
                       bottom: 20,
                       child: AnimatedOpacity(
-                        opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                        opacity: _expandedHeight != null
+                            ? _expandedHeight! / _moreHeight
+                            : 0,
                         duration: const Duration(milliseconds: 300),
                         child: ResponsiveRowColumn(
                           layout: ResponsiveRowColumnType.COLUMN,
@@ -166,7 +157,7 @@ class CollectionPageState extends State<CollectionPage> {
                           children: [
                             ResponsiveRowColumnItem(
                               child: Text(
-                                widget.name!,
+                                collectionDetail["name"],
                                 style: TextStyle(
                                   fontFamily: 'outfit-medium',
                                   fontSize: 24,
@@ -184,11 +175,14 @@ class CollectionPageState extends State<CollectionPage> {
                                       layout: ResponsiveRowColumnType.COLUMN,
                                       children: [
                                         ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset('assets/CollectionPage/novelCount.svg'),
+                                          child: SvgPicture.asset(
+                                              'assets/CollectionPage/novelCount.svg'),
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            widget.novelCount.toString() + ' Novels',
+                                            collectionDetail["novelCount"]
+                                                    .toString() +
+                                                ' Novels',
                                             style: TextStyle(
                                               fontFamily: 'outfit-regular',
                                               fontSize: 18,
@@ -204,11 +198,12 @@ class CollectionPageState extends State<CollectionPage> {
                                       layout: ResponsiveRowColumnType.COLUMN,
                                       children: [
                                         ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset('assets/CollectionPage/visibility.svg'),
+                                          child: SvgPicture.asset(
+                                              'assets/CollectionPage/visibility.svg'),
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            widget.visibility!,
+                                            collectionDetail["visibility"],
                                             style: TextStyle(
                                               fontFamily: 'outfit-regular',
                                               fontSize: 18,
@@ -224,11 +219,12 @@ class CollectionPageState extends State<CollectionPage> {
                                       layout: ResponsiveRowColumnType.COLUMN,
                                       children: [
                                         ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset('assets/CollectionPage/owner.svg'),
+                                          child: SvgPicture.asset(
+                                              'assets/CollectionPage/owner.svg'),
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            widget.owner!,
+                                            collectionDetail["owner"],
                                             style: TextStyle(
                                               fontFamily: 'outfit-regular',
                                               fontSize: 18,
@@ -298,7 +294,7 @@ class CollectionPageState extends State<CollectionPage> {
                       children: [
                         ResponsiveRowColumnItem(
                           child: Text(
-                            widget.desc!,
+                            collectionDetail["desc"],
                             style: TextStyle(
                               fontFamily: 'outfit-light',
                               fontSize: 14,
@@ -310,7 +306,8 @@ class CollectionPageState extends State<CollectionPage> {
                           child: FutureBuilder(
                             future: futureCollectionItem,
                             builder: (context, snapshot) {
-                              List<Map<String, dynamic>>? novels = snapshot.data;
+                              List<Map<String, dynamic>>? novels =
+                                  snapshot.data;
 
                               if (novels != null) {
                                 return Wrap(

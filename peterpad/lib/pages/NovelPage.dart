@@ -3,20 +3,13 @@ import 'dart:ui';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:peterpad/components/ChapterItem.dart';
+import 'package:peterpad/components/CommentPostItem.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:peterpad/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class NovelPage extends StatefulWidget {
   int id;
-  String? title;
-  String? author;
-  int? views;
-  double? rating;
-  int? chapters;
-  int? comments;
-  String? synopsis;
-  String? imagePath;
 
   NovelPage({
     super.key,
@@ -27,7 +20,8 @@ class NovelPage extends StatefulWidget {
   State<NovelPage> createState() => NovelPageState();
 }
 
-class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixin {
+class NovelPageState extends State<NovelPage>
+    with SingleTickerProviderStateMixin {
   late Future<List<Map<String, dynamic>>?> futureNovelChapters;
   late Future<List<Map<String, dynamic>>?> futureNovelComments;
   late Map<String, dynamic> novelDetail;
@@ -50,7 +44,7 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
     futureNovelChapters = Future.value(chapters);
     futureNovelComments = Future.value(comments);
 
-    _tabController = new TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
 
     // initialize and add scroll listener
     _scrollController = ScrollController();
@@ -65,15 +59,6 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
     );
 
     novelDetail = novelDetail['details'];
-
-    widget.title = novelDetail['title'];
-    widget.author = novelDetail['author'];
-    widget.views = novelDetail['views'];
-    widget.rating = novelDetail['rating'];
-    widget.chapters = novelDetail['chapters'];
-    widget.comments = novelDetail['comments'];
-    widget.synopsis = novelDetail['synopsis'];
-    widget.imagePath = novelDetail['imagePath'];
   }
 
   @override
@@ -130,7 +115,7 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                           : _expandedHeight! / _moreHeight,
                   duration: const Duration(milliseconds: 300),
                   child: Text(
-                    widget.title!,
+                    novelDetail["title"],
                     style: TextStyle(
                       fontFamily: 'outfit-medium',
                       fontSize: 24,
@@ -143,7 +128,9 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                   alignment: Alignment.topCenter,
                   children: [
                     AnimatedOpacity(
-                      opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                      opacity: _expandedHeight != null
+                          ? _expandedHeight! / _moreHeight
+                          : 0,
                       duration: const Duration(milliseconds: 300),
                       child: ResponsiveRowColumn(
                         layout: ResponsiveRowColumnType.COLUMN,
@@ -166,10 +153,12 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                   child: Transform.scale(
                                     scale: 1.05,
                                     child: Image.asset(
-                                      widget.imagePath!,
+                                      novelDetail["imagePath"],
                                       fit: BoxFit.cover,
                                       width: double.infinity,
-                                      height: _expandedHeight! * 0.65,
+                                      height: _expandedHeight != null
+                                          ? _expandedHeight! * 0.65
+                                          : 0,
                                     ),
                                   ),
                                 ),
@@ -180,16 +169,18 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                       ),
                     ),
                     Positioned(
-                      top: _expandedHeight! * 0.3,
+                      top: _expandedHeight != null ? _expandedHeight! * 0.3 : 0,
                       child: AnimatedOpacity(
-                        opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                        opacity: _expandedHeight != null
+                            ? _expandedHeight! / _moreHeight
+                            : 0,
                         duration: const Duration(milliseconds: 300),
                         child: ResponsiveRowColumn(
                           layout: ResponsiveRowColumnType.COLUMN,
                           columnCrossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             ResponsiveRowColumnItem(
-                              child: Image.asset(widget.imagePath!),
+                              child: Image.asset(novelDetail["imagePath"]),
                             ),
                             ResponsiveRowColumnItem(
                               child: ResponsiveRowColumn(
@@ -201,7 +192,7 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                 children: [
                                   ResponsiveRowColumnItem(
                                     child: Text(
-                                      widget.title!,
+                                      novelDetail["title"],
                                       style: TextStyle(
                                         fontFamily: 'outfit-semibold',
                                         fontSize: 24,
@@ -211,7 +202,7 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                   ),
                                   ResponsiveRowColumnItem(
                                     child: Text(
-                                      widget.author!,
+                                      novelDetail["author"],
                                       style: TextStyle(
                                         fontFamily: 'outfit-extra-light',
                                         fontSize: 14,
@@ -239,7 +230,8 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            NumberFormat.compact().format(widget.views),
+                                            NumberFormat.compact()
+                                                .format(novelDetail["views"]),
                                             style: TextStyle(
                                               fontFamily: 'outfit-light',
                                               fontSize: 12,
@@ -262,7 +254,7 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            widget.rating.toString(),
+                                            novelDetail["rating"].toString(),
                                             style: TextStyle(
                                               fontFamily: 'outfit-light',
                                               fontSize: 12,
@@ -285,7 +277,7 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            widget.chapters.toString(),
+                                            novelDetail["chapters"].toString(),
                                             style: TextStyle(
                                               fontFamily: 'outfit-light',
                                               fontSize: 12,
@@ -308,7 +300,8 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            NumberFormat.compact().format(widget.comments),
+                                            NumberFormat.compact().format(
+                                                novelDetail["comments"]),
                                             style: TextStyle(
                                               fontFamily: 'outfit-light',
                                               fontSize: 12,
@@ -439,7 +432,7 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                               if (_tabController.index == 0) ...[
                                 ResponsiveRowColumnItem(
                                   child: Text(
-                                    widget.synopsis!,
+                                    novelDetail["synopsis"],
                                     textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       fontFamily: 'outfit-light',
@@ -451,16 +444,15 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                               ] else if (_tabController.index == 1) ...[
                                 ResponsiveRowColumnItem(
                                   child: FutureBuilder(
-                                    future: futureNovelChapters!,
+                                    future: futureNovelChapters,
                                     builder: (context, AsyncSnapshot snapshot) {
-                                      List<Map<String, dynamic>>? chapters;
+                                      List<Map<String, dynamic>>? chapters = snapshot.data;;
 
-                                      if (snapshot.hasData) {
-                                        chapters = snapshot.data;
-
+                                      if (chapters != null) {
                                         chapters = chapters!.firstWhere(
                                           (element) {
-                                            return element['novelId'] == widget.id;
+                                            return element['novelId'] ==
+                                                widget.id;
                                           },
                                         )["chapters"];
                                         return Wrap(
@@ -483,31 +475,129 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                 ),
                               ] else if (_tabController.index == 2) ...[
                                 ResponsiveRowColumnItem(
-                                  child: FutureBuilder(
-                                    future: futureNovelComments,
-                                    builder: (context, AsyncSnapshot snapshot) {
-                                      List<Map<String, dynamic>>? comments;
+                                  child: ResponsiveRowColumn(
+                                    layout: ResponsiveRowColumnType.COLUMN,
+                                    columnSpacing: 20,
+                                    children: [
+                                      ResponsiveRowColumnItem(
+                                        child: ResponsiveRowColumn(
+                                          layout: ResponsiveRowColumnType.ROW,
+                                          rowSpacing: 15,
+                                          children: [
+                                            ResponsiveRowColumnItem(
+                                              child: Expanded(
+                                                child: TextField(
+                                                  decoration: InputDecoration(
+                                                    floatingLabelBehavior:
+                                                        FloatingLabelBehavior
+                                                            .never,
+                                                    label: Row(
+                                                      children: [
+                                                        Text(
+                                                          'Type Comment',
+                                                          style: TextStyle(
+                                                            color: Colors.black
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            fontFamily:
+                                                                'outfit-light',
+                                                            fontSize: 14,
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    enabledBorder:
+                                                        OutlineInputBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              30),
+                                                      borderSide:
+                                                          const BorderSide(
+                                                        color: red,
+                                                        width: 2,
+                                                      ),
+                                                    ),
+                                                    focusedBorder:
+                                                        OutlineInputBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              30),
+                                                      borderSide:
+                                                          const BorderSide(
+                                                        color: red,
+                                                        width: 2,
+                                                      ),
+                                                    ),
+                                                    contentPadding:
+                                                        EdgeInsets.fromLTRB(
+                                                            15, 0, 10, 0),
+                                                    constraints:
+                                                        const BoxConstraints(
+                                                      maxHeight: 40,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            ResponsiveRowColumnItem(
+                                              child: Container(
+                                                padding: EdgeInsets.all(6),
+                                                decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(40),
+                                                  border: Border.all(
+                                                    color: red,
+                                                    width: 2,
+                                                  ),
+                                                ),
+                                                child: SvgPicture.asset(
+                                                  'assets/NovelPage/send.svg',
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      ResponsiveRowColumnItem(
+                                        child: FutureBuilder(
+                                          future: futureNovelComments,
+                                          builder: (context,
+                                              AsyncSnapshot snapshot) {
+                                            List<Map<String, dynamic>>?
+                                                comments = snapshot.data;;
 
-                                      if (snapshot.hasData) {
-                                        comments = snapshot.data;
-
-                                        comments = comments!.firstWhere(
-                                          (element) {
-                                            return element['novelId'] == widget.id;
+                                            if (comments != null) {
+                                              comments = comments!.firstWhere(
+                                                (element) {
+                                                  return element['novelId'] ==
+                                                      widget.id;
+                                                },
+                                              )["comments"];
+                                              return Wrap(
+                                                runSpacing: 15,
+                                                children: comments!.map(
+                                                  (item) {
+                                                    return CommentPostItem(
+                                                      profilePic:
+                                                          item["profilePic"],
+                                                      name: item["name"],
+                                                      date: item["date"],
+                                                      comment: item["comment"],
+                                                      likeCount:
+                                                          item["likeCount"],
+                                                      replyCount:
+                                                          item["replyCount"],
+                                                    );
+                                                  },
+                                                ).toList(),
+                                              );
+                                            } else {
+                                              return CircularProgressIndicator();
+                                            }
                                           },
-                                        )["comments"];
-                                        return Wrap(
-                                          runSpacing: 10,
-                                          children: comments!.map(
-                                            (item) {
-                                              return SizedBox();
-                                            },
-                                          ).toList(),
-                                        );
-                                      } else {
-                                        return CircularProgressIndicator();
-                                      }
-                                    },
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ]

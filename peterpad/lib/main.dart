@@ -34,10 +34,10 @@ class MyApp extends StatelessWidget {
       ),
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: ExplorePage(),
-      // home: NovelPage(
-      //   id: 1,
-      // ), 
+      // home: ExplorePage(),
+      home: NovelPage(
+        id: 1,
+      ), 
     );
   }
 }

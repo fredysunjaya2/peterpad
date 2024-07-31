@@ -114,7 +114,8 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": false,
       },
       {
@@ -122,7 +123,8 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": false,
       },
       {
@@ -130,7 +132,8 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": false,
       },
     ],
@@ -143,7 +146,8 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
       {
@@ -151,7 +155,8 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
       {
@@ -159,7 +164,8 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
     ],
@@ -172,7 +178,8 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
       {
@@ -180,7 +187,8 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
       {
@@ -188,7 +196,8 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
     ],
@@ -411,7 +420,8 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad',
-      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc':
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -422,7 +432,8 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad 2',
-      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc':
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -433,7 +444,8 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad 3',
-      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc':
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -444,7 +456,8 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad',
-      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc':
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -455,7 +468,8 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad 2',
-      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc':
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -466,7 +480,8 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad 3',
-      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc':
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -477,7 +492,8 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad',
-      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc':
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
 ];
@@ -517,6 +533,106 @@ List<Map<String, dynamic>> chapters = [
   {
     "novelId": 1,
     "chapters": [
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
       {
         "name": "Chapter 1: Lorem Ipsum Dolor",
         "date": "18 Aug 2024",
@@ -730,6 +846,326 @@ List<Map<String, dynamic>> comments = [
   {
     "novelId": 1,
     "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
