@@ -128,7 +128,9 @@ class CollectionPageState extends State<CollectionPage> {
                   alignment: Alignment.center,
                   children: [
                     AnimatedOpacity(
-                      opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                      opacity: _expandedHeight != null
+                          ? _expandedHeight! / _moreHeight
+                          : 0,
                       duration: const Duration(milliseconds: 300),
                       child: ClipRRect(
                         borderRadius: BorderRadius.vertical(
@@ -158,7 +160,9 @@ class CollectionPageState extends State<CollectionPage> {
                     Positioned(
                       bottom: 20,
                       child: AnimatedOpacity(
-                        opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                        opacity: _expandedHeight != null
+                            ? _expandedHeight! / _moreHeight
+                            : 0,
                         duration: const Duration(milliseconds: 300),
                         child: ResponsiveRowColumn(
                           layout: ResponsiveRowColumnType.COLUMN,
@@ -184,11 +188,13 @@ class CollectionPageState extends State<CollectionPage> {
                                       layout: ResponsiveRowColumnType.COLUMN,
                                       children: [
                                         ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset('assets/CollectionPage/novelCount.svg'),
+                                          child: SvgPicture.asset(
+                                              'assets/CollectionPage/novelCount.svg'),
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            widget.novelCount.toString() + ' Novels',
+                                            widget.novelCount.toString() +
+                                                ' Novels',
                                             style: TextStyle(
                                               fontFamily: 'outfit-regular',
                                               fontSize: 18,
@@ -204,7 +210,8 @@ class CollectionPageState extends State<CollectionPage> {
                                       layout: ResponsiveRowColumnType.COLUMN,
                                       children: [
                                         ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset('assets/CollectionPage/visibility.svg'),
+                                          child: SvgPicture.asset(
+                                              'assets/CollectionPage/visibility.svg'),
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
@@ -224,7 +231,8 @@ class CollectionPageState extends State<CollectionPage> {
                                       layout: ResponsiveRowColumnType.COLUMN,
                                       children: [
                                         ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset('assets/CollectionPage/owner.svg'),
+                                          child: SvgPicture.asset(
+                                              'assets/CollectionPage/owner.svg'),
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
@@ -310,7 +318,8 @@ class CollectionPageState extends State<CollectionPage> {
                           child: FutureBuilder(
                             future: futureCollectionItem,
                             builder: (context, snapshot) {
-                              List<Map<String, dynamic>>? novels = snapshot.data;
+                              List<Map<String, dynamic>>? novels =
+                                  snapshot.data;
 
                               if (novels != null) {
                                 return Wrap(

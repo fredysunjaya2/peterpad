@@ -49,8 +49,10 @@ class HistoryItem extends StatelessWidget {
                       context,
                       defaultValue: 200,
                       conditionalValues: [
-                        Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.2),
-                        Condition.equals(name: DESKTOP, value: screenWidth * 0.2),
+                        Condition.smallerThan(
+                            name: DESKTOP, value: screenWidth * 0.2),
+                        Condition.equals(
+                            name: DESKTOP, value: screenWidth * 0.2),
                       ],
                     ).value,
                   ),
@@ -82,7 +84,10 @@ class HistoryItem extends StatelessWidget {
                             child: Padding(
                               padding: EdgeInsets.fromLTRB(0, 4, 0, 0),
                               child: Text(
-                                'Chapter ' + currentChapter.toString() + ' / ' + maxChapter.toString(),
+                                'Chapter ' +
+                                    currentChapter.toString() +
+                                    ' / ' +
+                                    maxChapter.toString(),
                                 overflow: TextOverflow.ellipsis,
                                 maxLines: 1,
                                 style: TextStyle(
@@ -116,9 +121,15 @@ class HistoryItem extends StatelessWidget {
                                       width: ResponsiveValue<double>(
                                         context,
                                         conditionalValues: [
-                                          Condition.equals(name: 'MOBILE', value: screenWidth * 0.4),
-                                          Condition.equals(name: 'TABLET', value: screenWidth * 0.5),
-                                          Condition.equals(name: 'DESKTOP', value: screenWidth * 0.6),
+                                          Condition.equals(
+                                              name: 'MOBILE',
+                                              value: screenWidth * 0.4),
+                                          Condition.equals(
+                                              name: 'TABLET',
+                                              value: screenWidth * 0.5),
+                                          Condition.equals(
+                                              name: 'DESKTOP',
+                                              value: screenWidth * 0.6),
                                         ],
                                       ).value,
                                       child: FAProgressBar(

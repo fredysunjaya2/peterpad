@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:peterpad/pages/AddChapterPage.dart';
+import 'package:peterpad/pages/EditChapterPage.dart';
 import 'package:peterpad/pages/ExplorePage.dart';
 import 'package:peterpad/pages/CollectionPage.dart';
 import 'package:peterpad/pages/ExploreGenrePage.dart';
@@ -9,7 +11,8 @@ import 'package:peterpad/pages/LibraryPage.dart';
 import 'package:peterpad/pages/LoginPage.dart';
 import 'package:peterpad/pages/NotificationsPage.dart';
 import 'package:peterpad/pages/NovelPage.dart';
-import 'package:peterpad/pages/ReadingPage.dart';
+import 'package:peterpad/pages/WritePage.dart';
+import 'package:peterpad/pages/WritingChapterPage.dart';
 import 'package:peterpad/test.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -35,10 +38,10 @@ class MyApp extends StatelessWidget {
       ),
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: ReadingPage(),
+      home: EditChapterPage(),
       // home: NovelPage(
       //   id: 1,
-      // ), 
+      // ),
     );
   }
 }

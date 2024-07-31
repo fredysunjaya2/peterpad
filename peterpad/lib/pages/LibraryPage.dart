@@ -43,7 +43,8 @@ class LibraryPageState extends State<LibraryPage> {
             return [
               // ------------------- ------------------- App Bar ------------------- -------------------
               SliverOverlapAbsorber(
-                handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                handle:
+                    NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                 sliver: SliverSafeArea(
                   top: false,
                   sliver: SliverAppBar(
@@ -65,7 +66,8 @@ class LibraryPageState extends State<LibraryPage> {
                             ResponsiveRowColumnItem(
                               child: TabBar(
                                 labelColor: Colors.black,
-                                unselectedLabelColor: Colors.black.withOpacity(0.5),
+                                unselectedLabelColor:
+                                    Colors.black.withOpacity(0.5),
                                 dividerColor: Colors.transparent,
                                 indicator: BoxDecoration(),
                                 isScrollable: true,
@@ -130,7 +132,8 @@ class LibraryPageState extends State<LibraryPage> {
                                       visible: currentIndex == 0 ? true : false,
                                       child: GestureDetector(
                                         onTap: () {},
-                                        child: SvgPicture.asset('assets/LibraryPage/clearall.svg'),
+                                        child: SvgPicture.asset(
+                                            'assets/LibraryPage/clearall.svg'),
                                       ),
                                     ),
                                   ),
@@ -139,7 +142,8 @@ class LibraryPageState extends State<LibraryPage> {
                                       visible: currentIndex == 1 ? true : false,
                                       child: GestureDetector(
                                         onTap: () {},
-                                        child: SvgPicture.asset('assets/LibraryPage/add.svg'),
+                                        child: SvgPicture.asset(
+                                            'assets/LibraryPage/add.svg'),
                                       ),
                                     ),
                                   ),
@@ -167,7 +171,9 @@ class LibraryPageState extends State<LibraryPage> {
                       scrollDirection: Axis.vertical,
                       slivers: [
                         SliverOverlapInjector(
-                          handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                          handle:
+                              NestedScrollView.sliverOverlapAbsorberHandleFor(
+                                  context),
                         ),
                         // ------------------- ------------------- History Group By Date ------------------- -------------------
                         SliverList(
@@ -180,24 +186,30 @@ class LibraryPageState extends State<LibraryPage> {
                                     child: FutureBuilder(
                                       future: futureHistory,
                                       builder: (context, snapshot) {
-                                        List<Map<String, dynamic>>? histories = snapshot.data;
+                                        List<Map<String, dynamic>>? histories =
+                                            snapshot.data;
 
                                         if (histories != null) {
                                           return Padding(
-                                            padding: EdgeInsets.fromLTRB(25, 10, 25, 40),
+                                            padding: EdgeInsets.fromLTRB(
+                                                25, 10, 25, 40),
                                             child: Wrap(
                                               runSpacing: 25,
                                               children: histories.map((item) {
                                                 return ResponsiveRowColumn(
-                                                  layout: ResponsiveRowColumnType.COLUMN,
-                                                  columnCrossAxisAlignment: CrossAxisAlignment.start,
+                                                  layout:
+                                                      ResponsiveRowColumnType
+                                                          .COLUMN,
+                                                  columnCrossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   columnSpacing: 10,
                                                   children: [
                                                     ResponsiveRowColumnItem(
                                                       child: Text(
                                                         item['date'],
                                                         style: TextStyle(
-                                                          fontFamily: 'outfit-regular',
+                                                          fontFamily:
+                                                              'outfit-regular',
                                                           fontSize: 16,
                                                           color: Colors.black,
                                                         ),
@@ -206,26 +218,48 @@ class LibraryPageState extends State<LibraryPage> {
                                                     ResponsiveRowColumnItem(
                                                       // ------------------- ------------------- History Items ------------------- -------------------
                                                       child: FutureBuilder(
-                                                        future: futureHistoryItem,
-                                                        builder: (context, snapshot) {
-                                                          List<Map<String, dynamic>> historyItems = item["historyItems"];
+                                                        future:
+                                                            futureHistoryItem,
+                                                        builder: (context,
+                                                            snapshot) {
+                                                          List<
+                                                                  Map<String,
+                                                                      dynamic>>
+                                                              historyItems =
+                                                              item[
+                                                                  "historyItems"];
 
-                                                          if (historyItems != null) {
+                                                          if (historyItems !=
+                                                              null) {
                                                             return Wrap(
                                                                 runSpacing: 15,
-                                                                children: historyItems.map((itemDetail) {
+                                                                children:
+                                                                    historyItems
+                                                                        .map(
+                                                                            (itemDetail) {
                                                                   return HistoryItem(
-                                                                    title: itemDetail['title'],
-                                                                    currentChapter: itemDetail['currentChapter'],
-                                                                    maxChapter: itemDetail['maxChapter'],
-                                                                    time: itemDetail['time'],
-                                                                    progress: itemDetail['progress'],
-                                                                    imagePath: itemDetail['imagePath'],
+                                                                    title: itemDetail[
+                                                                        'title'],
+                                                                    currentChapter:
+                                                                        itemDetail[
+                                                                            'currentChapter'],
+                                                                    maxChapter:
+                                                                        itemDetail[
+                                                                            'maxChapter'],
+                                                                    time: itemDetail[
+                                                                        'time'],
+                                                                    progress:
+                                                                        itemDetail[
+                                                                            'progress'],
+                                                                    imagePath:
+                                                                        itemDetail[
+                                                                            'imagePath'],
                                                                   );
                                                                 }).toList());
                                                           } else {
                                                             return const Center(
-                                                              child: CircularProgressIndicator(),
+                                                              child:
+                                                                  CircularProgressIndicator(),
                                                             );
                                                           }
                                                         },
@@ -263,7 +297,9 @@ class LibraryPageState extends State<LibraryPage> {
                       scrollDirection: Axis.vertical,
                       slivers: [
                         SliverOverlapInjector(
-                          handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                          handle:
+                              NestedScrollView.sliverOverlapAbsorberHandleFor(
+                                  context),
                         ),
                         // ------------------- ------------------- Collection Catalogue ------------------- -------------------
                         SliverList(
@@ -271,14 +307,17 @@ class LibraryPageState extends State<LibraryPage> {
                             (context, index) {
                               return ResponsiveRowColumn(
                                 layout: ResponsiveRowColumnType.COLUMN,
-                                columnPadding: EdgeInsets.fromLTRB(25, 10, 25, 40),
-                                columnCrossAxisAlignment: CrossAxisAlignment.start,
+                                columnPadding:
+                                    EdgeInsets.fromLTRB(25, 10, 25, 40),
+                                columnCrossAxisAlignment:
+                                    CrossAxisAlignment.start,
                                 children: [
                                   ResponsiveRowColumnItem(
                                     child: FutureBuilder(
                                       future: futureCollection,
                                       builder: (context, snapshot) {
-                                        List<Map<String, dynamic>>? collections = snapshot.data;
+                                        List<Map<String, dynamic>>?
+                                            collections = snapshot.data;
 
                                         if (collections != null) {
                                           return Wrap(
@@ -288,10 +327,14 @@ class LibraryPageState extends State<LibraryPage> {
                                               (item) {
                                                 return CollectionItem(
                                                   name: item['details']['name'],
-                                                  novelCount: item['details']['novelCount'],
-                                                  imagePath: item['details']['imagePath'],
-                                                  visibility: item['details']['visibility'],
-                                                  owner: item['details']['owner'],
+                                                  novelCount: item['details']
+                                                      ['novelCount'],
+                                                  imagePath: item['details']
+                                                      ['imagePath'],
+                                                  visibility: item['details']
+                                                      ['visibility'],
+                                                  owner: item['details']
+                                                      ['owner'],
                                                   desc: item['details']['desc'],
                                                 );
                                               },
