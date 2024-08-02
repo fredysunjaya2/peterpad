@@ -59,55 +59,48 @@ class _WritingchapterpageState extends State<WritingChapterPage> {
                       rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         ResponsiveRowColumnItem(
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).pop();
-                                  },
-                                  child: Icon(
-                                    Icons.arrow_back_ios,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                Text(
-                                  'Chapter 1',
-                                  style: TextStyle(
-                                      fontFamily: 'outfit-semibold',
-                                      fontSize: 24,
-                                      color: red),
-                                )
-                              ]),
+                          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Icon(
+                                Icons.arrow_back_ios,
+                                color: Colors.black,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Text(
+                              'Chapter 1',
+                              style: TextStyle(fontFamily: 'outfit-semibold', fontSize: 24, color: red),
+                            )
+                          ]),
                         ),
                         ResponsiveRowColumnItem(
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'Save',
-                                  style: TextStyle(
-                                    fontFamily: 'outfit-semibold',
-                                    fontSize: 24,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).pop();
-                                  },
-                                  child: Icon(
-                                    Icons.more_vert,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ]),
+                          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                            Text(
+                              'Save',
+                              style: TextStyle(
+                                fontFamily: 'outfit-semibold',
+                                fontSize: 24,
+                                color: Colors.black,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Icon(
+                                Icons.more_vert,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ]),
                         ),
                       ],
                     ),
@@ -133,11 +126,15 @@ class _WritingchapterpageState extends State<WritingChapterPage> {
                 ),
               ),
               TextField(
+                maxLines: null,
                 decoration: InputDecoration(
-                    hintText: "Type Your Story",
-                    border: InputBorder.none,
-                    hintStyle:
-                        TextStyle(fontSize: 14, fontFamily: "outfit-light")),
+                  hintText: "Type Your Story",
+                  border: InputBorder.none,
+                  hintStyle: TextStyle(
+                    fontSize: 14,
+                    fontFamily: "outfit-light",
+                  ),
+                ),
               ),
             ],
           ),

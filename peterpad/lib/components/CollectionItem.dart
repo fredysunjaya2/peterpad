@@ -5,22 +5,17 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:peterpad/constants.dart';
 
 class CollectionItem extends StatelessWidget {
+  int id;
   String name;
   int novelCount;
   String imagePath;
 
-  String? visibility;
-  String? owner;
-  String? desc;
-
   CollectionItem({
     super.key,
+    required this.id,
     required this.name,
     required this.novelCount,
     required this.imagePath,
-    this.visibility,
-    this.owner,
-    this.desc,
   });
 
   @override
@@ -33,7 +28,7 @@ class CollectionItem extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => CollectionPage(
-              id: 1,
+              id: id,
             ),
           ),
         );

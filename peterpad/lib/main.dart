@@ -6,11 +6,14 @@ import 'package:peterpad/pages/ExplorePage.dart';
 import 'package:peterpad/pages/CollectionPage.dart';
 import 'package:peterpad/pages/ExploreGenrePage.dart';
 import 'package:peterpad/pages/HomePage.dart';
+import 'package:peterpad/pages/IndexPage.dart';
 import 'package:peterpad/pages/LandingPage.dart';
 import 'package:peterpad/pages/LibraryPage.dart';
 import 'package:peterpad/pages/LoginPage.dart';
 import 'package:peterpad/pages/NotificationsPage.dart';
 import 'package:peterpad/pages/NovelPage.dart';
+import 'package:peterpad/pages/ProfilePage.dart';
+import 'package:peterpad/pages/ReadingPage.dart';
 import 'package:peterpad/pages/WritePage.dart';
 import 'package:peterpad/pages/WritingChapterPage.dart';
 import 'package:peterpad/test.dart';
@@ -38,10 +41,17 @@ class MyApp extends StatelessWidget {
       ),
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      // home: ExplorePage(),
-      home: NovelPage(
-        id: 1,
-      ), 
+      home: IndexPage(),
+      // home: CollectionPage(
+      //   id: 1,
+      // ),
+      // home: NovelPage(
+      //   id: 1,
+      // ),
+      // home: ProfilePage(
+      //   myId: 1,
+      //   userId: 2,
+      // ),
     );
   }
 }

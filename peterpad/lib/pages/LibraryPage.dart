@@ -43,8 +43,7 @@ class LibraryPageState extends State<LibraryPage> {
             return [
               // ------------------- ------------------- App Bar ------------------- -------------------
               SliverOverlapAbsorber(
-                handle:
-                    NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                 sliver: SliverSafeArea(
                   top: false,
                   sliver: SliverAppBar(
@@ -55,103 +54,111 @@ class LibraryPageState extends State<LibraryPage> {
                     floating: true,
                     snap: true,
                     primary: false,
-                    flexibleSpace: FlexibleSpaceBar(
-                      background: Container(
+                    flexibleSpace: Container(
+                      decoration: BoxDecoration(
                         color: background,
-                        padding: const EdgeInsets.fromLTRB(25, 40, 25, 20),
-                        child: ResponsiveRowColumn(
-                          layout: ResponsiveRowColumnType.ROW,
-                          rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ResponsiveRowColumnItem(
-                              child: TabBar(
-                                labelColor: Colors.black,
-                                unselectedLabelColor:
-                                    Colors.black.withOpacity(0.5),
-                                dividerColor: Colors.transparent,
-                                indicator: BoxDecoration(),
-                                isScrollable: true,
-                                physics: NeverScrollableScrollPhysics(),
-                                tabAlignment: TabAlignment.start,
-                                padding: EdgeInsets.zero,
-                                indicatorPadding: EdgeInsets.zero,
-                                labelPadding: EdgeInsets.zero,
-                                onTap: (index) {
-                                  setState(() {
-                                    currentIndex = index;
-                                  });
-                                },
-                                tabs: [
-                                  Tab(
-                                    child: Container(
-                                      padding: EdgeInsets.only(
-                                        right: 15,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        border: Border(
-                                          right: BorderSide(
-                                            color: Colors.black,
-                                            width: 1,
-                                            style: BorderStyle.solid,
-                                          ),
-                                        ),
-                                      ),
-                                      child: Text(
-                                        'History',
-                                        style: TextStyle(
-                                          fontFamily: 'outfit-semibold',
-                                          fontSize: 24,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Tab(
-                                    child: Container(
-                                      padding: EdgeInsets.only(
-                                        left: 15,
-                                      ),
-                                      child: Text(
-                                        'Collection',
-                                        style: TextStyle(
-                                          fontFamily: 'outfit-semibold',
-                                          fontSize: 24,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            ResponsiveRowColumnItem(
-                              child: ResponsiveRowColumn(
-                                layout: ResponsiveRowColumnType.ROW,
-                                rowMainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  ResponsiveRowColumnItem(
-                                    child: Visibility(
-                                      visible: currentIndex == 0 ? true : false,
-                                      child: GestureDetector(
-                                        onTap: () {},
-                                        child: SvgPicture.asset(
-                                            'assets/LibraryPage/clearall.svg'),
-                                      ),
-                                    ),
-                                  ),
-                                  ResponsiveRowColumnItem(
-                                    child: Visibility(
-                                      visible: currentIndex == 1 ? true : false,
-                                      child: GestureDetector(
-                                        onTap: () {},
-                                        child: SvgPicture.asset(
-                                            'assets/LibraryPage/add.svg'),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(30),
+                          bottomRight: Radius.circular(30),
                         ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: innerBoxIsScrolled ? Colors.black.withOpacity(0.2) : Colors.black.withOpacity(0),
+                            blurRadius: 10,
+                            spreadRadius: 0.5,
+                          )
+                        ],
+                      ),
+                      padding: const EdgeInsets.fromLTRB(25, 40, 25, 20),
+                      child: ResponsiveRowColumn(
+                        layout: ResponsiveRowColumnType.ROW,
+                        rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ResponsiveRowColumnItem(
+                            child: TabBar(
+                              labelColor: Colors.black,
+                              unselectedLabelColor: Colors.black.withOpacity(0.5),
+                              dividerColor: Colors.transparent,
+                              indicator: BoxDecoration(),
+                              isScrollable: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              tabAlignment: TabAlignment.start,
+                              padding: EdgeInsets.zero,
+                              indicatorPadding: EdgeInsets.zero,
+                              labelPadding: EdgeInsets.zero,
+                              onTap: (index) {
+                                setState(() {
+                                  currentIndex = index;
+                                });
+                              },
+                              tabs: [
+                                Tab(
+                                  child: Container(
+                                    padding: EdgeInsets.only(
+                                      right: 15,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      border: Border(
+                                        right: BorderSide(
+                                          color: Colors.black,
+                                          width: 1,
+                                          style: BorderStyle.solid,
+                                        ),
+                                      ),
+                                    ),
+                                    child: Text(
+                                      'History',
+                                      style: TextStyle(
+                                        fontFamily: 'outfit-semibold',
+                                        fontSize: 24,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Tab(
+                                  child: Container(
+                                    padding: EdgeInsets.only(
+                                      left: 15,
+                                    ),
+                                    child: Text(
+                                      'Collection',
+                                      style: TextStyle(
+                                        fontFamily: 'outfit-semibold',
+                                        fontSize: 24,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ResponsiveRowColumnItem(
+                            child: ResponsiveRowColumn(
+                              layout: ResponsiveRowColumnType.ROW,
+                              rowMainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                ResponsiveRowColumnItem(
+                                  child: Visibility(
+                                    visible: currentIndex == 0 ? true : false,
+                                    child: GestureDetector(
+                                      onTap: () {},
+                                      child: SvgPicture.asset('assets/LibraryPage/clearall.svg'),
+                                    ),
+                                  ),
+                                ),
+                                ResponsiveRowColumnItem(
+                                  child: Visibility(
+                                    visible: currentIndex == 1 ? true : false,
+                                    child: GestureDetector(
+                                      onTap: () {},
+                                      child: SvgPicture.asset('assets/LibraryPage/add.svg'),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -171,9 +178,7 @@ class LibraryPageState extends State<LibraryPage> {
                       scrollDirection: Axis.vertical,
                       slivers: [
                         SliverOverlapInjector(
-                          handle:
-                              NestedScrollView.sliverOverlapAbsorberHandleFor(
-                                  context),
+                          handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                         ),
                         // ------------------- ------------------- History Group By Date ------------------- -------------------
                         SliverList(
@@ -186,30 +191,24 @@ class LibraryPageState extends State<LibraryPage> {
                                     child: FutureBuilder(
                                       future: futureHistory,
                                       builder: (context, snapshot) {
-                                        List<Map<String, dynamic>>? histories =
-                                            snapshot.data;
+                                        List<Map<String, dynamic>>? histories = snapshot.data;
 
                                         if (histories != null) {
                                           return Padding(
-                                            padding: EdgeInsets.fromLTRB(
-                                                25, 10, 25, 40),
+                                            padding: EdgeInsets.fromLTRB(25, 10, 25, 40),
                                             child: Wrap(
                                               runSpacing: 25,
                                               children: histories.map((item) {
                                                 return ResponsiveRowColumn(
-                                                  layout:
-                                                      ResponsiveRowColumnType
-                                                          .COLUMN,
-                                                  columnCrossAxisAlignment:
-                                                      CrossAxisAlignment.start,
+                                                  layout: ResponsiveRowColumnType.COLUMN,
+                                                  columnCrossAxisAlignment: CrossAxisAlignment.start,
                                                   columnSpacing: 10,
                                                   children: [
                                                     ResponsiveRowColumnItem(
                                                       child: Text(
                                                         item['date'],
                                                         style: TextStyle(
-                                                          fontFamily:
-                                                              'outfit-regular',
+                                                          fontFamily: 'outfit-regular',
                                                           fontSize: 16,
                                                           color: Colors.black,
                                                         ),
@@ -218,48 +217,26 @@ class LibraryPageState extends State<LibraryPage> {
                                                     ResponsiveRowColumnItem(
                                                       // ------------------- ------------------- History Items ------------------- -------------------
                                                       child: FutureBuilder(
-                                                        future:
-                                                            futureHistoryItem,
-                                                        builder: (context,
-                                                            snapshot) {
-                                                          List<
-                                                                  Map<String,
-                                                                      dynamic>>
-                                                              historyItems =
-                                                              item[
-                                                                  "historyItems"];
+                                                        future: futureHistoryItem,
+                                                        builder: (context, snapshot) {
+                                                          List<Map<String, dynamic>> historyItems = item["historyItems"];
 
-                                                          if (historyItems !=
-                                                              null) {
+                                                          if (historyItems != null) {
                                                             return Wrap(
                                                                 runSpacing: 15,
-                                                                children:
-                                                                    historyItems
-                                                                        .map(
-                                                                            (itemDetail) {
+                                                                children: historyItems.map((itemDetail) {
                                                                   return HistoryItem(
-                                                                    title: itemDetail[
-                                                                        'title'],
-                                                                    currentChapter:
-                                                                        itemDetail[
-                                                                            'currentChapter'],
-                                                                    maxChapter:
-                                                                        itemDetail[
-                                                                            'maxChapter'],
-                                                                    time: itemDetail[
-                                                                        'time'],
-                                                                    progress:
-                                                                        itemDetail[
-                                                                            'progress'],
-                                                                    imagePath:
-                                                                        itemDetail[
-                                                                            'imagePath'],
+                                                                    title: itemDetail['title'],
+                                                                    currentChapter: itemDetail['currentChapter'],
+                                                                    maxChapter: itemDetail['maxChapter'],
+                                                                    time: itemDetail['time'],
+                                                                    progress: (itemDetail['progress']).toDouble(),
+                                                                    imagePath: itemDetail['imagePath'],
                                                                   );
                                                                 }).toList());
                                                           } else {
                                                             return const Center(
-                                                              child:
-                                                                  CircularProgressIndicator(),
+                                                              child: CircularProgressIndicator(),
                                                             );
                                                           }
                                                         },
@@ -297,9 +274,7 @@ class LibraryPageState extends State<LibraryPage> {
                       scrollDirection: Axis.vertical,
                       slivers: [
                         SliverOverlapInjector(
-                          handle:
-                              NestedScrollView.sliverOverlapAbsorberHandleFor(
-                                  context),
+                          handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                         ),
                         // ------------------- ------------------- Collection Catalogue ------------------- -------------------
                         SliverList(
@@ -307,17 +282,14 @@ class LibraryPageState extends State<LibraryPage> {
                             (context, index) {
                               return ResponsiveRowColumn(
                                 layout: ResponsiveRowColumnType.COLUMN,
-                                columnPadding:
-                                    EdgeInsets.fromLTRB(25, 10, 25, 40),
-                                columnCrossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                columnPadding: EdgeInsets.fromLTRB(25, 10, 25, 40),
+                                columnCrossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   ResponsiveRowColumnItem(
                                     child: FutureBuilder(
                                       future: futureCollection,
                                       builder: (context, snapshot) {
-                                        List<Map<String, dynamic>>?
-                                            collections = snapshot.data;
+                                        List<Map<String, dynamic>>? collections = snapshot.data;
 
                                         if (collections != null) {
                                           return Wrap(
@@ -326,16 +298,10 @@ class LibraryPageState extends State<LibraryPage> {
                                             children: collections.map(
                                               (item) {
                                                 return CollectionItem(
+                                                  id: item['id'],
                                                   name: item['details']['name'],
-                                                  novelCount: item['details']
-                                                      ['novelCount'],
-                                                  imagePath: item['details']
-                                                      ['imagePath'],
-                                                  visibility: item['details']
-                                                      ['visibility'],
-                                                  owner: item['details']
-                                                      ['owner'],
-                                                  desc: item['details']['desc'],
+                                                  novelCount: item['details']['novelCount'],
+                                                  imagePath: item['details']['imagePath'],
                                                 );
                                               },
                                             ).toList(),

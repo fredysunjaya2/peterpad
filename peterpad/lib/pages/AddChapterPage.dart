@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peterpad/pages/WritingChapterPage.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:peterpad/constants.dart';
 import 'package:peterpad/pages/WritePage.dart';
@@ -30,32 +31,27 @@ class _AddChapterPageState extends State<AddChapterPage> {
             color: background,
             padding: const EdgeInsets.fromLTRB(25, 40, 25, 20),
             child: ResponsiveRowColumn(
-                layout: ResponsiveRowColumnType.ROW,
-                rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ResponsiveRowColumnItem(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const WritePage()),
-                        );
-                      },
-                      child:
-                          const Icon(Icons.arrow_back_ios, color: Colors.black),
-                    ),
+              layout: ResponsiveRowColumnType.ROW,
+              rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ResponsiveRowColumnItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: const Icon(Icons.arrow_back_ios, color: Colors.black),
                   ),
-                  ResponsiveRowColumnItem(
-                    child: GestureDetector(
-                      onTap: () {
-                        // Add action
-                      },
-                      child: const Icon(Icons.more_vert, color: Colors.black),
-                    ),
-                  ),
-                ],
                 ),
+                ResponsiveRowColumnItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      // Add action
+                    },
+                    child: const Icon(Icons.more_vert, color: Colors.black),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -158,8 +154,7 @@ class _AddChapterPageState extends State<AddChapterPage> {
                             color: Colors.black.withOpacity(0.3),
                           ),
                         ),
-                        items: genresDropList
-                            .map<DropdownMenuItem<String>>((String genre) {
+                        items: genresDropList.map<DropdownMenuItem<String>>((String genre) {
                           return DropdownMenuItem<String>(
                             value: genre,
                             child: Text(genre),
@@ -197,8 +192,7 @@ class _AddChapterPageState extends State<AddChapterPage> {
                             color: Colors.black.withOpacity(0.3),
                           ),
                         ),
-                        items: languages
-                            .map<DropdownMenuItem<String>>((String language) {
+                        items: languages.map<DropdownMenuItem<String>>((String language) {
                           return DropdownMenuItem<String>(
                             value: language,
                             child: Text(language),
@@ -218,8 +212,7 @@ class _AddChapterPageState extends State<AddChapterPage> {
               children: [
                 const Text(
                   'Chapters',
-                  style: TextStyle(
-                      fontFamily: 'outfit-semibold', fontSize: 20, color: red),
+                  style: TextStyle(fontFamily: 'outfit-semibold', fontSize: 20, color: red),
                 ),
                 IconButton(
                   icon: const Icon(Icons.add),
@@ -242,43 +235,49 @@ class _AddChapterPageState extends State<AddChapterPage> {
                   itemCount: adds.length,
                   itemBuilder: (context, index) {
                     final add = adds[index]['details'];
-                    return Container(
-                      margin: const EdgeInsets.symmetric(vertical: 0),
-                      child: ListTile(
-                        contentPadding: EdgeInsets.zero,
-                        title: Text(
-                          'Chapter ${add['chapter']} : ${add['title']}',
-                          style: const TextStyle(
-                            fontFamily: 'outfit-regular',
-                            fontSize: 14,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => WritingChapterPage(),
                           ),
-                        ),
-                        subtitle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  add['date'],
-                                  style: TextStyle(
-                                    fontFamily: 'outfit-extra-light',
-                                    fontSize: 11,
-                                    color: Colors.black.withOpacity(0.5),
-                                  ),
-                                ),
-                                const SizedBox(width: 40),
-                                _buildIconText(
-                                    Icons.star, add['rating'].toString()),
-                              ],
+                        );
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(vertical: 0),
+                        child: ListTile(
+                          contentPadding: EdgeInsets.zero,
+                          title: Text(
+                            'Chapter ${add['chapter']} : ${add['title']}',
+                            style: const TextStyle(
+                              fontFamily: 'outfit-regular',
+                              fontSize: 14,
                             ),
-                          ],
-                        ),
-                        trailing: Icon(
-                          add['downloaded']
-                              ? Icons.cloud_done_outlined
-                              : Icons.cloud_download_outlined,
-                          color: add['downloaded'] ? green : green,
-                          size: 30.0,
+                          ),
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    add['date'],
+                                    style: TextStyle(
+                                      fontFamily: 'outfit-extra-light',
+                                      fontSize: 11,
+                                      color: Colors.black.withOpacity(0.5),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 40),
+                                  _buildIconText(Icons.star, add['rating'].toString()),
+                                ],
+                              ),
+                            ],
+                          ),
+                          trailing: Icon(
+                            add['downloaded'] ? Icons.cloud_done_outlined : Icons.cloud_download_outlined,
+                            color: add['downloaded'] ? green : green,
+                            size: 30.0,
+                          ),
                         ),
                       ),
                     );

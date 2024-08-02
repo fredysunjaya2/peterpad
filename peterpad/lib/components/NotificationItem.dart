@@ -42,8 +42,7 @@ class NotificationItem extends StatelessWidget {
                 context,
                 defaultValue: 200,
                 conditionalValues: [
-                  Condition.smallerThan(
-                      name: DESKTOP, value: screenWidth * 0.1),
+                  Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.1),
                   Condition.equals(name: DESKTOP, value: screenWidth * 0.15),
                 ],
               ).value,
@@ -116,8 +115,7 @@ class NotificationItem extends StatelessWidget {
                   context,
                   defaultValue: 200,
                   conditionalValues: [
-                    Condition.smallerThan(
-                        name: DESKTOP, value: screenWidth * 0.2),
+                    Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.2),
                     Condition.equals(name: DESKTOP, value: screenWidth * 0.2),
                   ],
                 ).value,

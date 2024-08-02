@@ -8,8 +8,9 @@ class CommentPostItem extends StatelessWidget {
   String name;
   String date;
   String comment;
-  int likeCount;
+  int? likeCount;
   int replyCount;
+  bool isComment;
 
   CommentPostItem({
     super.key,
@@ -17,8 +18,9 @@ class CommentPostItem extends StatelessWidget {
     required this.name,
     required this.date,
     required this.comment,
-    required this.likeCount,
+    this.likeCount,
     required this.replyCount,
+    required this.isComment,
   });
 
   @override
@@ -32,6 +34,7 @@ class CommentPostItem extends StatelessWidget {
       rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         ResponsiveRowColumnItem(
+          rowFit: FlexFit.tight,
           child: ResponsiveRowColumn(
             layout: ResponsiveRowColumnType.ROW,
             rowCrossAxisAlignment: CrossAxisAlignment.start,
@@ -47,16 +50,15 @@ class CommentPostItem extends StatelessWidget {
                       context,
                       defaultValue: 200,
                       conditionalValues: [
-                        Condition.smallerThan(
-                            name: DESKTOP, value: screenWidth * 0.1),
-                        Condition.equals(
-                            name: DESKTOP, value: screenWidth * 0.1),
+                        Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.1),
+                        Condition.equals(name: DESKTOP, value: screenWidth * 0.1),
                       ],
                     ).value,
                   ),
                 ),
               ),
               ResponsiveRowColumnItem(
+                rowFit: FlexFit.tight,
                 child: ResponsiveRowColumn(
                   layout: ResponsiveRowColumnType.COLUMN,
                   columnCrossAxisAlignment: CrossAxisAlignment.start,
@@ -98,6 +100,7 @@ class CommentPostItem extends StatelessWidget {
                           ResponsiveRowColumnItem(
                             child: Text(
                               comment,
+                              textAlign: TextAlign.justify,
                               style: TextStyle(
                                 fontFamily: 'outfit-regular',
                                 fontSize: 12,
@@ -122,14 +125,11 @@ class CommentPostItem extends StatelessWidget {
                                 layout: ResponsiveRowColumnType.ROW,
                                 children: [
                                   ResponsiveRowColumnItem(
-                                    child: SvgPicture.asset(
-                                        'assets/NovelPage/replyblock.svg'),
+                                    child: SvgPicture.asset('assets/NovelPage/replyblock.svg'),
                                   ),
                                   ResponsiveRowColumnItem(
                                     child: Text(
-                                      "View " +
-                                          replyCount.toString() +
-                                          " replies",
+                                      "View " + replyCount.toString() + " replies",
                                       style: TextStyle(
                                         fontFamily: 'outfit-light',
                                         fontSize: 10,
@@ -151,23 +151,29 @@ class CommentPostItem extends StatelessWidget {
           ),
         ),
         ResponsiveRowColumnItem(
-          child: ResponsiveRowColumn(
-            layout: ResponsiveRowColumnType.COLUMN,
-            children: [
-              ResponsiveRowColumnItem(
-                child: SvgPicture.asset('assets/NovelPage/like.svg'),
-              ),
-              ResponsiveRowColumnItem(
-                child: Text(
-                  likeCount.toString(),
-                  style: TextStyle(
-                    fontFamily: 'outfit-regular',
-                    fontSize: 10,
-                    color: green,
+          child: Visibility(
+            visible: isComment,
+            child: ResponsiveRowColumn(
+              layout: ResponsiveRowColumnType.COLUMN,
+              children: [
+                ResponsiveRowColumnItem(
+                  child: SvgPicture.asset('assets/NovelPage/like.svg'),
+                ),
+                ResponsiveRowColumnItem(
+                  child: Visibility(
+                    visible: isComment,
+                    child: Text(
+                      isComment ? likeCount!.toString() : "0",
+                      style: TextStyle(
+                        fontFamily: 'outfit-regular',
+                        fontSize: 10,
+                        color: green,
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],

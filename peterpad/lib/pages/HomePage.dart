@@ -88,13 +88,11 @@ class HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                NotificationsPage(),
+                            builder: (BuildContext context) => NotificationsPage(),
                           ),
                         );
                       },
-                      child:
-                          SvgPicture.asset('assets/HomePage/notification.svg'),
+                      child: SvgPicture.asset('assets/HomePage/notification.svg'),
                     ),
                   ),
                 ],
@@ -184,14 +182,10 @@ class HomePageState extends State<HomePage> {
                                     fit: BoxFit.cover,
                                     width: ResponsiveValue<double>(
                                       context,
-                                      defaultValue: 200,
+                                      defaultValue: 100,
                                       conditionalValues: [
-                                        Condition.smallerThan(
-                                            name: DESKTOP,
-                                            value: screenWidth * 0.35),
-                                        Condition.equals(
-                                            name: DESKTOP,
-                                            value: screenWidth * 0.3),
+                                        Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.35),
+                                        Condition.equals(name: DESKTOP, value: screenWidth * 0.3),
                                       ],
                                     ).value,
                                   ),
@@ -216,17 +210,12 @@ class HomePageState extends State<HomePage> {
                                     context,
                                     defaultValue: 200,
                                     conditionalValues: [
-                                      Condition.smallerThan(
-                                          name: DESKTOP,
-                                          value: screenWidth * 0.49),
-                                      Condition.equals(
-                                          name: DESKTOP,
-                                          value: screenWidth * 0.4),
+                                      Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.49),
+                                      Condition.equals(name: DESKTOP, value: screenWidth * 0.4),
                                     ],
                                   ).value,
                                   child: ResponsiveRowColumn(
-                                    columnCrossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    columnCrossAxisAlignment: CrossAxisAlignment.start,
                                     layout: ResponsiveRowColumnType.COLUMN,
                                     children: [
                                       ResponsiveRowColumnItem(
@@ -249,15 +238,13 @@ class HomePageState extends State<HomePage> {
                                           style: TextStyle(
                                             fontFamily: 'outfit-extra-light',
                                             fontSize: 12,
-                                            color:
-                                                Colors.black.withOpacity(0.5),
+                                            color: Colors.black.withOpacity(0.5),
                                           ),
                                         ),
                                       ),
                                       ResponsiveRowColumnItem(
                                         child: Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(0, 4, 0, 0),
+                                          padding: EdgeInsets.fromLTRB(0, 4, 0, 0),
                                           child: Text(
                                             'Chapter 10 / 100',
                                             overflow: TextOverflow.ellipsis,
@@ -278,12 +265,10 @@ class HomePageState extends State<HomePage> {
                                             ResponsiveRowColumnItem(
                                               child: Expanded(
                                                 child: FAProgressBar(
-                                                  animatedDuration:
-                                                      Duration.zero,
+                                                  animatedDuration: Duration.zero,
                                                   maxValue: 100,
                                                   currentValue: 75,
-                                                  borderRadius:
-                                                      BorderRadius.circular(20),
+                                                  borderRadius: BorderRadius.circular(20),
                                                   direction: Axis.horizontal,
                                                   size: 15,
                                                   progressColor: green,
@@ -315,18 +300,14 @@ class HomePageState extends State<HomePage> {
                                           alignment: Alignment.center,
                                           child: TextButton(
                                             onPressed: () {
-                                              Navigator.of(context)
-                                                  .pushReplacement(
+                                              Navigator.of(context).pushReplacement(
                                                 MaterialPageRoute(
-                                                  builder:
-                                                      (BuildContext context) =>
-                                                          const HomePage(),
+                                                  builder: (BuildContext context) => const HomePage(),
                                                 ),
                                               );
                                             },
                                             child: Padding(
-                                              padding: EdgeInsets.fromLTRB(
-                                                  40, 5, 40, 5),
+                                              padding: EdgeInsets.fromLTRB(40, 5, 40, 5),
                                               child: Text(
                                                 'Continue',
                                                 textAlign: TextAlign.center,
@@ -340,13 +321,9 @@ class HomePageState extends State<HomePage> {
                                             style: TextButton.styleFrom(
                                               minimumSize: Size.zero,
                                               padding: EdgeInsets.zero,
-                                              tapTargetSize:
-                                                  MaterialTapTargetSize
-                                                      .shrinkWrap,
-                                              shape:
-                                                  const RoundedRectangleBorder(
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(15)),
+                                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                              shape: const RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.all(Radius.circular(15)),
                                               ),
                                               backgroundColor: red,
                                             ),
@@ -393,9 +370,7 @@ class HomePageState extends State<HomePage> {
                                 conditionalValues: [
                                   Condition.equals(name: 'Mobile', value: 258),
                                   Condition.equals(name: 'TABLET', value: 450),
-                                  Condition.equals(
-                                      name: 'DESKTOP',
-                                      value: screenHeight * 0.75),
+                                  Condition.equals(name: 'DESKTOP', value: screenHeight * 0.75),
                                 ],
                               ).value,
                               child: OverflowBox(
@@ -409,16 +384,15 @@ class HomePageState extends State<HomePage> {
                                   child: FutureBuilder(
                                     future: futureRecommended,
                                     builder: (context, snapshot) {
-                                      List<Map<String, dynamic>>?
-                                          recommendations = snapshot.data;
+                                      List<Map<String, dynamic>>? recommendations = snapshot.data;
 
                                       if (recommendations != null) {
                                         return Wrap(
                                             spacing: 20,
                                             direction: Axis.horizontal,
-                                            children:
-                                                recommendations.map((item) {
+                                            children: recommendations.map((item) {
                                               return CatalogueItem(
+                                                id: item['id'],
                                                 title: item['title'],
                                                 author: item['author'],
                                                 rating: item['rating'],
@@ -469,9 +443,7 @@ class HomePageState extends State<HomePage> {
                               conditionalValues: [
                                 Condition.equals(name: 'MOBILE', value: 390),
                                 Condition.equals(name: 'TABLET', value: 900),
-                                Condition.equals(
-                                    name: 'DESKTOP',
-                                    value: screenHeight * 0.75),
+                                Condition.equals(name: 'DESKTOP', value: screenHeight * 0.75),
                               ],
                             ).value,
                             child: OverflowBox(
@@ -485,8 +457,7 @@ class HomePageState extends State<HomePage> {
                                 child: FutureBuilder(
                                   future: futureTrending,
                                   builder: (context, snapshot) {
-                                    List<Map<String, dynamic>>? trendings =
-                                        snapshot.data;
+                                    List<Map<String, dynamic>>? trendings = snapshot.data;
 
                                     if (trendings != null) {
                                       return Wrap(
@@ -497,37 +468,24 @@ class HomePageState extends State<HomePage> {
                                             return Container(
                                               width: ResponsiveValue<double>(
                                                 context,
+                                                defaultValue: 300,
                                                 conditionalValues: [
-                                                  Condition.equals(
-                                                      name: 'MOBILE',
-                                                      value:
-                                                          screenWidth * 0.75),
-                                                  Condition.equals(
-                                                      name: 'TABLET',
-                                                      value: screenWidth * 0.8),
-                                                  Condition.equals(
-                                                      name: 'DESKTOP',
-                                                      value: screenWidth * 0.7),
+                                                  Condition.equals(name: 'MOBILE', value: screenWidth * 0.75),
+                                                  Condition.equals(name: 'TABLET', value: screenWidth * 0.8),
+                                                  Condition.equals(name: 'DESKTOP', value: screenWidth * 0.7),
                                                 ],
                                               ).value,
                                               height: ResponsiveValue<double>(
                                                 context,
+                                                defaultValue: 123,
                                                 conditionalValues: [
-                                                  Condition.equals(
-                                                      name: 'MOBILE',
-                                                      value: 123),
-                                                  Condition.equals(
-                                                      name: 'TABLET',
-                                                      value: 293),
-                                                  Condition.equals(
-                                                      name: 'DESKTOP',
-                                                      value: ((screenHeight *
-                                                                  0.7) /
-                                                              3) -
-                                                          30),
+                                                  Condition.equals(name: 'MOBILE', value: 123.0),
+                                                  Condition.equals(name: 'TABLET', value: 293.0),
+                                                  Condition.equals(name: 'DESKTOP', value: ((screenHeight * 0.7) / 3.0) - 30.0),
                                                 ],
                                               ).value,
                                               child: TrendingItem(
+                                                id: item['id'],
                                                 title: item['title'],
                                                 author: item['author'],
                                                 rating: item['rating'],

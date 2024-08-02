@@ -1,5 +1,4 @@
 import 'dart:ui';
-// import 'dart:ui_web';
 
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
@@ -21,12 +20,12 @@ class NovelPage extends StatefulWidget {
   State<NovelPage> createState() => NovelPageState();
 }
 
-class NovelPageState extends State<NovelPage>
-    with SingleTickerProviderStateMixin {
+class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixin {
   late Future<List<Map<String, dynamic>>?> futureNovelChapters;
   late Future<List<Map<String, dynamic>>?> futureNovelComments;
   late Map<String, dynamic> novelDetail;
   late TabController _tabController;
+  int tabIndex = 0;
 
   late ScrollController _scrollController;
   // variable height passed to SliverAppBar expanded height
@@ -36,8 +35,6 @@ class NovelPageState extends State<NovelPage>
   // of the SliverAppBar
   final double _moreHeight = 450;
 
-  double asd = 0;
-
   @override
   void initState() {
     super.initState();
@@ -45,7 +42,7 @@ class NovelPageState extends State<NovelPage>
     futureNovelChapters = Future.value(chapters);
     futureNovelComments = Future.value(comments);
 
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = new TabController(length: 3, vsync: this);
 
     // initialize and add scroll listener
     _scrollController = ScrollController();
@@ -76,13 +73,11 @@ class NovelPageState extends State<NovelPage>
       // if offset is more height, disable expanded height
       setState(() {
         _expandedHeight = null;
-        asd = 0;
       });
     } else {
       // if offset is less, keep increasing the height to offset 0
       setState(() {
         _expandedHeight = _moreHeight - offset;
-        asd = offset;
       });
     }
   }
@@ -105,8 +100,8 @@ class NovelPageState extends State<NovelPage>
               expandedHeight: _expandedHeight,
               elevation: 0,
               titleSpacing: 0,
-              floating: true,
-              snap: true,
+              floating: _expandedHeight == null ? true : false,
+              snap: _expandedHeight == null ? true : false,
               primary: false,
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
@@ -131,9 +126,7 @@ class NovelPageState extends State<NovelPage>
                   alignment: Alignment.topCenter,
                   children: [
                     AnimatedOpacity(
-                      opacity: _expandedHeight != null
-                          ? _expandedHeight! / _moreHeight
-                          : 0,
+                      opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
                       duration: const Duration(milliseconds: 300),
                       child: ResponsiveRowColumn(
                         layout: ResponsiveRowColumnType.COLUMN,
@@ -159,9 +152,7 @@ class NovelPageState extends State<NovelPage>
                                       novelDetail["imagePath"],
                                       fit: BoxFit.cover,
                                       width: double.infinity,
-                                      height: _expandedHeight != null
-                                          ? _expandedHeight! * 0.65
-                                          : 0,
+                                      height: _expandedHeight != null ? _expandedHeight! * 0.65 : 0,
                                     ),
                                   ),
                                 ),
@@ -174,9 +165,7 @@ class NovelPageState extends State<NovelPage>
                     Positioned(
                       top: _expandedHeight != null ? _expandedHeight! * 0.3 : 0,
                       child: AnimatedOpacity(
-                        opacity: _expandedHeight != null
-                            ? _expandedHeight! / _moreHeight
-                            : 0,
+                        opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
                         duration: const Duration(milliseconds: 300),
                         child: ResponsiveRowColumn(
                           layout: ResponsiveRowColumnType.COLUMN,
@@ -233,8 +222,7 @@ class NovelPageState extends State<NovelPage>
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            NumberFormat.compact()
-                                                .format(novelDetail["views"]),
+                                            NumberFormat.compact().format(novelDetail["views"]),
                                             style: TextStyle(
                                               fontFamily: 'outfit-light',
                                               fontSize: 12,
@@ -303,8 +291,7 @@ class NovelPageState extends State<NovelPage>
                                         ),
                                         ResponsiveRowColumnItem(
                                           child: Text(
-                                            NumberFormat.compact().format(
-                                                novelDetail["comments"]),
+                                            NumberFormat.compact().format(novelDetail["comments"]),
                                             style: TextStyle(
                                               fontFamily: 'outfit-light',
                                               fontSize: 12,
@@ -374,7 +361,11 @@ class NovelPageState extends State<NovelPage>
                       children: [
                         ResponsiveRowColumnItem(
                           child: TabBar(
-                            onTap: (value) {},
+                            onTap: (value) {
+                              setState(() {
+                                tabIndex = _tabController.index;
+                              });
+                            },
                             controller: _tabController,
                             labelColor: red,
                             unselectedLabelColor: Colors.black.withOpacity(0.5),
@@ -445,15 +436,12 @@ class NovelPageState extends State<NovelPage>
                                   child: FutureBuilder(
                                     future: futureNovelChapters,
                                     builder: (context, AsyncSnapshot snapshot) {
-                                      List<Map<String, dynamic>>? chapters =
-                                          snapshot.data;
-                                      ;
+                                      List<Map<String, dynamic>>? chapters = snapshot.data;
 
                                       if (chapters != null) {
                                         chapters = chapters!.firstWhere(
                                           (element) {
-                                            return element['novelId'] ==
-                                                widget.id;
+                                            return element['novelId'] == widget.id;
                                           },
                                         )["chapters"];
                                         return Wrap(
@@ -489,51 +477,35 @@ class NovelPageState extends State<NovelPage>
                                               child: Expanded(
                                                 child: TextField(
                                                   decoration: InputDecoration(
-                                                    floatingLabelBehavior:
-                                                        FloatingLabelBehavior
-                                                            .never,
+                                                    floatingLabelBehavior: FloatingLabelBehavior.never,
                                                     label: Row(
                                                       children: [
                                                         Text(
                                                           'Type Comment',
                                                           style: TextStyle(
-                                                            color: Colors.black
-                                                                .withOpacity(
-                                                                    0.3),
-                                                            fontFamily:
-                                                                'outfit-light',
+                                                            color: Colors.black.withOpacity(0.3),
+                                                            fontFamily: 'outfit-light',
                                                             fontSize: 14,
                                                           ),
                                                         ),
                                                       ],
                                                     ),
-                                                    enabledBorder:
-                                                        OutlineInputBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              30),
-                                                      borderSide:
-                                                          const BorderSide(
+                                                    enabledBorder: OutlineInputBorder(
+                                                      borderRadius: BorderRadius.circular(30),
+                                                      borderSide: const BorderSide(
                                                         color: red,
                                                         width: 2,
                                                       ),
                                                     ),
-                                                    focusedBorder:
-                                                        OutlineInputBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              30),
-                                                      borderSide:
-                                                          const BorderSide(
+                                                    focusedBorder: OutlineInputBorder(
+                                                      borderRadius: BorderRadius.circular(30),
+                                                      borderSide: const BorderSide(
                                                         color: red,
                                                         width: 2,
                                                       ),
                                                     ),
-                                                    contentPadding:
-                                                        EdgeInsets.fromLTRB(
-                                                            15, 0, 10, 0),
-                                                    constraints:
-                                                        const BoxConstraints(
+                                                    contentPadding: EdgeInsets.fromLTRB(15, 0, 10, 0),
+                                                    constraints: const BoxConstraints(
                                                       maxHeight: 40,
                                                     ),
                                                   ),
@@ -544,8 +516,7 @@ class NovelPageState extends State<NovelPage>
                                               child: Container(
                                                 padding: EdgeInsets.all(6),
                                                 decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.circular(40),
+                                                  borderRadius: BorderRadius.circular(40),
                                                   border: Border.all(
                                                     color: red,
                                                     width: 2,
@@ -562,17 +533,13 @@ class NovelPageState extends State<NovelPage>
                                       ResponsiveRowColumnItem(
                                         child: FutureBuilder(
                                           future: futureNovelComments,
-                                          builder: (context,
-                                              AsyncSnapshot snapshot) {
-                                            List<Map<String, dynamic>>?
-                                                comments = snapshot.data;
-                                            ;
+                                          builder: (context, AsyncSnapshot snapshot) {
+                                            List<Map<String, dynamic>>? comments = snapshot.data;
 
                                             if (comments != null) {
                                               comments = comments!.firstWhere(
                                                 (element) {
-                                                  return element['novelId'] ==
-                                                      widget.id;
+                                                  return element['novelId'] == widget.id;
                                                 },
                                               )["comments"];
                                               return Wrap(
@@ -580,15 +547,13 @@ class NovelPageState extends State<NovelPage>
                                                 children: comments!.map(
                                                   (item) {
                                                     return CommentPostItem(
-                                                      profilePic:
-                                                          item["profilePic"],
+                                                      profilePic: item["profilePic"],
                                                       name: item["name"],
                                                       date: item["date"],
                                                       comment: item["comment"],
-                                                      likeCount:
-                                                          item["likeCount"],
-                                                      replyCount:
-                                                          item["replyCount"],
+                                                      likeCount: item["likeCount"],
+                                                      replyCount: item["replyCount"],
+                                                      isComment: true,
                                                     );
                                                   },
                                                 ).toList(),

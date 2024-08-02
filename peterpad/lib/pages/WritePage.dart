@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:peterpad/pages/AddChapterPage.dart';
 import 'package:peterpad/pages/EditChapterPage.dart';
+import 'package:peterpad/pages/WritingChapterPage.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:peterpad/constants.dart';
 
@@ -19,54 +21,96 @@ class WritePageState extends State<WritePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: background,
-      appBar: AppBar(
-        backgroundColor: background,
-        automaticallyImplyLeading: false,
-        toolbarHeight: 100,
-        elevation: 0,
-        titleSpacing: 0,
-        flexibleSpace: FlexibleSpaceBar(
-          background: Container(
-            color: background,
-            padding: const EdgeInsets.fromLTRB(25, 40, 25, 20),
-            child: ResponsiveRowColumn(
-              layout: ResponsiveRowColumnType.ROW,
-              rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const ResponsiveRowColumnItem(
-                  child: Text(
-                    'Write',
-                    style: TextStyle(
-                      fontFamily: 'outfit-semibold',
-                      fontSize: 24,
-                      color: Colors.black,
+      body: NestedScrollView(
+        floatHeaderSlivers: true,
+        headerSliverBuilder: (context, innerBoxIsScrolled) {
+          return [
+            SliverOverlapAbsorber(
+              handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+              sliver: SliverSafeArea(
+                top: false,
+                sliver: SliverAppBar(
+                  backgroundColor: background,
+                  elevation: 0,
+                  toolbarHeight: 100,
+                  titleSpacing: 0,
+                  floating: true,
+                  snap: true,
+                  primary: false,
+                  flexibleSpace: Container(
+                    decoration: BoxDecoration(
+                      color: background,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(30),
+                        bottomRight: Radius.circular(30),
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: innerBoxIsScrolled ? Colors.black.withOpacity(0.2) : Colors.black.withOpacity(0),
+                          blurRadius: 10,
+                          spreadRadius: 0.5,
+                        )
+                      ],
+                    ),
+                    padding: const EdgeInsets.fromLTRB(25, 40, 25, 20),
+                    child: ResponsiveRowColumn(
+                      layout: ResponsiveRowColumnType.ROW,
+                      rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ResponsiveRowColumnItem(
+                          child: Text(
+                            "Write",
+                            style: TextStyle(
+                              fontFamily: 'outfit-semibold',
+                              fontSize: 24,
+                            ),
+                          ),
+                        ),
+                        ResponsiveRowColumnItem(
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => AddChapterPage(),
+                                ),
+                              );
+                            },
+                            child: SvgPicture.asset('assets/LibraryPage/add.svg'),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                ResponsiveRowColumnItem(
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const AddChapterPage()),
-                      );
-                    },
-                    child: const Icon(Icons.add, color: Colors.black),
-                  ),
-                ),
-              ],
+              ),
             ),
+          ];
+        },
+        body: SafeArea(
+          top: false,
+          bottom: false,
+          child: Builder(
+            builder: (context) {
+              return CustomScrollView(
+                scrollDirection: Axis.vertical,
+                slivers: [
+                  SliverOverlapInjector(
+                    handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                  ),
+                  // ------------------- ------------------- Notification Group By Date ------------------- -------------------
+                  SliverList(
+                    delegate: SliverChildBuilderDelegate((context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0), // Use the length of the novelDetails list
+                        child: _buildCard(context, writes[index]['details']),
+                      );
+                    }, childCount: writes.length),
+                  ),
+                ],
+              );
+            },
           ),
         ),
-      ),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(8.0),
-        itemCount: writes.length, // Use the length of the novelDetails list
-        itemBuilder: (context, index) {
-          final novel = writes[index]['details'];
-          return _buildCard(context, novel);
-        },
       ),
     );
   }
@@ -118,11 +162,9 @@ class WritePageState extends State<WritePage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        _buildIconText(
-                            Icons.visibility, novel['views'].toString()),
-                        _buildIconText(Icons.star, novel['rating'].toString()),
-                        _buildIconText(
-                            Icons.comment, novel['comments'].toString()),
+                        _buildIconText("assets/NovelPage/views.svg", novel['views'].toString()),
+                        _buildIconText("assets/WritePage/rating.svg", novel['rating'].toString()),
+                        _buildIconText("assets/NovelPage/comments.svg", novel['comments'].toString()),
                       ],
                     ),
                   ],
@@ -131,12 +173,11 @@ class WritePageState extends State<WritePage> {
               GestureDetector(
                 onTap: () {
                   Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const EditChapterPage()),
-                      );
+                    context,
+                    MaterialPageRoute(builder: (context) => const EditChapterPage()),
+                  );
                 },
-                child: const Icon(Icons.edit, color: Colors.black),
+                child: SvgPicture.asset('assets/WritePage/edit.svg'),
               ),
             ],
           ),
@@ -146,16 +187,16 @@ class WritePageState extends State<WritePage> {
     );
   }
 
-  Widget _buildIconText(IconData icon, String text) {
+  Widget _buildIconText(String imagePath, String text) {
     return Row(
       children: [
-        Icon(icon, size: 20.0, color: green),
+        SvgPicture.asset(imagePath),
         const SizedBox(width: 4.0),
         Text(
           text,
           style: const TextStyle(
             fontFamily: 'outfit-light',
-            fontSize: 10,
+            fontSize: 12,
           ),
         ),
       ],

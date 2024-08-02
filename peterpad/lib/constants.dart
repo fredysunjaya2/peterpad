@@ -8,39 +8,50 @@ const Color background = Color(0xffF1FAEE);
 
 List<Map<String, dynamic>> recommendedCatalogue = [
   {
+    "id": 1,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
+    "userId": 1,
   },
   {
+    "id": 2,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula 2",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
+    "userId": 1,
   },
   {
+    "id": 3,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula 3",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
+    "userId": 1,
   },
   {
+    "id": 4,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
+    "userId": 2,
   },
   {
+    "id": 5,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
+    "userId": 2,
   },
 ];
 
 List<Map<String, dynamic>> trendingCatalogue = [
   {
+    "id": 1,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
@@ -48,6 +59,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
     "rating": 4.5,
   },
   {
+    "id": 2,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula 2",
     "author": "Toshikazu Kawaguchi",
@@ -55,6 +67,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
     "rating": 4.5,
   },
   {
+    "id": 3,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula 3",
     "author": "Toshikazu Kawaguchi",
@@ -62,6 +75,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
     "rating": 4.5,
   },
   {
+    "id": 4,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
@@ -69,6 +83,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
     "rating": 4.5,
   },
   {
+    "id": 5,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
@@ -76,6 +91,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
     "rating": 4.5,
   },
   {
+    "id": 6,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
@@ -83,6 +99,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
     "rating": 4.5,
   },
   {
+    "id": 7,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula 2",
     "author": "Toshikazu Kawaguchi",
@@ -90,6 +107,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
     "rating": 4.5,
   },
   {
+    "id": 8,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula 3",
     "author": "Toshikazu Kawaguchi",
@@ -97,6 +115,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
     "rating": 4.5,
   },
   {
+    "id": 9,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
@@ -114,8 +133,7 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc":
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": false,
       },
       {
@@ -123,8 +141,7 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc":
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": false,
       },
       {
@@ -132,8 +149,7 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc":
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": false,
       },
     ],
@@ -146,8 +162,7 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc":
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
       {
@@ -155,8 +170,7 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc":
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
       {
@@ -164,8 +178,7 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc":
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
     ],
@@ -178,8 +191,7 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc":
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
       {
@@ -187,8 +199,7 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc":
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
       {
@@ -196,8 +207,7 @@ List<Map<String, dynamic>> notifications = [
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
-        "desc":
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "isPost": true,
       },
     ],
@@ -206,60 +216,70 @@ List<Map<String, dynamic>> notifications = [
 
 List<Map<String, dynamic>> exploreCatalogue = [
   {
+    "id": 1,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
+    "id": 2,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula 2",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
+    "id": 3,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula 3",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
+    "id": 4,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
+    "id": 5,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
+    "id": 6,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
+    "id": 7,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula 2",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
+    "id": 8,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula 3",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
+    "id": 9,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
+    "id": 10,
     "imagePath": "assets/HomePage/image1.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
@@ -404,8 +424,7 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad',
-      'desc':
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -416,8 +435,7 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad 2',
-      'desc':
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -428,8 +446,7 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad 3',
-      'desc':
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -440,8 +457,7 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad',
-      'desc':
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -452,8 +468,7 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad 2',
-      'desc':
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -464,8 +479,7 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad 3',
-      'desc':
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
   {
@@ -476,8 +490,7 @@ List<Map<String, dynamic>> collections = [
       'imagePath': 'assets/LibraryPage/image1.png',
       'visibility': 'Public',
       'owner': 'Peterpad',
-      'desc':
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+      'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
     },
   },
 ];
@@ -506,6 +519,118 @@ List<Map<String, dynamic>> novelDetails = [
       "rating": 5.0,
       "chapters": 20,
       "comments": 5000,
+      "synopsis":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+      "imagePath": "assets/HomePage/image1.png",
+    },
+  },
+  {
+    "id": 3,
+    "details": {
+      "title": "Funiculi Funicula 3",
+      "author": "Toshikazu Kawaguchi",
+      "views": 300000,
+      "rating": 4.5,
+      "chapters": 30,
+      "comments": 3300,
+      "synopsis":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+      "imagePath": "assets/HomePage/image1.png",
+    },
+  },
+  {
+    "id": 4,
+    "details": {
+      "title": "Funiculi Funicula 4",
+      "author": "Toshikazu Kawaguchi",
+      "views": 300000,
+      "rating": 4.5,
+      "chapters": 30,
+      "comments": 3300,
+      "synopsis":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+      "imagePath": "assets/HomePage/image1.png",
+    },
+  },
+  {
+    "id": 5,
+    "details": {
+      "title": "Funiculi Funicula 5",
+      "author": "Toshikazu Kawaguchi",
+      "views": 300000,
+      "rating": 4.5,
+      "chapters": 30,
+      "comments": 3300,
+      "synopsis":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+      "imagePath": "assets/HomePage/image1.png",
+    },
+  },
+  {
+    "id": 6,
+    "details": {
+      "title": "Funiculi Funicula 6",
+      "author": "Toshikazu Kawaguchi",
+      "views": 300000,
+      "rating": 4.5,
+      "chapters": 30,
+      "comments": 3300,
+      "synopsis":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+      "imagePath": "assets/HomePage/image1.png",
+    },
+  },
+  {
+    "id": 7,
+    "details": {
+      "title": "Funiculi Funicula 7",
+      "author": "Toshikazu Kawaguchi",
+      "views": 300000,
+      "rating": 4.5,
+      "chapters": 30,
+      "comments": 3300,
+      "synopsis":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+      "imagePath": "assets/HomePage/image1.png",
+    },
+  },
+  {
+    "id": 8,
+    "details": {
+      "title": "Funiculi Funicula 8",
+      "author": "Toshikazu Kawaguchi",
+      "views": 300000,
+      "rating": 4.5,
+      "chapters": 30,
+      "comments": 3300,
+      "synopsis":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+      "imagePath": "assets/HomePage/image1.png",
+    },
+  },
+  {
+    "id": 9,
+    "details": {
+      "title": "Funiculi Funicula 9",
+      "author": "Toshikazu Kawaguchi",
+      "views": 300000,
+      "rating": 4.5,
+      "chapters": 30,
+      "comments": 3300,
+      "synopsis":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+      "imagePath": "assets/HomePage/image1.png",
+    },
+  },
+  {
+    "id": 10,
+    "details": {
+      "title": "Funiculi Funicula 10",
+      "author": "Toshikazu Kawaguchi",
+      "views": 300000,
+      "rating": 4.5,
+      "chapters": 30,
+      "comments": 3300,
       "synopsis":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
       "imagePath": "assets/HomePage/image1.png",
@@ -824,6 +949,406 @@ List<Map<String, dynamic>> chapters = [
       },
     ],
   },
+  {
+    "novelId": 3,
+    "chapters": [
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+    ],
+  },
+  {
+    "novelId": 4,
+    "chapters": [
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+    ],
+  },
+  {
+    "novelId": 5,
+    "chapters": [
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+    ],
+  },
+  {
+    "novelId": 6,
+    "chapters": [
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+    ],
+  },
+  {
+    "novelId": 7,
+    "chapters": [
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+    ],
+  },
+  {
+    "novelId": 8,
+    "chapters": [
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+    ],
+  },
+  {
+    "novelId": 9,
+    "chapters": [
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+    ],
+  },
+  {
+    "novelId": 10,
+    "chapters": [
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 5: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 1: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 2: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 3: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+      {
+        "name": "Chapter 4: Lorem Ipsum Dolor",
+        "date": "18 Aug 2024",
+        "rating": 4.5,
+      },
+    ],
+  },
 ];
 
 List<Map<String, dynamic>> comments = [
@@ -834,7 +1359,8 @@ List<Map<String, dynamic>> comments = [
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
         "date": "3d ago",
-        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "comment":
+            "Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
         "likeCount": 100,
       },
@@ -1193,44 +1719,174 @@ List<Map<String, dynamic>> comments = [
     ],
   },
   {
-    "id": 2,
-    "details": {
-      "title": "Funiculi Funicula 2",
-      "chapter": 2,
-      "date": "24 Aug 2024",
-      "rating": 4.2,
-      "downloaded": true,
-    },
+    "novelId": 2,
+    "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+    ],
   },
   {
-    "id": 3,
-    "details": {
-      "title": "Funiculi Funicula 3",
-      "chapter": 3,
-      "date": "25 Aug 2024",
-      "rating": 4.6,
-      "downloaded": false,
-    },
-  },
-  {
-    "id": 4,
-    "details": {
-      "title": "Funiculi Funicula 4",
-      "chapter": 4,
-      "date": "26 Aug 2024",
-      "rating": 4.6,
-      "downloaded": true,
-    },
-  },
-  {
-    "id": 5,
-    "details": {
-      "title": "Funiculi Funicula 5",
-      "chapter": 5,
-      "date": "28 Aug 2024",
-      "rating": 4.9,
-      "downloaded": false,
-    },
+    "novelId": 3,
+    "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+    ],
   },
 ];
 
@@ -1272,21 +1928,118 @@ List<Map<String, dynamic>> writes = [
       "imagePath": "assets/WritePage/image.png",
     },
   },
+  {
+    "id": 3,
+    "details": {
+      "title": "Funiculi Funicula 2",
+      "chapterPublished": 3,
+      "totalChapters": 5,
+      "date": "23 Sept 2024",
+      "views": "400K",
+      "rating": 4.2,
+      "comments": "3.5K",
+      "imagePath": "assets/WritePage/image.png",
+    },
+  },
+  {
+    "id": 4,
+    "details": {
+      "title": "Funiculi Funicula 2",
+      "chapterPublished": 3,
+      "totalChapters": 5,
+      "date": "23 Sept 2024",
+      "views": "400K",
+      "rating": 4.2,
+      "comments": "3.5K",
+      "imagePath": "assets/WritePage/image.png",
+    },
+  },
+  {
+    "id": 5,
+    "details": {
+      "title": "Funiculi Funicula 2",
+      "chapterPublished": 3,
+      "totalChapters": 5,
+      "date": "23 Sept 2024",
+      "views": "400K",
+      "rating": 4.2,
+      "comments": "3.5K",
+      "imagePath": "assets/WritePage/image.png",
+    },
+  },
+  {
+    "id": 6,
+    "details": {
+      "title": "Funiculi Funicula 2",
+      "chapterPublished": 3,
+      "totalChapters": 5,
+      "date": "23 Sept 2024",
+      "views": "400K",
+      "rating": 4.2,
+      "comments": "3.5K",
+      "imagePath": "assets/WritePage/image.png",
+    },
+  },
+  {
+    "id": 7,
+    "details": {
+      "title": "Funiculi Funicula 2",
+      "chapterPublished": 3,
+      "totalChapters": 5,
+      "date": "23 Sept 2024",
+      "views": "400K",
+      "rating": 4.2,
+      "comments": "3.5K",
+      "imagePath": "assets/WritePage/image.png",
+    },
+  },
+  {
+    "id": 8,
+    "details": {
+      "title": "Funiculi Funicula 2",
+      "chapterPublished": 3,
+      "totalChapters": 5,
+      "date": "23 Sept 2024",
+      "views": "400K",
+      "rating": 4.2,
+      "comments": "3.5K",
+      "imagePath": "assets/WritePage/image.png",
+    },
+  },
+  {
+    "id": 9,
+    "details": {
+      "title": "Funiculi Funicula 2",
+      "chapterPublished": 3,
+      "totalChapters": 5,
+      "date": "23 Sept 2024",
+      "views": "400K",
+      "rating": 4.2,
+      "comments": "3.5K",
+      "imagePath": "assets/WritePage/image.png",
+    },
+  },
+  {
+    "id": 10,
+    "details": {
+      "title": "Funiculi Funicula 2",
+      "chapterPublished": 3,
+      "totalChapters": 5,
+      "date": "23 Sept 2024",
+      "views": "400K",
+      "rating": 4.2,
+      "comments": "3.5K",
+      "imagePath": "assets/WritePage/image.png",
+    },
+  },
 ];
 
-List<String> genresDropList = [
-  'Action',
-  'Adventure',
-  'Comedy',
-  'Drama',
-  'Fantasy',
-  'Horror'
-];
+List<String> genresDropList = ['Action', 'Adventure', 'Comedy', 'Drama', 'Fantasy', 'Horror'];
 
 List<String> languages = [
   'Indonesian',
   'English',
-  'Japanese'
+  'Japanese',
 ];
 
 List<Map<String, dynamic>> adds = [
@@ -1339,5 +2092,206 @@ List<Map<String, dynamic>> adds = [
       "rating": 4.9,
       "downloaded": false,
     },
+  },
+];
+
+List<Map<String, dynamic>> users = [
+  {
+    "userId": 1,
+    "imagePath": "assets/LibraryPage/image1.png",
+    "profilePic": "assets/NovelPage/profilepic.png",
+    "name": "Peterpad",
+    "followerCount": 30,
+    "followingCount": 10,
+    "worksCount": 10,
+    "collectionsCount": 5,
+    "about":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+  },
+  {
+    "userId": 2,
+    "imagePath": "assets/LibraryPage/image1.png",
+    "profilePic": "assets/NovelPage/profilepic.png",
+    "name": "Lofi Girl",
+    "followerCount": 30,
+    "followingCount": 10,
+    "worksCount": 10,
+    "collectionsCount": 5,
+    "about":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+  },
+  {
+    "userId": 3,
+    "imagePath": "assets/LibraryPage/image1.png",
+    "profilePic": "assets/NovelPage/profilepic.png",
+    "name": "Lofi Girl",
+    "followerCount": 30,
+    "followingCount": 10,
+    "worksCount": 10,
+    "collectionsCount": 5,
+    "about":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+  },
+];
+
+List<Map<String, dynamic>> posts = [
+  {
+    "userId": 1,
+    "posts": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 6,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 6,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+    ],
+  },
+  {
+    "userId": 2,
+    "posts": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 6,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 6,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+    ],
+  },
+  {
+    "userId": 3,
+    "posts": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 6,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 6,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "date": "3d ago",
+        "comment":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
+        "replyCount": 0,
+      },
+    ],
   },
 ];

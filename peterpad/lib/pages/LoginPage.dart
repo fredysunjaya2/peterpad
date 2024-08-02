@@ -79,8 +79,7 @@ class LoginPageState extends State<LoginPage> {
                             ResponsiveRowColumnItem(
                               child: ResponsiveRowColumn(
                                 layout: ResponsiveRowColumnType.COLUMN,
-                                columnCrossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                columnCrossAxisAlignment: CrossAxisAlignment.start,
                                 columnSpacing: 5,
                                 children: [
                                   ResponsiveRowColumnItem(
@@ -103,23 +102,20 @@ class LoginPageState extends State<LoginPage> {
                                       ),
                                       decoration: InputDecoration(
                                         enabledBorder: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
+                                          borderRadius: BorderRadius.circular(10),
                                           borderSide: const BorderSide(
                                             color: red,
                                             width: 2,
                                           ),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
+                                          borderRadius: BorderRadius.circular(10),
                                           borderSide: const BorderSide(
                                             color: red,
                                             width: 2,
                                           ),
                                         ),
-                                        contentPadding:
-                                            EdgeInsets.fromLTRB(10, 0, 10, 0),
+                                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                                         constraints: const BoxConstraints(
                                           maxHeight: 40,
                                         ),
@@ -132,8 +128,7 @@ class LoginPageState extends State<LoginPage> {
                             ResponsiveRowColumnItem(
                               child: ResponsiveRowColumn(
                                 layout: ResponsiveRowColumnType.COLUMN,
-                                columnCrossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                columnCrossAxisAlignment: CrossAxisAlignment.start,
                                 columnSpacing: 5,
                                 children: [
                                   ResponsiveRowColumnItem(
@@ -156,23 +151,20 @@ class LoginPageState extends State<LoginPage> {
                                       ),
                                       decoration: InputDecoration(
                                         enabledBorder: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
+                                          borderRadius: BorderRadius.circular(10),
                                           borderSide: const BorderSide(
                                             color: red,
                                             width: 2,
                                           ),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
+                                          borderRadius: BorderRadius.circular(10),
                                           borderSide: const BorderSide(
                                             color: red,
                                             width: 2,
                                           ),
                                         ),
-                                        contentPadding:
-                                            EdgeInsets.fromLTRB(10, 0, 10, 0),
+                                        contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                                         constraints: const BoxConstraints(
                                           maxHeight: 40,
                                         ),
@@ -190,8 +182,7 @@ class LoginPageState extends State<LoginPage> {
                           onPressed: () {
                             Navigator.of(context).pushReplacement(
                               MaterialPageRoute(
-                                builder: (BuildContext context) =>
-                                    const HomePage(),
+                                builder: (BuildContext context) => const HomePage(),
                               ),
                             );
                           },
@@ -212,8 +203,7 @@ class LoginPageState extends State<LoginPage> {
                             padding: EdgeInsets.zero,
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             shape: const RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                              borderRadius: BorderRadius.all(Radius.circular(15)),
                             ),
                             backgroundColor: red,
                           ),

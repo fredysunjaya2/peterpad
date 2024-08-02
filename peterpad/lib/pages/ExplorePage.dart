@@ -47,8 +47,7 @@ class ExplorePageState extends State<ExplorePage> {
             return [
               // ------------------- ------------------- App Bar ------------------- -------------------
               SliverOverlapAbsorber(
-                handle:
-                    NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                 sliver: SliverSafeArea(
                   top: false,
                   sliver: SliverAppBar(
@@ -59,84 +58,92 @@ class ExplorePageState extends State<ExplorePage> {
                     floating: true,
                     snap: true,
                     primary: false,
-                    flexibleSpace: FlexibleSpaceBar(
-                      background: Container(
+                    flexibleSpace: Container(
+                      decoration: BoxDecoration(
                         color: background,
-                        padding: const EdgeInsets.fromLTRB(25, 40, 25, 20),
-                        child: ResponsiveRowColumn(
-                          layout: ResponsiveRowColumnType.ROW,
-                          rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ResponsiveRowColumnItem(
-                              child: TabBar(
-                                labelColor: Colors.black,
-                                unselectedLabelColor:
-                                    Colors.black.withOpacity(0.5),
-                                dividerColor: Colors.transparent,
-                                indicator: BoxDecoration(),
-                                isScrollable: true,
-                                physics: NeverScrollableScrollPhysics(),
-                                tabAlignment: TabAlignment.start,
-                                padding: EdgeInsets.zero,
-                                indicatorPadding: EdgeInsets.zero,
-                                labelPadding: EdgeInsets.zero,
-                                tabs: [
-                                  Tab(
-                                    child: Container(
-                                      padding: EdgeInsets.only(
-                                        right: 15,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        border: Border(
-                                          right: BorderSide(
-                                            color: Colors.black,
-                                            width: 1,
-                                            style: BorderStyle.solid,
-                                          ),
-                                        ),
-                                      ),
-                                      child: Text(
-                                        'Browse',
-                                        style: TextStyle(
-                                          fontFamily: 'outfit-semibold',
-                                          fontSize: 24,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Tab(
-                                    child: Container(
-                                      padding: EdgeInsets.only(
-                                        left: 15,
-                                      ),
-                                      child: Text(
-                                        'Genre',
-                                        style: TextStyle(
-                                          fontFamily: 'outfit-semibold',
-                                          fontSize: 24,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            ResponsiveRowColumnItem(
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          NotificationsPage(),
-                                    ),
-                                  );
-                                },
-                                child: SvgPicture.asset(
-                                    'assets/HomePage/notification.svg'),
-                              ),
-                            ),
-                          ],
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(30),
+                          bottomRight: Radius.circular(30),
                         ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: innerBoxIsScrolled ? Colors.black.withOpacity(0.2) : Colors.black.withOpacity(0),
+                            blurRadius: 10,
+                            spreadRadius: 0.5,
+                          )
+                        ],
+                      ),
+                      padding: const EdgeInsets.fromLTRB(25, 40, 25, 20),
+                      child: ResponsiveRowColumn(
+                        layout: ResponsiveRowColumnType.ROW,
+                        rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ResponsiveRowColumnItem(
+                            child: TabBar(
+                              labelColor: Colors.black,
+                              unselectedLabelColor: Colors.black.withOpacity(0.5),
+                              dividerColor: Colors.transparent,
+                              indicator: BoxDecoration(),
+                              isScrollable: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              tabAlignment: TabAlignment.start,
+                              padding: EdgeInsets.zero,
+                              indicatorPadding: EdgeInsets.zero,
+                              labelPadding: EdgeInsets.zero,
+                              tabs: [
+                                Tab(
+                                  child: Container(
+                                    padding: EdgeInsets.only(
+                                      right: 15,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      border: Border(
+                                        right: BorderSide(
+                                          color: Colors.black,
+                                          width: 1,
+                                          style: BorderStyle.solid,
+                                        ),
+                                      ),
+                                    ),
+                                    child: Text(
+                                      'Browse',
+                                      style: TextStyle(
+                                        fontFamily: 'outfit-semibold',
+                                        fontSize: 24,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Tab(
+                                  child: Container(
+                                    padding: EdgeInsets.only(
+                                      left: 15,
+                                    ),
+                                    child: Text(
+                                      'Genre',
+                                      style: TextStyle(
+                                        fontFamily: 'outfit-semibold',
+                                        fontSize: 24,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ResponsiveRowColumnItem(
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) => NotificationsPage(),
+                                  ),
+                                );
+                              },
+                              child: SvgPicture.asset('assets/HomePage/notification.svg'),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -155,17 +162,14 @@ class ExplorePageState extends State<ExplorePage> {
                     scrollDirection: Axis.vertical,
                     slivers: [
                       SliverOverlapInjector(
-                        handle: NestedScrollView.sliverOverlapAbsorberHandleFor(
-                            context),
+                        handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                       ),
                       SliverList(
                         delegate: SliverChildBuilderDelegate(
                           (context, index) {
                             return ResponsiveRowColumn(
-                              columnPadding:
-                                  EdgeInsets.fromLTRB(25, 10, 25, 40),
-                              columnCrossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                              columnPadding: EdgeInsets.fromLTRB(25, 10, 25, 40),
+                              columnCrossAxisAlignment: CrossAxisAlignment.start,
                               layout: ResponsiveRowColumnType.COLUMN,
                               columnSpacing: 20,
                               children: [
@@ -173,20 +177,17 @@ class ExplorePageState extends State<ExplorePage> {
                                 ResponsiveRowColumnItem(
                                   child: TextField(
                                     decoration: InputDecoration(
-                                      floatingLabelBehavior:
-                                          FloatingLabelBehavior.never,
+                                      floatingLabelBehavior: FloatingLabelBehavior.never,
                                       label: Row(
                                         children: [
-                                          SvgPicture.asset(
-                                              'assets/HomePage/search.svg'),
+                                          SvgPicture.asset('assets/HomePage/search.svg'),
                                           SizedBox(
                                             width: 15,
                                           ),
                                           Text(
                                             'Search Books',
                                             style: TextStyle(
-                                              color:
-                                                  Colors.black.withOpacity(0.3),
+                                              color: Colors.black.withOpacity(0.3),
                                               fontFamily: 'outfit-light',
                                               fontSize: 20,
                                             ),
@@ -207,8 +208,7 @@ class ExplorePageState extends State<ExplorePage> {
                                           width: 2,
                                         ),
                                       ),
-                                      contentPadding:
-                                          EdgeInsets.fromLTRB(10, 0, 10, 0),
+                                      contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                                       constraints: const BoxConstraints(
                                         maxHeight: 50,
                                       ),
@@ -219,19 +219,16 @@ class ExplorePageState extends State<ExplorePage> {
                                 ResponsiveRowColumnItem(
                                   child: ResponsiveRowColumn(
                                     layout: ResponsiveRowColumnType.ROW,
-                                    rowMainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
                                       ResponsiveRowColumnItem(
                                         child: ResponsiveRowColumn(
                                           layout: ResponsiveRowColumnType.ROW,
-                                          rowCrossAxisAlignment:
-                                              CrossAxisAlignment.center,
+                                          rowCrossAxisAlignment: CrossAxisAlignment.center,
                                           rowSpacing: 15,
                                           children: [
                                             ResponsiveRowColumnItem(
-                                              child: SvgPicture.asset(
-                                                  'assets/ExplorePage/filter.svg'),
+                                              child: SvgPicture.asset('assets/ExplorePage/filter.svg'),
                                             ),
                                             ResponsiveRowColumnItem(
                                               child: Text(
@@ -249,13 +246,11 @@ class ExplorePageState extends State<ExplorePage> {
                                       ResponsiveRowColumnItem(
                                         child: ResponsiveRowColumn(
                                           layout: ResponsiveRowColumnType.ROW,
-                                          rowCrossAxisAlignment:
-                                              CrossAxisAlignment.center,
+                                          rowCrossAxisAlignment: CrossAxisAlignment.center,
                                           rowSpacing: 15,
                                           children: [
                                             ResponsiveRowColumnItem(
-                                              child: SvgPicture.asset(
-                                                  'assets/ExplorePage/sort.svg'),
+                                              child: SvgPicture.asset('assets/ExplorePage/sort.svg'),
                                             ),
                                             ResponsiveRowColumnItem(
                                               child: Text(
@@ -278,8 +273,7 @@ class ExplorePageState extends State<ExplorePage> {
                                   child: FutureBuilder(
                                     future: futureExplore,
                                     builder: (context, snapshot) {
-                                      List<Map<String, dynamic>>? novels =
-                                          snapshot.data;
+                                      List<Map<String, dynamic>>? novels = snapshot.data;
 
                                       if (novels != null) {
                                         return Wrap(
@@ -288,6 +282,7 @@ class ExplorePageState extends State<ExplorePage> {
                                             direction: Axis.horizontal,
                                             children: novels.map((item) {
                                               return CatalogueItem(
+                                                id: item['id'],
                                                 title: item['title'],
                                                 author: item['author'],
                                                 rating: item['rating'],
@@ -323,26 +318,21 @@ class ExplorePageState extends State<ExplorePage> {
                       scrollDirection: Axis.vertical,
                       slivers: [
                         SliverOverlapInjector(
-                          handle:
-                              NestedScrollView.sliverOverlapAbsorberHandleFor(
-                                  context),
+                          handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                         ),
                         SliverList(
                           delegate: SliverChildBuilderDelegate(
                             (context, index) {
                               return ResponsiveRowColumn(
-                                columnPadding:
-                                    EdgeInsets.fromLTRB(25, 10, 25, 40),
-                                columnCrossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                columnPadding: EdgeInsets.fromLTRB(25, 10, 25, 40),
+                                columnCrossAxisAlignment: CrossAxisAlignment.start,
                                 layout: ResponsiveRowColumnType.COLUMN,
                                 children: [
                                   ResponsiveRowColumnItem(
                                     child: FutureBuilder(
                                       future: futureGenre,
                                       builder: (context, snapshot) {
-                                        List<Map<String, dynamic>>? genres =
-                                            snapshot.data;
+                                        List<Map<String, dynamic>>? genres = snapshot.data;
 
                                         if (genres != null) {
                                           return Wrap(

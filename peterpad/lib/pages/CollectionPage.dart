@@ -29,7 +29,7 @@ class CollectionPageState extends State<CollectionPage> {
 
   // constant more height that is given to the expandedHeight
   // of the SliverAppBar
-  final double _moreHeight = 400;
+  final double _moreHeight = 350;
 
   @override
   void initState() {
@@ -75,6 +75,9 @@ class CollectionPageState extends State<CollectionPage> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.sizeOf(context).width;
+    double screenHeight = MediaQuery.sizeOf(context).height;
+
     return Scaffold(
       backgroundColor: background,
       body: CustomScrollView(
@@ -89,8 +92,8 @@ class CollectionPageState extends State<CollectionPage> {
               elevation: 0,
               titleSpacing: 0,
               primary: false,
-              floating: true,
-              snap: true,
+              floating: _expandedHeight == null ? true : false,
+              snap: _expandedHeight == null ? true : false,
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
                 title: AnimatedOpacity(
@@ -115,9 +118,7 @@ class CollectionPageState extends State<CollectionPage> {
                   alignment: Alignment.center,
                   children: [
                     AnimatedOpacity(
-                      opacity: _expandedHeight != null
-                          ? _expandedHeight! / _moreHeight
-                          : 0,
+                      opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
                       duration: const Duration(milliseconds: 300),
                       child: ClipRRect(
                         borderRadius: BorderRadius.vertical(
@@ -147,98 +148,97 @@ class CollectionPageState extends State<CollectionPage> {
                     Positioned(
                       bottom: 20,
                       child: AnimatedOpacity(
-                        opacity: _expandedHeight != null
-                            ? _expandedHeight! / _moreHeight
-                            : 0,
+                        opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
                         duration: const Duration(milliseconds: 300),
-                        child: ResponsiveRowColumn(
-                          layout: ResponsiveRowColumnType.COLUMN,
-                          columnSpacing: 20,
-                          children: [
-                            ResponsiveRowColumnItem(
-                              child: Text(
-                                collectionDetail["name"],
-                                style: TextStyle(
-                                  fontFamily: 'outfit-medium',
-                                  fontSize: 24,
-                                  color: Colors.white,
+                        child: Container(
+                          width: screenWidth,
+                          child: ResponsiveRowColumn(
+                            layout: ResponsiveRowColumnType.COLUMN,
+                            columnSpacing: 20,
+                            children: [
+                              ResponsiveRowColumnItem(
+                                child: Text(
+                                  collectionDetail["name"],
+                                  style: TextStyle(
+                                    fontFamily: 'outfit-medium',
+                                    fontSize: 24,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
-                            ),
-                            ResponsiveRowColumnItem(
-                              child: ResponsiveRowColumn(
-                                layout: ResponsiveRowColumnType.ROW,
-                                rowSpacing: 75,
-                                children: [
-                                  ResponsiveRowColumnItem(
-                                    child: ResponsiveRowColumn(
-                                      layout: ResponsiveRowColumnType.COLUMN,
-                                      children: [
-                                        ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset(
-                                              'assets/CollectionPage/novelCount.svg'),
-                                        ),
-                                        ResponsiveRowColumnItem(
-                                          child: Text(
-                                            collectionDetail["novelCount"]
-                                                    .toString() +
-                                                ' Novels',
-                                            style: TextStyle(
-                                              fontFamily: 'outfit-regular',
-                                              fontSize: 18,
-                                              color: Colors.white,
+                              ResponsiveRowColumnItem(
+                                child: ResponsiveRowColumn(
+                                  layout: ResponsiveRowColumnType.ROW,
+                                  rowPadding: EdgeInsets.symmetric(
+                                    horizontal: 45,
+                                  ),
+                                  rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    ResponsiveRowColumnItem(
+                                      child: ResponsiveRowColumn(
+                                        layout: ResponsiveRowColumnType.COLUMN,
+                                        children: [
+                                          ResponsiveRowColumnItem(
+                                            child: SvgPicture.asset('assets/CollectionPage/novelCount.svg'),
+                                          ),
+                                          ResponsiveRowColumnItem(
+                                            child: Text(
+                                              collectionDetail["novelCount"].toString() + ' Novels',
+                                              style: TextStyle(
+                                                fontFamily: 'outfit-regular',
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                  ResponsiveRowColumnItem(
-                                    child: ResponsiveRowColumn(
-                                      layout: ResponsiveRowColumnType.COLUMN,
-                                      children: [
-                                        ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset(
-                                              'assets/CollectionPage/visibility.svg'),
-                                        ),
-                                        ResponsiveRowColumnItem(
-                                          child: Text(
-                                            collectionDetail["visibility"],
-                                            style: TextStyle(
-                                              fontFamily: 'outfit-regular',
-                                              fontSize: 18,
-                                              color: Colors.white,
+                                    ResponsiveRowColumnItem(
+                                      child: ResponsiveRowColumn(
+                                        layout: ResponsiveRowColumnType.COLUMN,
+                                        children: [
+                                          ResponsiveRowColumnItem(
+                                            child: SvgPicture.asset('assets/CollectionPage/visibility.svg'),
+                                          ),
+                                          ResponsiveRowColumnItem(
+                                            child: Text(
+                                              collectionDetail["visibility"],
+                                              style: TextStyle(
+                                                fontFamily: 'outfit-regular',
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                  ResponsiveRowColumnItem(
-                                    child: ResponsiveRowColumn(
-                                      layout: ResponsiveRowColumnType.COLUMN,
-                                      children: [
-                                        ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset(
-                                              'assets/CollectionPage/owner.svg'),
-                                        ),
-                                        ResponsiveRowColumnItem(
-                                          child: Text(
-                                            collectionDetail["owner"],
-                                            style: TextStyle(
-                                              fontFamily: 'outfit-regular',
-                                              fontSize: 18,
-                                              color: Colors.white,
+                                    ResponsiveRowColumnItem(
+                                      child: ResponsiveRowColumn(
+                                        layout: ResponsiveRowColumnType.COLUMN,
+                                        children: [
+                                          ResponsiveRowColumnItem(
+                                            child: SvgPicture.asset('assets/CollectionPage/owner.svg'),
+                                          ),
+                                          ResponsiveRowColumnItem(
+                                            child: Text(
+                                              collectionDetail["owner"],
+                                              style: TextStyle(
+                                                fontFamily: 'outfit-regular',
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -306,8 +306,7 @@ class CollectionPageState extends State<CollectionPage> {
                           child: FutureBuilder(
                             future: futureCollectionItem,
                             builder: (context, snapshot) {
-                              List<Map<String, dynamic>>? novels =
-                                  snapshot.data;
+                              List<Map<String, dynamic>>? novels = snapshot.data;
 
                               if (novels != null) {
                                 return Wrap(
@@ -315,6 +314,7 @@ class CollectionPageState extends State<CollectionPage> {
                                   spacing: 20,
                                   children: novels.map((item) {
                                     return CatalogueItem(
+                                      id: item['id'],
                                       title: item['title'],
                                       author: item['author'],
                                       rating: item['rating'],

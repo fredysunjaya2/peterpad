@@ -58,7 +58,7 @@ class NotificationsPageState extends State<NotificationsPage> {
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.2),
+                          color: innerBoxIsScrolled ? Colors.black.withOpacity(0.2) : Colors.black.withOpacity(0),
                           blurRadius: 10,
                           spreadRadius: 0.5,
                         )
@@ -107,8 +107,7 @@ class NotificationsPageState extends State<NotificationsPage> {
                 scrollDirection: Axis.vertical,
                 slivers: [
                   SliverOverlapInjector(
-                    handle: NestedScrollView.sliverOverlapAbsorberHandleFor(
-                        context),
+                    handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                   ),
                   // ------------------- ------------------- Notification Group By Date ------------------- -------------------
                   SliverList(
@@ -121,30 +120,24 @@ class NotificationsPageState extends State<NotificationsPage> {
                               child: FutureBuilder(
                                 future: futureNotificationGroup,
                                 builder: (context, snapshot) {
-                                  List<Map<String, dynamic>>?
-                                      notificationGroups = snapshot.data;
+                                  List<Map<String, dynamic>>? notificationGroups = snapshot.data;
 
                                   if (notificationGroups != null) {
                                     return Padding(
-                                      padding:
-                                          EdgeInsets.fromLTRB(25, 10, 25, 40),
+                                      padding: EdgeInsets.fromLTRB(25, 10, 25, 40),
                                       child: Wrap(
                                         runSpacing: 25,
-                                        children:
-                                            notificationGroups.map((item) {
+                                        children: notificationGroups.map((item) {
                                           return ResponsiveRowColumn(
-                                            layout:
-                                                ResponsiveRowColumnType.COLUMN,
-                                            columnCrossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                            layout: ResponsiveRowColumnType.COLUMN,
+                                            columnCrossAxisAlignment: CrossAxisAlignment.start,
                                             columnSpacing: 10,
                                             children: [
                                               ResponsiveRowColumnItem(
                                                 child: Text(
                                                   item['date'],
                                                   style: TextStyle(
-                                                    fontFamily:
-                                                        'outfit-regular',
+                                                    fontFamily: 'outfit-regular',
                                                     fontSize: 16,
                                                     color: Colors.black,
                                                   ),
@@ -153,49 +146,28 @@ class NotificationsPageState extends State<NotificationsPage> {
                                               ResponsiveRowColumnItem(
                                                 // ------------------- ------------------- Notification Items ------------------- -------------------
                                                 child: FutureBuilder(
-                                                  future:
-                                                      futureNotificationItem,
+                                                  future: futureNotificationItem,
                                                   builder: (context, snapshot) {
-                                                    List<Map<String, dynamic>>
-                                                        notificationItems =
-                                                        item[
-                                                            "notificationItems"];
+                                                    List<Map<String, dynamic>> notificationItems = item["notificationItems"];
 
-                                                    if (notificationItems !=
-                                                        null) {
+                                                    if (notificationItems != null) {
                                                       return Wrap(
                                                           runSpacing: 15,
-                                                          children:
-                                                              notificationItems.map(
-                                                                  (itemDetail) {
+                                                          children: notificationItems.map((itemDetail) {
                                                             return Container(
-                                                              child:
-                                                                  NotificationItem(
-                                                                profilePic:
-                                                                    itemDetail[
-                                                                        'profilePic'],
-                                                                name:
-                                                                    itemDetail[
-                                                                        'name'],
-                                                                time:
-                                                                    itemDetail[
-                                                                        'time'],
-                                                                desc:
-                                                                    itemDetail[
-                                                                        'desc'],
-                                                                imagePath:
-                                                                    itemDetail[
-                                                                        'imagePath'],
-                                                                isPost:
-                                                                    itemDetail[
-                                                                        'isPost'],
+                                                              child: NotificationItem(
+                                                                profilePic: itemDetail['profilePic'],
+                                                                name: itemDetail['name'],
+                                                                time: itemDetail['time'],
+                                                                desc: itemDetail['desc'],
+                                                                imagePath: itemDetail['imagePath'],
+                                                                isPost: itemDetail['isPost'],
                                                               ),
                                                             );
                                                           }).toList());
                                                     } else {
                                                       return const Center(
-                                                        child:
-                                                            CircularProgressIndicator(),
+                                                        child: CircularProgressIndicator(),
                                                       );
                                                     }
                                                   },

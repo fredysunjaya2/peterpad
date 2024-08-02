@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:peterpad/constants.dart';
+import 'package:peterpad/pages/NovelPage.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CatalogueItem extends StatelessWidget {
+  int id;
   String title;
   String author;
   double rating;
@@ -12,6 +14,7 @@ class CatalogueItem extends StatelessWidget {
 
   CatalogueItem({
     super.key,
+    required this.id,
     required this.title,
     required this.author,
     required this.rating,
@@ -25,7 +28,15 @@ class CatalogueItem extends StatelessWidget {
 
     // TODO: implement build
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) => NovelPage(
+              id: id,
+            ),
+          ),
+        );
+      },
       child: Container(
         width: ResponsiveValue<double>(
           context,

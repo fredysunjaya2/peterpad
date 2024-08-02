@@ -45,14 +45,9 @@ class _AddChapterPageState extends State<EditChapterPage> {
                 ResponsiveRowColumnItem(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const WritePage()),
-                      );
+                      Navigator.of(context).pop();
                     },
-                    child:
-                        const Icon(Icons.arrow_back_ios, color: Colors.black),
+                    child: const Icon(Icons.arrow_back_ios, color: Colors.black),
                   ),
                 ),
                 ResponsiveRowColumnItem(
@@ -167,8 +162,7 @@ class _AddChapterPageState extends State<EditChapterPage> {
                             color: Colors.black.withOpacity(0.3),
                           ),
                         ),
-                        items: genresDropList
-                            .map<DropdownMenuItem<String>>((String genre) {
+                        items: genresDropList.map<DropdownMenuItem<String>>((String genre) {
                           return DropdownMenuItem<String>(
                             value: genre,
                             child: Text(genre),
@@ -206,8 +200,7 @@ class _AddChapterPageState extends State<EditChapterPage> {
                             color: Colors.black.withOpacity(0.3),
                           ),
                         ),
-                        items: languages
-                            .map<DropdownMenuItem<String>>((String language) {
+                        items: languages.map<DropdownMenuItem<String>>((String language) {
                           return DropdownMenuItem<String>(
                             value: language,
                             child: Text(language),
@@ -227,8 +220,7 @@ class _AddChapterPageState extends State<EditChapterPage> {
               children: [
                 const Text(
                   'Chapters',
-                  style: TextStyle(
-                      fontFamily: 'outfit-semibold', fontSize: 20, color: red),
+                  style: TextStyle(fontFamily: 'outfit-semibold', fontSize: 20, color: red),
                 ),
                 IconButton(
                   icon: const Icon(Icons.add),
@@ -276,16 +268,13 @@ class _AddChapterPageState extends State<EditChapterPage> {
                                   ),
                                 ),
                                 const SizedBox(width: 40),
-                                _buildIconText(
-                                    Icons.star, add['rating'].toString()),
+                                _buildIconText(Icons.star, add['rating'].toString()),
                               ],
                             ),
                           ],
                         ),
                         trailing: Icon(
-                          add['downloaded']
-                              ? Icons.cloud_done_outlined
-                              : Icons.cloud_download_outlined,
+                          add['downloaded'] ? Icons.cloud_done_outlined : Icons.cloud_download_outlined,
                           color: add['downloaded'] ? green : green,
                           size: 30.0,
                         ),
