@@ -500,6 +500,7 @@ List<Map<String, dynamic>> novelDetails = [
     "id": 1,
     "details": {
       "title": "Funiculi Funicula",
+      "userId": 2,
       "author": "Toshikazu Kawaguchi",
       "views": 300000,
       "rating": 4.5,
@@ -514,6 +515,7 @@ List<Map<String, dynamic>> novelDetails = [
     "id": 2,
     "details": {
       "title": "Funiculi Funicula 2",
+      "userId": 2,
       "author": "Toshikazu Kawaguchi",
       "views": 500000,
       "rating": 5.0,
@@ -528,6 +530,7 @@ List<Map<String, dynamic>> novelDetails = [
     "id": 3,
     "details": {
       "title": "Funiculi Funicula 3",
+      "userId": 2,
       "author": "Toshikazu Kawaguchi",
       "views": 300000,
       "rating": 4.5,
@@ -542,6 +545,7 @@ List<Map<String, dynamic>> novelDetails = [
     "id": 4,
     "details": {
       "title": "Funiculi Funicula 4",
+      "userId": 2,
       "author": "Toshikazu Kawaguchi",
       "views": 300000,
       "rating": 4.5,
@@ -556,6 +560,7 @@ List<Map<String, dynamic>> novelDetails = [
     "id": 5,
     "details": {
       "title": "Funiculi Funicula 5",
+      "userId": 2,
       "author": "Toshikazu Kawaguchi",
       "views": 300000,
       "rating": 4.5,
@@ -570,6 +575,7 @@ List<Map<String, dynamic>> novelDetails = [
     "id": 6,
     "details": {
       "title": "Funiculi Funicula 6",
+      "userId": 3,
       "author": "Toshikazu Kawaguchi",
       "views": 300000,
       "rating": 4.5,
@@ -584,6 +590,7 @@ List<Map<String, dynamic>> novelDetails = [
     "id": 7,
     "details": {
       "title": "Funiculi Funicula 7",
+      "userId": 3,
       "author": "Toshikazu Kawaguchi",
       "views": 300000,
       "rating": 4.5,
@@ -598,6 +605,7 @@ List<Map<String, dynamic>> novelDetails = [
     "id": 8,
     "details": {
       "title": "Funiculi Funicula 8",
+      "userId": 3,
       "author": "Toshikazu Kawaguchi",
       "views": 300000,
       "rating": 4.5,
@@ -612,6 +620,7 @@ List<Map<String, dynamic>> novelDetails = [
     "id": 9,
     "details": {
       "title": "Funiculi Funicula 9",
+      "userId": 3,
       "author": "Toshikazu Kawaguchi",
       "views": 300000,
       "rating": 4.5,
@@ -626,6 +635,7 @@ List<Map<String, dynamic>> novelDetails = [
     "id": 10,
     "details": {
       "title": "Funiculi Funicula 10",
+      "userId": 3,
       "author": "Toshikazu Kawaguchi",
       "views": 300000,
       "rating": 4.5,
@@ -1358,6 +1368,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet",
@@ -1367,6 +1378,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 2,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1375,6 +1387,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 2,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1383,6 +1396,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1391,6 +1405,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 2,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1399,6 +1414,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 2,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1407,6 +1423,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1415,6 +1432,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 2,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1423,6 +1441,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 2,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1431,6 +1450,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1439,6 +1459,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 2,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1447,6 +1468,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 2,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1455,6 +1477,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1463,6 +1486,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1471,6 +1495,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1479,6 +1504,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1487,6 +1513,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1495,6 +1522,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1503,6 +1531,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1511,6 +1540,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1519,6 +1549,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1527,6 +1558,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1535,6 +1567,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1543,6 +1576,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1551,6 +1585,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1559,6 +1594,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1567,6 +1603,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1575,6 +1612,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1583,6 +1621,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1591,6 +1630,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1599,6 +1639,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1607,6 +1648,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1615,6 +1657,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1623,6 +1666,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1631,6 +1675,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1639,6 +1684,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1647,6 +1693,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1655,6 +1702,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1663,6 +1711,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1671,6 +1720,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1679,6 +1729,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1687,6 +1738,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1695,6 +1747,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1703,6 +1756,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1711,6 +1765,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1724,6 +1779,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1732,6 +1788,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1740,6 +1797,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1748,6 +1806,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1756,6 +1815,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1764,6 +1824,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1772,6 +1833,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1780,6 +1842,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1788,6 +1851,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1796,6 +1860,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1804,6 +1869,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1812,6 +1878,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1820,6 +1887,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1828,6 +1896,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1836,6 +1905,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1844,6 +1914,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1852,6 +1923,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1865,6 +1937,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1873,6 +1946,7 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 0,
@@ -1881,6 +1955,231 @@ List<Map<String, dynamic>> comments = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+    ],
+  },
+  {
+    "novelId": 4,
+    "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+    ],
+  },
+  {
+    "novelId": 5,
+    "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+    ],
+  },
+  {
+    "novelId": 6,
+    "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+    ],
+  },
+  {
+    "novelId": 7,
+    "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+    ],
+  },
+  {
+    "novelId": 8,
+    "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+    ],
+  },
+  {
+    "novelId": 9,
+    "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 6,
+        "likeCount": 100,
+      },
+    ],
+  },
+  {
+    "novelId": 10,
+    "comments": [
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
+        "date": "3d ago",
+        "comment": "Lorem Ipsum Dolor Sit Amet",
+        "replyCount": 0,
+        "likeCount": 100,
+      },
+      {
+        "profilePic": "assets/NovelPage/profilepic.png",
+        "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment": "Lorem Ipsum Dolor Sit Amet",
         "replyCount": 6,
@@ -1913,6 +2212,10 @@ List<Map<String, dynamic>> writes = [
       "rating": 4.5,
       "comments": "3.3K",
       "imagePath": "assets/WritePage/image.png",
+      "synopsis":
+          "Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
+      "genre": "Science Fiction",
+      "language": "English",
     },
   },
   {
@@ -1926,6 +2229,10 @@ List<Map<String, dynamic>> writes = [
       "rating": 4.2,
       "comments": "3.5K",
       "imagePath": "assets/WritePage/image.png",
+      "synopsis":
+          "2 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
+      "genre": "Science Fiction",
+      "language": "English",
     },
   },
   {
@@ -1939,6 +2246,10 @@ List<Map<String, dynamic>> writes = [
       "rating": 4.2,
       "comments": "3.5K",
       "imagePath": "assets/WritePage/image.png",
+      "synopsis":
+          "3 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
+      "genre": "Science Fiction",
+      "language": "English",
     },
   },
   {
@@ -1952,6 +2263,10 @@ List<Map<String, dynamic>> writes = [
       "rating": 4.2,
       "comments": "3.5K",
       "imagePath": "assets/WritePage/image.png",
+      "synopsis":
+          "4 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
+      "genre": "Science Fiction",
+      "language": "English",
     },
   },
   {
@@ -1965,6 +2280,10 @@ List<Map<String, dynamic>> writes = [
       "rating": 4.2,
       "comments": "3.5K",
       "imagePath": "assets/WritePage/image.png",
+      "synopsis":
+          "5 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
+      "genre": "Science Fiction",
+      "language": "English",
     },
   },
   {
@@ -1978,6 +2297,10 @@ List<Map<String, dynamic>> writes = [
       "rating": 4.2,
       "comments": "3.5K",
       "imagePath": "assets/WritePage/image.png",
+      "synopsis":
+          "6 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
+      "genre": "Science Fiction",
+      "language": "English",
     },
   },
   {
@@ -1991,6 +2314,10 @@ List<Map<String, dynamic>> writes = [
       "rating": 4.2,
       "comments": "3.5K",
       "imagePath": "assets/WritePage/image.png",
+      "synopsis":
+          "7 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
+      "genre": "Science Fiction",
+      "language": "English",
     },
   },
   {
@@ -2004,6 +2331,10 @@ List<Map<String, dynamic>> writes = [
       "rating": 4.2,
       "comments": "3.5K",
       "imagePath": "assets/WritePage/image.png",
+      "synopsis":
+          "8 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
+      "genre": "Science Fiction",
+      "language": "English",
     },
   },
   {
@@ -2017,6 +2348,10 @@ List<Map<String, dynamic>> writes = [
       "rating": 4.2,
       "comments": "3.5K",
       "imagePath": "assets/WritePage/image.png",
+      "synopsis":
+          "9 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
+      "genre": "Science Fiction",
+      "language": "English",
     },
   },
   {
@@ -2030,11 +2365,28 @@ List<Map<String, dynamic>> writes = [
       "rating": 4.2,
       "comments": "3.5K",
       "imagePath": "assets/WritePage/image.png",
+      "synopsis":
+          "10 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
+      "genre": "Science Fiction",
+      "language": "Japanese",
     },
   },
 ];
 
-List<String> genresDropList = ['Action', 'Adventure', 'Comedy', 'Drama', 'Fantasy', 'Horror'];
+List<String> genresDropList = [
+  'Action',
+  'Adventure',
+  'Comedy',
+  'Drama',
+  'Fantasy',
+  'Historical Fiction',
+  'Horror',
+  'Mystery',
+  'Non-Fiction',
+  'Romance',
+  'Science Fiction',
+  'Thriller',
+];
 
 List<String> languages = [
   'Indonesian',
@@ -2043,6 +2395,56 @@ List<String> languages = [
 ];
 
 List<Map<String, dynamic>> adds = [
+  {
+    "id": 1,
+    "details": {
+      "title": "Funiculi Funicula",
+      "chapter": 1,
+      "date": "23 Aug 2024",
+      "rating": 4.5,
+      "downloaded": false,
+    },
+  },
+  {
+    "id": 2,
+    "details": {
+      "title": "Funiculi Funicula 2",
+      "chapter": 2,
+      "date": "24 Aug 2024",
+      "rating": 4.2,
+      "downloaded": true,
+    },
+  },
+  {
+    "id": 3,
+    "details": {
+      "title": "Funiculi Funicula 3",
+      "chapter": 3,
+      "date": "25 Aug 2024",
+      "rating": 4.6,
+      "downloaded": false,
+    },
+  },
+  {
+    "id": 4,
+    "details": {
+      "title": "Funiculi Funicula 4",
+      "chapter": 4,
+      "date": "26 Aug 2024",
+      "rating": 4.6,
+      "downloaded": true,
+    },
+  },
+  {
+    "id": 5,
+    "details": {
+      "title": "Funiculi Funicula 5",
+      "chapter": 5,
+      "date": "28 Aug 2024",
+      "rating": 4.9,
+      "downloaded": false,
+    },
+  },
   {
     "id": 1,
     "details": {
@@ -2112,7 +2514,7 @@ List<Map<String, dynamic>> users = [
     "userId": 2,
     "imagePath": "assets/LibraryPage/image1.png",
     "profilePic": "assets/NovelPage/profilepic.png",
-    "name": "Lofi Girl",
+    "name": "Toshikazu Kawaguchi",
     "followerCount": 30,
     "followingCount": 10,
     "worksCount": 10,
@@ -2124,7 +2526,7 @@ List<Map<String, dynamic>> users = [
     "userId": 3,
     "imagePath": "assets/LibraryPage/image1.png",
     "profilePic": "assets/NovelPage/profilepic.png",
-    "name": "Lofi Girl",
+    "name": "Lofi Girl 2",
     "followerCount": 30,
     "followingCount": 10,
     "worksCount": 10,
@@ -2141,6 +2543,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2149,6 +2552,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 2,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2157,6 +2561,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2165,6 +2570,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 2,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2173,6 +2579,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2181,6 +2588,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 2,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2194,6 +2602,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2202,6 +2611,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2210,6 +2620,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2218,6 +2629,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2226,6 +2638,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2234,6 +2647,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2247,6 +2661,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2255,6 +2670,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2263,6 +2679,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2271,6 +2688,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2279,6 +2697,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",
@@ -2287,6 +2706,7 @@ List<Map<String, dynamic>> posts = [
       {
         "profilePic": "assets/NovelPage/profilepic.png",
         "name": "Lofi Girl",
+        "userId": 3,
         "date": "3d ago",
         "comment":
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. ",

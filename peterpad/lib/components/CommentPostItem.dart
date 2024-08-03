@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:peterpad/pages/ProfilePage.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:peterpad/constants.dart';
 
 class CommentPostItem extends StatelessWidget {
   String profilePic;
   String name;
+  int userId;
   String date;
   String comment;
   int? likeCount;
@@ -16,6 +18,7 @@ class CommentPostItem extends StatelessWidget {
     super.key,
     required this.profilePic,
     required this.name,
+    required this.userId,
     required this.date,
     required this.comment,
     this.likeCount,
@@ -41,19 +44,31 @@ class CommentPostItem extends StatelessWidget {
             rowSpacing: 10,
             children: [
               ResponsiveRowColumnItem(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: Image.asset(
-                    profilePic,
-                    fit: BoxFit.cover,
-                    width: ResponsiveValue<double>(
-                      context,
-                      defaultValue: 200,
-                      conditionalValues: [
-                        Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.1),
-                        Condition.equals(name: DESKTOP, value: screenWidth * 0.1),
-                      ],
-                    ).value,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => ProfilePage(
+                          userId: userId,
+                          myId: 1,
+                        ),
+                      ),
+                    );
+                  },
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: Image.asset(
+                      profilePic,
+                      fit: BoxFit.cover,
+                      width: ResponsiveValue<double>(
+                        context,
+                        defaultValue: 200,
+                        conditionalValues: [
+                          Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.1),
+                          Condition.equals(name: DESKTOP, value: screenWidth * 0.1),
+                        ],
+                      ).value,
+                    ),
                   ),
                 ),
               ),
@@ -70,12 +85,24 @@ class CommentPostItem extends StatelessWidget {
                         columnCrossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ResponsiveRowColumnItem(
-                            child: Text(
-                              name,
-                              style: TextStyle(
-                                fontFamily: 'outfit-semibold',
-                                fontSize: 14,
-                                color: Colors.black,
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => ProfilePage(
+                                      userId: userId,
+                                      myId: 1,
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                name,
+                                style: TextStyle(
+                                  fontFamily: 'outfit-semibold',
+                                  fontSize: 14,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                           ),

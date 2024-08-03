@@ -16,18 +16,18 @@ class IndexPage extends StatefulWidget {
 }
 
 class IndexPageState extends State<IndexPage> {
-  final screens = [
-    HomePage(),
-    ExplorePage(),
-    LibraryPage(),
-    WritePage(),
-    ProfilePage(userId: 1, myId: 1),
-  ];
-
   int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    final screens = [
+      HomePage(),
+      ExplorePage(),
+      LibraryPage(),
+      WritePage(),
+      ProfilePage(userId: 1, myId: 1),
+    ];
+
     return Scaffold(
       backgroundColor: background,
       bottomNavigationBar: Container(

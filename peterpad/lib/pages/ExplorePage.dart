@@ -52,6 +52,7 @@ class ExplorePageState extends State<ExplorePage> {
                   top: false,
                   sliver: SliverAppBar(
                     backgroundColor: background,
+                    surfaceTintColor: background,
                     toolbarHeight: 100,
                     elevation: 0,
                     titleSpacing: 0,

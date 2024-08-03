@@ -44,6 +44,7 @@ class ExploreGenrePageState extends State<ExploreGenrePage> {
                 top: false,
                 sliver: SliverAppBar(
                   backgroundColor: background,
+                  surfaceTintColor: background,
                   toolbarHeight: 100,
                   elevation: 0,
                   titleSpacing: 0,

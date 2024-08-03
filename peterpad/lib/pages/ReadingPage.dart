@@ -72,6 +72,7 @@ class _ReadingPageState extends State<ReadingPage> {
       backgroundColor: background,
       appBar: AppBar(
         backgroundColor: background,
+        surfaceTintColor: background,
         toolbarHeight: 50,
         flexibleSpace: ValueListenableBuilder<bool>(
           valueListenable: isScrolledNotifier,

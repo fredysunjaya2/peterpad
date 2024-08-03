@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:peterpad/pages/HomePage.dart';
+import 'package:peterpad/pages/IndexPage.dart';
 import 'package:peterpad/pages/LoginPage.dart';
 import 'package:peterpad/constants.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -280,7 +281,7 @@ class RegisterPageState extends State<RegisterPage> {
                           onPressed: () {
                             Navigator.of(context).pushReplacement(
                               MaterialPageRoute(
-                                builder: (BuildContext context) => const HomePage(),
+                                builder: (BuildContext context) => const IndexPage(),
                               ),
                             );
                           },

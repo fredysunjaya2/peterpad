@@ -31,6 +31,7 @@ class WritePageState extends State<WritePage> {
                 top: false,
                 sliver: SliverAppBar(
                   backgroundColor: background,
+                  surfaceTintColor: background,
                   elevation: 0,
                   toolbarHeight: 100,
                   titleSpacing: 0,
@@ -71,7 +72,9 @@ class WritePageState extends State<WritePage> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => AddChapterPage(),
+                                  builder: (context) => AddChapterPage(
+                                    isAdd: true,
+                                  ),
                                 ),
                               );
                             },
@@ -99,12 +102,15 @@ class WritePageState extends State<WritePage> {
                   ),
                   // ------------------- ------------------- Notification Group By Date ------------------- -------------------
                   SliverList(
-                    delegate: SliverChildBuilderDelegate((context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0), // Use the length of the novelDetails list
-                        child: _buildCard(context, writes[index]['details']),
-                      );
-                    }, childCount: writes.length),
+                    delegate: SliverChildBuilderDelegate(
+                      (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.fromLTRB(25, 0, 25, 0), // Use the length of the novelDetails list
+                          child: _buildCard(context, writes[index]),
+                        );
+                      },
+                      childCount: writes.length,
+                    ),
                   ),
                 ],
               );
@@ -117,14 +123,16 @@ class WritePageState extends State<WritePage> {
 
   Widget _buildCard(BuildContext context, Map<String, dynamic> novel) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
+      padding: const EdgeInsets.symmetric(
+        vertical: 10,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
               Image.asset(
-                novel['imagePath'],
+                novel['details']['imagePath'],
                 width: 116,
                 height: 150,
                 fit: BoxFit.cover,
@@ -135,7 +143,7 @@ class WritePageState extends State<WritePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      novel['title'],
+                      novel['details']['title'],
                       style: const TextStyle(
                         fontFamily: 'outfit-medium',
                         fontSize: 24,
@@ -144,7 +152,7 @@ class WritePageState extends State<WritePage> {
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      '${novel['chapterPublished']} of ${novel['totalChapters']} Parts Published',
+                      '${novel['details']['chapterPublished']} of ${novel['details']['totalChapters']} Parts Published',
                       style: const TextStyle(
                         fontFamily: 'outfit-regular',
                         fontSize: 16,
@@ -152,7 +160,7 @@ class WritePageState extends State<WritePage> {
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      novel['date'],
+                      novel['details']['date'],
                       style: const TextStyle(
                         fontFamily: 'outfit-extra-light',
                         fontSize: 11,
@@ -162,9 +170,9 @@ class WritePageState extends State<WritePage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        _buildIconText("assets/NovelPage/views.svg", novel['views'].toString()),
-                        _buildIconText("assets/WritePage/rating.svg", novel['rating'].toString()),
-                        _buildIconText("assets/NovelPage/comments.svg", novel['comments'].toString()),
+                        _buildIconText("assets/NovelPage/views.svg", novel['details']['views'].toString()),
+                        _buildIconText("assets/WritePage/rating.svg", novel['details']['rating'].toString()),
+                        _buildIconText("assets/NovelPage/comments.svg", novel['details']['comments'].toString()),
                       ],
                     ),
                   ],
@@ -174,7 +182,12 @@ class WritePageState extends State<WritePage> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const EditChapterPage()),
+                    MaterialPageRoute(
+                      builder: (context) => new AddChapterPage(
+                        isAdd: false,
+                        id: novel['id'],
+                      ),
+                    ),
                   );
                 },
                 child: SvgPicture.asset('assets/WritePage/edit.svg'),

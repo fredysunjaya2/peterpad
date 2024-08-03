@@ -31,6 +31,7 @@ class _WritingchapterpageState extends State<WritingChapterPage> {
                 top: false,
                 sliver: SliverAppBar(
                   backgroundColor: background,
+                  surfaceTintColor: background,
                   toolbarHeight: 100,
                   elevation: 0,
                   titleSpacing: 0,
@@ -83,7 +84,7 @@ class _WritingchapterpageState extends State<WritingChapterPage> {
                             Text(
                               'Save',
                               style: TextStyle(
-                                fontFamily: 'outfit-semibold',
+                                fontFamily: 'outfit-regular',
                                 fontSize: 24,
                                 color: Colors.black,
                               ),

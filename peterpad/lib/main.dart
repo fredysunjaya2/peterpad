@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
       ),
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: IndexPage(),
+      home: Landingpage(),
       // home: CollectionPage(
       //   id: 1,
       // ),

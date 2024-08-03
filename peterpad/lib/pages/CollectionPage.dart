@@ -87,165 +87,200 @@ class CollectionPageState extends State<CollectionPage> {
             top: false,
             sliver: SliverAppBar(
               backgroundColor: background,
+              surfaceTintColor: background,
               toolbarHeight: 100,
               expandedHeight: _expandedHeight,
               elevation: 0,
               titleSpacing: 0,
               primary: false,
+              automaticallyImplyLeading: false,
               floating: _expandedHeight == null ? true : false,
               snap: _expandedHeight == null ? true : false,
-              flexibleSpace: FlexibleSpaceBar(
-                centerTitle: true,
-                title: AnimatedOpacity(
-                  opacity: _expandedHeight != null
-                      ? 0
-                      : _expandedHeight == null
-                          ? 1
-                          : _expandedHeight! / _moreHeight,
-                  duration: const Duration(milliseconds: 300),
-                  child: Text(
-                    collectionDetail["name"],
-                    style: TextStyle(
-                      fontFamily: 'outfit-medium',
-                      fontSize: 24,
-                      color: Colors.black,
+              title: AnimatedOpacity(
+                opacity: _expandedHeight != null
+                    ? 0
+                    : _expandedHeight == null
+                        ? 1
+                        : _expandedHeight! / _moreHeight,
+                duration: const Duration(milliseconds: 300),
+                child: Container(
+                  height: 100,
+                  padding: EdgeInsets.fromLTRB(25, 40, 25, 20),
+                  decoration: BoxDecoration(
+                    color: background,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30),
                     ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 10,
+                        spreadRadius: 0.5,
+                      )
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      GestureDetector(
+                        onTap: () => Navigator.of(context).pop(),
+                        child: SvgPicture.asset(
+                          'assets/NotificationPage/back.svg',
+                        ),
+                      ),
+                      Text(
+                        collectionDetail["name"],
+                        style: TextStyle(
+                          fontFamily: 'outfit-medium',
+                          fontSize: 24,
+                          color: Colors.black,
+                        ),
+                      ),
+                      SvgPicture.asset(
+                        'assets/WritingPage/more.svg',
+                      ),
+                    ],
                   ),
                 ),
-                titlePadding: EdgeInsets.only(bottom: 25),
-                background: Stack(
-                  fit: StackFit.expand,
-                  alignment: Alignment.center,
-                  children: [
-                    AnimatedOpacity(
+              ),
+              flexibleSpace: Stack(
+                fit: StackFit.expand,
+                alignment: Alignment.center,
+                children: [
+                  AnimatedOpacity(
+                    opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                    duration: const Duration(milliseconds: 300),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.vertical(
+                        bottom: Radius.circular(10),
+                      ),
+                      child: ImageFiltered(
+                        imageFilter: ImageFilter.blur(
+                          sigmaX: 5,
+                          sigmaY: 5,
+                        ),
+                        child: ColorFiltered(
+                          colorFilter: ColorFilter.mode(
+                            Colors.black.withOpacity(0.2),
+                            BlendMode.darken,
+                          ),
+                          child: Transform.scale(
+                            scale: 1.05,
+                            child: Image.asset(
+                              collectionDetail["imagePath"],
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 20,
+                    child: AnimatedOpacity(
                       opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
                       duration: const Duration(milliseconds: 300),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.vertical(
-                          bottom: Radius.circular(10),
-                        ),
-                        child: ImageFiltered(
-                          imageFilter: ImageFilter.blur(
-                            sigmaX: 5,
-                            sigmaY: 5,
-                          ),
-                          child: ColorFiltered(
-                            colorFilter: ColorFilter.mode(
-                              Colors.black.withOpacity(0.2),
-                              BlendMode.darken,
-                            ),
-                            child: Transform.scale(
-                              scale: 1.05,
-                              child: Image.asset(
-                                collectionDetail["imagePath"],
-                                fit: BoxFit.cover,
+                      child: Container(
+                        width: screenWidth,
+                        child: ResponsiveRowColumn(
+                          layout: ResponsiveRowColumnType.COLUMN,
+                          columnSpacing: 20,
+                          children: [
+                            ResponsiveRowColumnItem(
+                              child: Text(
+                                collectionDetail["name"],
+                                style: TextStyle(
+                                  fontFamily: 'outfit-medium',
+                                  fontSize: 24,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
-                          ),
+                            ResponsiveRowColumnItem(
+                              child: ResponsiveRowColumn(
+                                layout: ResponsiveRowColumnType.ROW,
+                                rowPadding: EdgeInsets.symmetric(
+                                  horizontal: 45,
+                                ),
+                                rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  ResponsiveRowColumnItem(
+                                    child: ResponsiveRowColumn(
+                                      layout: ResponsiveRowColumnType.COLUMN,
+                                      children: [
+                                        ResponsiveRowColumnItem(
+                                          child: SvgPicture.asset('assets/CollectionPage/novelCount.svg'),
+                                        ),
+                                        ResponsiveRowColumnItem(
+                                          child: Text(
+                                            collectionDetail["novelCount"].toString() + ' Novels',
+                                            style: TextStyle(
+                                              fontFamily: 'outfit-regular',
+                                              fontSize: 18,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  ResponsiveRowColumnItem(
+                                    child: ResponsiveRowColumn(
+                                      layout: ResponsiveRowColumnType.COLUMN,
+                                      children: [
+                                        ResponsiveRowColumnItem(
+                                          child: SvgPicture.asset('assets/CollectionPage/visibility.svg'),
+                                        ),
+                                        ResponsiveRowColumnItem(
+                                          child: Text(
+                                            collectionDetail["visibility"],
+                                            style: TextStyle(
+                                              fontFamily: 'outfit-regular',
+                                              fontSize: 18,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  ResponsiveRowColumnItem(
+                                    child: ResponsiveRowColumn(
+                                      layout: ResponsiveRowColumnType.COLUMN,
+                                      children: [
+                                        ResponsiveRowColumnItem(
+                                          child: SvgPicture.asset('assets/CollectionPage/owner.svg'),
+                                        ),
+                                        ResponsiveRowColumnItem(
+                                          child: Text(
+                                            collectionDetail["owner"],
+                                            style: TextStyle(
+                                              fontFamily: 'outfit-regular',
+                                              fontSize: 18,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                    Positioned(
-                      bottom: 20,
-                      child: AnimatedOpacity(
-                        opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
-                        duration: const Duration(milliseconds: 300),
-                        child: Container(
-                          width: screenWidth,
-                          child: ResponsiveRowColumn(
-                            layout: ResponsiveRowColumnType.COLUMN,
-                            columnSpacing: 20,
-                            children: [
-                              ResponsiveRowColumnItem(
-                                child: Text(
-                                  collectionDetail["name"],
-                                  style: TextStyle(
-                                    fontFamily: 'outfit-medium',
-                                    fontSize: 24,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              ResponsiveRowColumnItem(
-                                child: ResponsiveRowColumn(
-                                  layout: ResponsiveRowColumnType.ROW,
-                                  rowPadding: EdgeInsets.symmetric(
-                                    horizontal: 45,
-                                  ),
-                                  rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    ResponsiveRowColumnItem(
-                                      child: ResponsiveRowColumn(
-                                        layout: ResponsiveRowColumnType.COLUMN,
-                                        children: [
-                                          ResponsiveRowColumnItem(
-                                            child: SvgPicture.asset('assets/CollectionPage/novelCount.svg'),
-                                          ),
-                                          ResponsiveRowColumnItem(
-                                            child: Text(
-                                              collectionDetail["novelCount"].toString() + ' Novels',
-                                              style: TextStyle(
-                                                fontFamily: 'outfit-regular',
-                                                fontSize: 18,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    ResponsiveRowColumnItem(
-                                      child: ResponsiveRowColumn(
-                                        layout: ResponsiveRowColumnType.COLUMN,
-                                        children: [
-                                          ResponsiveRowColumnItem(
-                                            child: SvgPicture.asset('assets/CollectionPage/visibility.svg'),
-                                          ),
-                                          ResponsiveRowColumnItem(
-                                            child: Text(
-                                              collectionDetail["visibility"],
-                                              style: TextStyle(
-                                                fontFamily: 'outfit-regular',
-                                                fontSize: 18,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    ResponsiveRowColumnItem(
-                                      child: ResponsiveRowColumn(
-                                        layout: ResponsiveRowColumnType.COLUMN,
-                                        children: [
-                                          ResponsiveRowColumnItem(
-                                            child: SvgPicture.asset('assets/CollectionPage/owner.svg'),
-                                          ),
-                                          ResponsiveRowColumnItem(
-                                            child: Text(
-                                              collectionDetail["owner"],
-                                              style: TextStyle(
-                                                fontFamily: 'outfit-regular',
-                                                fontSize: 18,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      top: 40,
-                      left: 25,
-                      right: 25,
+                  ),
+                  Positioned(
+                    // top: 40,
+                    left: 25,
+                    right: 25,
+                    bottom: 270,
+                    child: AnimatedOpacity(
+                      opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                      duration: const Duration(milliseconds: 300),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -275,8 +310,8 @@ class CollectionPageState extends State<CollectionPage> {
                         ],
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

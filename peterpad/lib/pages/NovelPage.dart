@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:peterpad/components/ChapterItem.dart';
 import 'package:peterpad/components/CommentPostItem.dart';
+import 'package:peterpad/pages/ProfilePage.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:peterpad/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -96,6 +97,7 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
             top: false,
             sliver: SliverAppBar(
               backgroundColor: background,
+              surfaceTintColor: background,
               toolbarHeight: 100,
               expandedHeight: _expandedHeight,
               elevation: 0,
@@ -103,96 +105,133 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
               floating: _expandedHeight == null ? true : false,
               snap: _expandedHeight == null ? true : false,
               primary: false,
-              flexibleSpace: FlexibleSpaceBar(
-                centerTitle: true,
-                title: AnimatedOpacity(
-                  opacity: _expandedHeight != null
-                      ? 0
-                      : _expandedHeight == null
-                          ? 1
-                          : _expandedHeight! / _moreHeight,
-                  duration: const Duration(milliseconds: 300),
-                  child: Text(
-                    novelDetail["title"],
-                    style: TextStyle(
-                      fontFamily: 'outfit-medium',
-                      fontSize: 24,
-                      color: Colors.black,
+              automaticallyImplyLeading: false,
+              title: AnimatedOpacity(
+                opacity: _expandedHeight != null
+                    ? 0
+                    : _expandedHeight == null
+                        ? 1
+                        : _expandedHeight! / _moreHeight,
+                duration: const Duration(milliseconds: 300),
+                child: Container(
+                  height: 100,
+                  padding: EdgeInsets.fromLTRB(25, 40, 25, 20),
+                  decoration: BoxDecoration(
+                    color: background,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30),
                     ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 10,
+                        spreadRadius: 0.5,
+                      )
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      GestureDetector(
+                        onTap: () => Navigator.of(context).pop(),
+                        child: SvgPicture.asset(
+                          'assets/NotificationPage/back.svg',
+                        ),
+                      ),
+                      Text(
+                        novelDetail["title"],
+                        style: TextStyle(
+                          fontFamily: 'outfit-medium',
+                          fontSize: 24,
+                          color: Colors.black,
+                        ),
+                      ),
+                      SvgPicture.asset(
+                        'assets/WritingPage/more.svg',
+                      ),
+                    ],
                   ),
                 ),
-                titlePadding: EdgeInsets.only(bottom: 25),
-                background: Stack(
-                  alignment: Alignment.topCenter,
-                  children: [
-                    AnimatedOpacity(
+              ),
+              flexibleSpace: Stack(
+                alignment: Alignment.topCenter,
+                children: [
+                  Positioned(
+                    top: 0,
+                    child: AnimatedOpacity(
+                      opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                      duration: const Duration(milliseconds: 300),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.vertical(
+                          bottom: Radius.circular(10),
+                        ),
+                        child: ImageFiltered(
+                          imageFilter: ImageFilter.blur(
+                            sigmaX: 5,
+                            sigmaY: 5,
+                          ),
+                          child: ColorFiltered(
+                            colorFilter: ColorFilter.mode(
+                              Colors.black.withOpacity(0.2),
+                              BlendMode.darken,
+                            ),
+                            child: Transform.scale(
+                              scale: 1.05,
+                              child: Image.asset(
+                                novelDetail["imagePath"],
+                                fit: BoxFit.cover,
+                                width: screenWidth,
+                                height: _expandedHeight != null ? _expandedHeight! * 0.65 : 0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: _expandedHeight != null ? _expandedHeight! * 0.02 : 0,
+                    child: AnimatedOpacity(
                       opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
                       duration: const Duration(milliseconds: 300),
                       child: ResponsiveRowColumn(
                         layout: ResponsiveRowColumnType.COLUMN,
+                        columnCrossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           ResponsiveRowColumnItem(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.vertical(
-                                bottom: Radius.circular(10),
-                              ),
-                              child: ImageFiltered(
-                                imageFilter: ImageFilter.blur(
-                                  sigmaX: 5,
-                                  sigmaY: 5,
-                                ),
-                                child: ColorFiltered(
-                                  colorFilter: ColorFilter.mode(
-                                    Colors.black.withOpacity(0.2),
-                                    BlendMode.darken,
-                                  ),
-                                  child: Transform.scale(
-                                    scale: 1.05,
-                                    child: Image.asset(
-                                      novelDetail["imagePath"],
-                                      fit: BoxFit.cover,
-                                      width: double.infinity,
-                                      height: _expandedHeight != null ? _expandedHeight! * 0.65 : 0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                            child: Image.asset(novelDetail["imagePath"]),
                           ),
-                        ],
-                      ),
-                    ),
-                    Positioned(
-                      top: _expandedHeight != null ? _expandedHeight! * 0.3 : 0,
-                      child: AnimatedOpacity(
-                        opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
-                        duration: const Duration(milliseconds: 300),
-                        child: ResponsiveRowColumn(
-                          layout: ResponsiveRowColumnType.COLUMN,
-                          columnCrossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            ResponsiveRowColumnItem(
-                              child: Image.asset(novelDetail["imagePath"]),
-                            ),
-                            ResponsiveRowColumnItem(
-                              child: ResponsiveRowColumn(
-                                layout: ResponsiveRowColumnType.COLUMN,
-                                columnPadding: EdgeInsets.only(
-                                  top: 10,
-                                  bottom: 15,
-                                ),
-                                children: [
-                                  ResponsiveRowColumnItem(
-                                    child: Text(
-                                      novelDetail["title"],
-                                      style: TextStyle(
-                                        fontFamily: 'outfit-semibold',
-                                        fontSize: 24,
-                                        color: red,
-                                      ),
+                          ResponsiveRowColumnItem(
+                            child: ResponsiveRowColumn(
+                              layout: ResponsiveRowColumnType.COLUMN,
+                              columnPadding: EdgeInsets.only(
+                                top: 10,
+                                bottom: 15,
+                              ),
+                              children: [
+                                ResponsiveRowColumnItem(
+                                  child: Text(
+                                    novelDetail["title"],
+                                    style: TextStyle(
+                                      fontFamily: 'outfit-semibold',
+                                      fontSize: 24,
+                                      color: red,
                                     ),
                                   ),
-                                  ResponsiveRowColumnItem(
+                                ),
+                                ResponsiveRowColumnItem(
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) => ProfilePage(
+                                            userId: novelDetail["userId"],
+                                            myId: 1,
+                                          ),
+                                        ),
+                                      );
+                                    },
                                     child: Text(
                                       novelDetail["author"],
                                       style: TextStyle(
@@ -202,117 +241,122 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                       ),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                            ResponsiveRowColumnItem(
-                              child: ResponsiveRowColumn(
-                                layout: ResponsiveRowColumnType.ROW,
-                                rowSpacing: 50,
-                                children: [
-                                  ResponsiveRowColumnItem(
-                                    child: ResponsiveRowColumn(
-                                      layout: ResponsiveRowColumnType.ROW,
-                                      rowSpacing: 7,
-                                      children: [
-                                        ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset(
-                                            'assets/NovelPage/views.svg',
+                          ),
+                          ResponsiveRowColumnItem(
+                            child: ResponsiveRowColumn(
+                              layout: ResponsiveRowColumnType.ROW,
+                              rowSpacing: 50,
+                              children: [
+                                ResponsiveRowColumnItem(
+                                  child: ResponsiveRowColumn(
+                                    layout: ResponsiveRowColumnType.ROW,
+                                    rowSpacing: 7,
+                                    children: [
+                                      ResponsiveRowColumnItem(
+                                        child: SvgPicture.asset(
+                                          'assets/NovelPage/views.svg',
+                                        ),
+                                      ),
+                                      ResponsiveRowColumnItem(
+                                        child: Text(
+                                          NumberFormat.compact().format(novelDetail["views"]),
+                                          style: TextStyle(
+                                            fontFamily: 'outfit-light',
+                                            fontSize: 12,
+                                            color: Colors.black,
                                           ),
                                         ),
-                                        ResponsiveRowColumnItem(
-                                          child: Text(
-                                            NumberFormat.compact().format(novelDetail["views"]),
-                                            style: TextStyle(
-                                              fontFamily: 'outfit-light',
-                                              fontSize: 12,
-                                              color: Colors.black,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
-                                  ResponsiveRowColumnItem(
-                                    child: ResponsiveRowColumn(
-                                      layout: ResponsiveRowColumnType.ROW,
-                                      rowSpacing: 7,
-                                      children: [
-                                        ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset(
-                                            'assets/star.svg',
+                                ),
+                                ResponsiveRowColumnItem(
+                                  child: ResponsiveRowColumn(
+                                    layout: ResponsiveRowColumnType.ROW,
+                                    rowSpacing: 7,
+                                    children: [
+                                      ResponsiveRowColumnItem(
+                                        child: SvgPicture.asset(
+                                          'assets/star.svg',
+                                        ),
+                                      ),
+                                      ResponsiveRowColumnItem(
+                                        child: Text(
+                                          novelDetail["rating"].toString(),
+                                          style: TextStyle(
+                                            fontFamily: 'outfit-light',
+                                            fontSize: 12,
+                                            color: Colors.black,
                                           ),
                                         ),
-                                        ResponsiveRowColumnItem(
-                                          child: Text(
-                                            novelDetail["rating"].toString(),
-                                            style: TextStyle(
-                                              fontFamily: 'outfit-light',
-                                              fontSize: 12,
-                                              color: Colors.black,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
-                                  ResponsiveRowColumnItem(
-                                    child: ResponsiveRowColumn(
-                                      layout: ResponsiveRowColumnType.ROW,
-                                      rowSpacing: 7,
-                                      children: [
-                                        ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset(
-                                            'assets/NovelPage/chapters.svg',
+                                ),
+                                ResponsiveRowColumnItem(
+                                  child: ResponsiveRowColumn(
+                                    layout: ResponsiveRowColumnType.ROW,
+                                    rowSpacing: 7,
+                                    children: [
+                                      ResponsiveRowColumnItem(
+                                        child: SvgPicture.asset(
+                                          'assets/NovelPage/chapters.svg',
+                                        ),
+                                      ),
+                                      ResponsiveRowColumnItem(
+                                        child: Text(
+                                          novelDetail["chapters"].toString(),
+                                          style: TextStyle(
+                                            fontFamily: 'outfit-light',
+                                            fontSize: 12,
+                                            color: Colors.black,
                                           ),
                                         ),
-                                        ResponsiveRowColumnItem(
-                                          child: Text(
-                                            novelDetail["chapters"].toString(),
-                                            style: TextStyle(
-                                              fontFamily: 'outfit-light',
-                                              fontSize: 12,
-                                              color: Colors.black,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
-                                  ResponsiveRowColumnItem(
-                                    child: ResponsiveRowColumn(
-                                      layout: ResponsiveRowColumnType.ROW,
-                                      rowSpacing: 7,
-                                      children: [
-                                        ResponsiveRowColumnItem(
-                                          child: SvgPicture.asset(
-                                            'assets/NovelPage/comments.svg',
+                                ),
+                                ResponsiveRowColumnItem(
+                                  child: ResponsiveRowColumn(
+                                    layout: ResponsiveRowColumnType.ROW,
+                                    rowSpacing: 7,
+                                    children: [
+                                      ResponsiveRowColumnItem(
+                                        child: SvgPicture.asset(
+                                          'assets/NovelPage/comments.svg',
+                                        ),
+                                      ),
+                                      ResponsiveRowColumnItem(
+                                        child: Text(
+                                          NumberFormat.compact().format(novelDetail["comments"]),
+                                          style: TextStyle(
+                                            fontFamily: 'outfit-light',
+                                            fontSize: 12,
+                                            color: Colors.black,
                                           ),
                                         ),
-                                        ResponsiveRowColumnItem(
-                                          child: Text(
-                                            NumberFormat.compact().format(novelDetail["comments"]),
-                                            style: TextStyle(
-                                              fontFamily: 'outfit-light',
-                                              fontSize: 12,
-                                              color: Colors.black,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
-                    Positioned(
-                      top: 40,
-                      left: 25,
-                      right: 25,
+                  ),
+                  Positioned(
+                    // top: 40,
+                    left: 25,
+                    right: 25,
+                    bottom: 370,
+                    child: AnimatedOpacity(
+                      opacity: _expandedHeight != null ? _expandedHeight! / _moreHeight : 0,
+                      duration: const Duration(milliseconds: 300),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -342,8 +386,8 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                         ],
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -553,7 +597,8 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                                       comment: item["comment"],
                                                       likeCount: item["likeCount"],
                                                       replyCount: item["replyCount"],
-                                                      isComment: true,
+                                                      userId: item["userId"],
+                                                      isComment: true, 
                                                     );
                                                   },
                                                 ).toList(),
