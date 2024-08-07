@@ -299,13 +299,7 @@ class HomePageState extends State<HomePage> {
                                           ),
                                           alignment: Alignment.center,
                                           child: TextButton(
-                                            onPressed: () {
-                                              Navigator.of(context).pushReplacement(
-                                                MaterialPageRoute(
-                                                  builder: (BuildContext context) => const HomePage(),
-                                                ),
-                                              );
-                                            },
+                                            onPressed: () {},
                                             child: Padding(
                                               padding: EdgeInsets.fromLTRB(40, 5, 40, 5),
                                               child: Text(

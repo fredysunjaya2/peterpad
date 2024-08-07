@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:peterpad/pages/AddChapterPage.dart';
-import 'package:peterpad/pages/EditChapterPage.dart';
 import 'package:peterpad/pages/WritingChapterPage.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:peterpad/constants.dart';

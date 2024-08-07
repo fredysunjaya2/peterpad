@@ -51,6 +51,7 @@ class ExploreGenrePageState extends State<ExploreGenrePage> {
                   floating: true,
                   snap: true,
                   primary: false,
+                  automaticallyImplyLeading: false,
                   flexibleSpace: Container(
                     decoration: BoxDecoration(
                       color: background,

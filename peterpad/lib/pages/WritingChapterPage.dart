@@ -6,13 +6,30 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:flutter/material.dart';
 
 class WritingChapterPage extends StatefulWidget {
-  const WritingChapterPage({super.key});
+  late bool isEdit;
+
+  WritingChapterPage({
+    super.key,
+    required this.isEdit,
+  });
 
   @override
   State<WritingChapterPage> createState() => _WritingchapterpageState();
 }
 
 class _WritingchapterpageState extends State<WritingChapterPage> {
+  TextEditingController _titleFieldController = new TextEditingController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    if (widget.isEdit) {
+      _titleFieldController.text = "Lorem Ipsum Dolor Sit Amet";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.sizeOf(context).width;
@@ -35,9 +52,9 @@ class _WritingchapterpageState extends State<WritingChapterPage> {
                   toolbarHeight: 100,
                   elevation: 0,
                   titleSpacing: 0,
-                  floating: true,
-                  snap: true,
+                  pinned: true,
                   primary: false,
+                  automaticallyImplyLeading: false,
                   flexibleSpace: Container(
                     decoration: BoxDecoration(
                       color: background,
@@ -111,33 +128,138 @@ class _WritingchapterpageState extends State<WritingChapterPage> {
             ),
           ];
         },
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              TextField(
-                obscureText: false,
-                textAlign: TextAlign.center,
-                decoration: InputDecoration(
-                  hintText: 'Title',
-                  hintStyle: TextStyle(
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(15, 20, 15, 40),
+            child: Column(
+              children: [
+                TextField(
+                  controller: _titleFieldController,
+                  obscureText: false,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
                     fontSize: 20,
-                    fontFamily: "outfit-light",
+                    fontFamily: 'outfit-semibold',
+                  ),
+                  decoration: InputDecoration(
+                    hintText: 'Title',
+                    hintStyle: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "outfit-light",
+                    ),
                   ),
                 ),
-              ),
-              TextField(
-                maxLines: null,
-                decoration: InputDecoration(
-                  hintText: "Type Your Story",
-                  border: InputBorder.none,
-                  hintStyle: TextStyle(
-                    fontSize: 14,
-                    fontFamily: "outfit-light",
+                if (widget.isEdit) ...[
+                  SizedBox(
+                    height: 30,
                   ),
-                ),
-              ),
-            ],
+                  RichText(
+                    textAlign: TextAlign.justify,
+                    text: TextSpan(
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontFamily: 'outfit-light',
+                        color: Colors.black,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                        ),
+                        TextSpan(text: "\n\n"),
+                        TextSpan(
+                          text:
+                              "Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. ",
+                        ),
+                        TextSpan(text: "\n\n"),
+                        TextSpan(
+                          text:
+                              "Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+                        ),
+                        TextSpan(text: "\n\n"),
+                        TextSpan(
+                          text:
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. ",
+                        ),
+                        TextSpan(text: "\n\n"),
+                        TextSpan(
+                          text:
+                              "Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. ",
+                        ),
+                      ],
+                    ),
+                  ),
+                ] else ...[
+                  TextField(
+                    maxLines: null,
+                    decoration: InputDecoration(
+                      hintText: "Type Your Story",
+                      border: InputBorder.none,
+                      hintStyle: TextStyle(
+                        fontSize: 14,
+                        fontFamily: "outfit-light",
+                      ),
+                    ),
+                  ),
+                ]
+              ],
+            ),
           ),
         ),
       ),

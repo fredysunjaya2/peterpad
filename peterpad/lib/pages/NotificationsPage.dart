@@ -50,6 +50,7 @@ class NotificationsPageState extends State<NotificationsPage> {
                   floating: true,
                   snap: true,
                   primary: false,
+                  automaticallyImplyLeading: false,
                   flexibleSpace: Container(
                     decoration: BoxDecoration(
                       color: background,

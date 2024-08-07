@@ -190,7 +190,7 @@ class LoginPageState extends State<LoginPage> {
                           child: Padding(
                             padding: EdgeInsets.fromLTRB(45, 13, 45, 13),
                             child: Text(
-                              'Register',
+                              'Sign In',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,
@@ -282,7 +282,7 @@ class LoginPageState extends State<LoginPage> {
                       ),
                       ResponsiveRowColumnItem(
                         child: Text(
-                          'Sign In',
+                          'Register',
                           style: TextStyle(
                             fontFamily: 'outfit-light',
                             fontSize: 14,

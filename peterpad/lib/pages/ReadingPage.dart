@@ -12,54 +12,24 @@ class ReadingPage extends StatefulWidget {
 }
 
 class _ReadingPageState extends State<ReadingPage> {
-  late ScrollController _scrollController;
-  // variable height passed to SliverAppBar expanded height
-  late double? _expandedHeight;
-  bool toolbarHeight = true;
-
-  // constant more height that is given to the expandedHeight
-  // of the SliverAppBar
-  final double _moreHeight = 450;
   ValueNotifier<bool> isScrolledNotifier = ValueNotifier(true);
-  // bool _showBottomBar = true;
+  final ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
-    super.initState();
+    isScrolledNotifier.value = true;
 
-    // initialize and add scroll listener
-    _scrollController = ScrollController();
-    _scrollController.addListener(_scrollListen);
-    // initially expanded height is full
-    _expandedHeight = _moreHeight;
+    super.initState();
   }
 
   @override
   dispose() {
-    isScrolledNotifier.dispose();
-    isScrolledNotifier.dispose();
-    // dispose the scroll listener and controller
-    _scrollController.removeListener(_scrollListen);
-    _scrollController.dispose();
     super.dispose();
   }
 
   void _showBars() {
-    isScrolledNotifier.value = !isScrolledNotifier.value;
-  }
-
-  _scrollListen() {
-    final offset = _scrollController.offset;
-    if (offset > _moreHeight) {
-      // if offset is more height, disable expanded height
-      setState(() {
-        _expandedHeight = null;
-      });
-    } else {
-      // if offset is less, keep increasing the height to offset 0
-      setState(() {
-        _expandedHeight = _moreHeight - offset;
-      });
+    if (_scrollController.offset != 0) {
+      isScrolledNotifier.value = !isScrolledNotifier.value;
     }
   }
 
@@ -70,195 +40,206 @@ class _ReadingPageState extends State<ReadingPage> {
 
     return Scaffold(
       backgroundColor: background,
-      appBar: AppBar(
-        backgroundColor: background,
-        surfaceTintColor: background,
-        toolbarHeight: 50,
-        flexibleSpace: ValueListenableBuilder<bool>(
-          valueListenable: isScrolledNotifier,
-          builder: (context, isScrolled, child) {
-            return AnimatedContainer(
-              duration: Duration(milliseconds: 300),
-              height: isScrolled ? 100 : 0,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: background,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(30),
-                    bottomRight: Radius.circular(30),
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 10,
-                      spreadRadius: 0.5,
-                    )
-                  ],
-                ),
-                padding: EdgeInsets.fromLTRB(25, 40, 25, 20),
-                child: ResponsiveRowColumn(
-                  layout: ResponsiveRowColumnType.ROW,
-                  rowSpacing: 30,
-                  rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    ResponsiveRowColumnItem(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: Icon(
-                              Icons.arrow_back_ios,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    ResponsiveRowColumnItem(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Funiculi Funicula',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontFamily: 'outfit-semibold', fontSize: 24, color: red),
-                          )
-                        ],
-                      ),
-                    ),
-                    ResponsiveRowColumnItem(
-                      child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: const Icon(
-                            Icons.list,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ]),
-                    ),
-                  ],
-                ),
-              ),
-            );
-          },
-        ),
-      ),
       body: GestureDetector(
         onTap: _showBars,
         child: NestedScrollView(
+          controller: _scrollController,
           headerSliverBuilder: (context, innerBoxIsScrolled) {
-            WidgetsBinding.instance.addPostFrameCallback((_) {
-              // Add Your Code here.
-              isScrolledNotifier.value = !innerBoxIsScrolled;
-            });
-
-            return [];
+            WidgetsBinding.instance.addPostFrameCallback(
+              (_) {
+                // Add Your Code here.
+                isScrolledNotifier.value = !innerBoxIsScrolled;
+              },
+            );
+            return [
+              SliverAppBar(
+                backgroundColor: Colors.transparent,
+                surfaceTintColor: background,
+                toolbarHeight: 100,
+                floating: true,
+                primary: false,
+                automaticallyImplyLeading: false,
+                pinned: true,
+                flexibleSpace: ValueListenableBuilder<bool>(
+                  valueListenable: isScrolledNotifier,
+                  builder: (context, isScrolled, child) {
+                    return AnimatedContainer(
+                      duration: Duration(milliseconds: 300),
+                      height: isScrolled ? 100 : 0,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: background,
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              blurRadius: 10,
+                              spreadRadius: 0.5,
+                            )
+                          ],
+                        ),
+                        padding: EdgeInsets.fromLTRB(25, 40, 25, 20),
+                        child: ResponsiveRowColumn(
+                          layout: ResponsiveRowColumnType.ROW,
+                          rowSpacing: 30,
+                          rowMainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            ResponsiveRowColumnItem(
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: SvgPicture.asset(
+                                  'assets/NotificationPage/back.svg',
+                                ),
+                              ),
+                            ),
+                            ResponsiveRowColumnItem(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Funiculi Funicula',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(fontFamily: 'outfit-semibold', fontSize: 24, color: red),
+                                  )
+                                ],
+                              ),
+                            ),
+                            ResponsiveRowColumnItem(
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: SvgPicture.asset(
+                                  'assets/ReadingPage/more.svg',
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ];
             // ------------------- ------------------- App Bar ------------------- -------------------
           },
           body: SingleChildScrollView(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.fromLTRB(15, 20, 15, 40),
             child: Column(
               children: [
                 SizedBox(height: 15),
-                Text('Chapter 1:', style: TextStyle(fontSize: 14, color: Colors.grey, fontFamily: 'outfit')),
-                Text('A New Life', style: TextStyle(fontSize: 20, fontFamily: 'outfit-semibold')),
+                Text(
+                  'Chapter 1:',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.grey,
+                    fontFamily: 'outfit',
+                  ),
+                ),
+                Text(
+                  'A New Life',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'outfit-semibold',
+                  ),
+                ),
                 SizedBox(height: 30),
                 RichText(
-                    textAlign: TextAlign.justify,
-                    text: TextSpan(
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontFamily: 'outfit-light',
-                          color: Colors.black,
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
-                          ),
-                          TextSpan(text: "\n\n"),
-                          TextSpan(
-                            text:
-                                "Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. ",
-                          ),
-                          TextSpan(text: "\n\n"),
-                          TextSpan(
-                            text:
-                                "Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
-                          ),
-                          TextSpan(text: "\n\n"),
-                          TextSpan(
-                            text:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. ",
-                          ),
-                          TextSpan(text: "\n\n"),
-                          TextSpan(
-                            text:
-                                "Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. ",
-                          ),
-                        ])),
+                  textAlign: TextAlign.justify,
+                  text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontFamily: 'outfit-light',
+                      color: Colors.black,
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in.",
+                      ),
+                      TextSpan(text: "\n\n"),
+                      TextSpan(
+                        text:
+                            "Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. ",
+                      ),
+                      TextSpan(text: "\n\n"),
+                      TextSpan(
+                        text:
+                            "Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
+                      ),
+                      TextSpan(text: "\n\n"),
+                      TextSpan(
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. ",
+                      ),
+                      TextSpan(text: "\n\n"),
+                      TextSpan(
+                        text:
+                            "Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. ",
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

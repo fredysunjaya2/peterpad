@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:peterpad/pages/AddChapterPage.dart';
-import 'package:peterpad/pages/EditChapterPage.dart';
 import 'package:peterpad/pages/ExplorePage.dart';
 import 'package:peterpad/pages/CollectionPage.dart';
 import 'package:peterpad/pages/ExploreGenrePage.dart';

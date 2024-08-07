@@ -65,6 +65,7 @@ class _AddChapterPageState extends State<AddChapterPage> {
                   floating: true,
                   snap: true,
                   primary: false,
+                  automaticallyImplyLeading: false,
                   flexibleSpace: Container(
                     decoration: BoxDecoration(
                       color: background,
@@ -357,6 +358,13 @@ class _AddChapterPageState extends State<AddChapterPage> {
                                   icon: const Icon(Icons.add),
                                   onPressed: () {
                                     // Add new chapter
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) => new WritingChapterPage(
+                                          isEdit: false,
+                                        ),
+                                      ),
+                                    );
                                   },
                                 ),
                               ],
@@ -380,7 +388,9 @@ class _AddChapterPageState extends State<AddChapterPage> {
                                       onTap: () {
                                         Navigator.of(context).push(
                                           MaterialPageRoute(
-                                            builder: (context) => WritingChapterPage(),
+                                            builder: (context) => new WritingChapterPage(
+                                              isEdit: true,
+                                            ),
                                           ),
                                         );
                                       },
@@ -438,6 +448,7 @@ class _AddChapterPageState extends State<AddChapterPage> {
             );
           }),
         ),
+        
       ),
     );
   }

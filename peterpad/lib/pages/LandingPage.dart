@@ -17,7 +17,7 @@ class Landingpage extends StatelessWidget {
       backgroundColor: background,
       body: ResponsiveRowColumn(
         layout: ResponsiveRowColumnType.COLUMN,
-        columnPadding: EdgeInsets.fromLTRB(0, 75, 0, 0),
+        columnPadding: EdgeInsets.fromLTRB(0, 50, 0, 0),
         columnSpacing: 50,
         children: [
           ResponsiveRowColumnItem(
