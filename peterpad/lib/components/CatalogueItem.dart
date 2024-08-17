@@ -40,7 +40,7 @@ class CatalogueItem extends StatelessWidget {
       child: Container(
         width: ResponsiveValue<double>(
           context,
-          defaultValue: 200,
+          defaultValue: 260,
           conditionalValues: [
             Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.4),
             Condition.equals(name: DESKTOP, value: 400),
@@ -58,6 +58,15 @@ class CatalogueItem extends StatelessWidget {
                   imagePath,
                   fit: BoxFit.cover,
                   width: double.infinity,
+                  height: ResponsiveValue<double>(
+                    context,
+                    defaultValue: 210,
+                    conditionalValues: [
+                      Condition.equals(name: 'MOBILE', value: 210),
+                      Condition.equals(name: 'TABLET', value: 350),
+                      Condition.equals(name: 'DESKTOP', value: screenHeight * 0.5),
+                    ],
+                  ).value,
                 ),
               ),
             ),

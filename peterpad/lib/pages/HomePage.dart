@@ -178,7 +178,7 @@ class HomePageState extends State<HomePage> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
-                                    'assets/HomePage/image1.png',
+                                    'assets/HomePage/image10.jpg',
                                     fit: BoxFit.cover,
                                     width: ResponsiveValue<double>(
                                       context,
@@ -360,9 +360,9 @@ class HomePageState extends State<HomePage> {
                             child: Container(
                               height: ResponsiveValue<double>(
                                 context,
-                                defaultValue: 258,
+                                defaultValue: 260,
                                 conditionalValues: [
-                                  Condition.equals(name: 'Mobile', value: 258),
+                                  Condition.equals(name: 'MOBILE', value: 260),
                                   Condition.equals(name: 'TABLET', value: 450),
                                   Condition.equals(name: 'DESKTOP', value: screenHeight * 0.75),
                                 ],

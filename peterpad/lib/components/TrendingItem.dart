@@ -74,12 +74,13 @@ class TrendingItem extends StatelessWidget {
                     child: Image.asset(
                       imagePath,
                       fit: BoxFit.cover,
-                      width: ResponsiveValue<double>(
+                      height: ResponsiveValue<double>(
                         context,
-                        defaultValue: 200,
+                        defaultValue: 120,
                         conditionalValues: [
-                          Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.25),
-                          Condition.equals(name: DESKTOP, value: screenWidth * 0.2),
+                          Condition.equals(name: 'MOBILE', value: 120),
+                          Condition.equals(name: 'TABLET', value: 300),
+                          Condition.equals(name: 'DESKTOP', value: screenHeight * 0.5),
                         ],
                       ).value,
                     ),

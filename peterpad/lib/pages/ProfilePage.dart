@@ -547,7 +547,7 @@ class ProfilePageState extends State<ProfilePage> with SingleTickerProviderState
                                                   context,
                                                   defaultValue: 258,
                                                   conditionalValues: [
-                                                    Condition.equals(name: 'Mobile', value: 258),
+                                                    Condition.equals(name: 'MOBILE', value: 258),
                                                     Condition.equals(name: 'TABLET', value: 450),
                                                     Condition.equals(name: 'DESKTOP', value: screenHeight * 0.75),
                                                   ],

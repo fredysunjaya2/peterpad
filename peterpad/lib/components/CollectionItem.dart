@@ -53,6 +53,15 @@ class CollectionItem extends StatelessWidget {
                   imagePath,
                   fit: BoxFit.cover,
                   width: double.infinity,
+                  height: ResponsiveValue<double>(
+                    context,
+                    defaultValue: 210,
+                    conditionalValues: [
+                      Condition.equals(name: 'MOBILE', value: 210),
+                      Condition.equals(name: 'TABLET', value: 350),
+                      Condition.equals(name: 'DESKTOP', value: screenHeight * 0.5),
+                    ],
+                  ).value,
                 ),
               ),
             ),

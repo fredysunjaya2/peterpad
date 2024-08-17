@@ -164,7 +164,7 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                       duration: const Duration(milliseconds: 300),
                       child: ClipRRect(
                         borderRadius: BorderRadius.vertical(
-                          bottom: Radius.circular(10),
+                          bottom: Radius.circular(20),
                         ),
                         child: ImageFiltered(
                           imageFilter: ImageFilter.blur(
@@ -182,7 +182,7 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                                 novelDetail["imagePath"],
                                 fit: BoxFit.cover,
                                 width: screenWidth,
-                                height: _expandedHeight != null ? _expandedHeight! * 0.65 : 0,
+                                height: _expandedHeight != null ? _expandedHeight! * 0.6 : 0,
                               ),
                             ),
                           ),
@@ -200,7 +200,22 @@ class NovelPageState extends State<NovelPage> with SingleTickerProviderStateMixi
                         columnCrossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           ResponsiveRowColumnItem(
-                            child: Image.asset(novelDetail["imagePath"]),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.asset(
+                                novelDetail["imagePath"],
+                                fit: BoxFit.cover,
+                                height: ResponsiveValue<double>(
+                                  context,
+                                  defaultValue: 210,
+                                  conditionalValues: [
+                                    Condition.equals(name: 'MOBILE', value: 210),
+                                    Condition.equals(name: 'TABLET', value: 350),
+                                    Condition.equals(name: 'DESKTOP', value: screenHeight * 0.5),
+                                  ],
+                                ).value,
+                              ),
+                            ), 
                           ),
                           ResponsiveRowColumnItem(
                             child: ResponsiveRowColumn(

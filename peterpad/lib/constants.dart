@@ -9,7 +9,7 @@ const Color background = Color(0xffF1FAEE);
 List<Map<String, dynamic>> recommendedCatalogue = [
   {
     "id": 1,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image1.jpeg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
@@ -17,7 +17,7 @@ List<Map<String, dynamic>> recommendedCatalogue = [
   },
   {
     "id": 2,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image2.jpg",
     "title": "Funiculi Funicula 2",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
@@ -25,7 +25,7 @@ List<Map<String, dynamic>> recommendedCatalogue = [
   },
   {
     "id": 3,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image3.jpg",
     "title": "Funiculi Funicula 3",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
@@ -33,7 +33,7 @@ List<Map<String, dynamic>> recommendedCatalogue = [
   },
   {
     "id": 4,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image4.jpg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
@@ -41,7 +41,7 @@ List<Map<String, dynamic>> recommendedCatalogue = [
   },
   {
     "id": 5,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image5.png",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
@@ -52,7 +52,7 @@ List<Map<String, dynamic>> recommendedCatalogue = [
 List<Map<String, dynamic>> trendingCatalogue = [
   {
     "id": 1,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image6.jpg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "ranking": 1,
@@ -60,7 +60,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
   },
   {
     "id": 2,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image7.jpg",
     "title": "Funiculi Funicula 2",
     "author": "Toshikazu Kawaguchi",
     "ranking": 2,
@@ -68,7 +68,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
   },
   {
     "id": 3,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image8.jpg",
     "title": "Funiculi Funicula 3",
     "author": "Toshikazu Kawaguchi",
     "ranking": 3,
@@ -76,7 +76,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
   },
   {
     "id": 4,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image9.jpg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "ranking": 4,
@@ -84,7 +84,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
   },
   {
     "id": 5,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image10.jpg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "ranking": 5,
@@ -92,7 +92,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
   },
   {
     "id": 6,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image1.jpeg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "ranking": 6,
@@ -100,7 +100,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
   },
   {
     "id": 7,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image2.jpg",
     "title": "Funiculi Funicula 2",
     "author": "Toshikazu Kawaguchi",
     "ranking": 7,
@@ -108,7 +108,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
   },
   {
     "id": 8,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image3.jpg",
     "title": "Funiculi Funicula 3",
     "author": "Toshikazu Kawaguchi",
     "ranking": 8,
@@ -116,7 +116,7 @@ List<Map<String, dynamic>> trendingCatalogue = [
   },
   {
     "id": 9,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image4.jpg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "ranking": 9,
@@ -129,7 +129,7 @@ List<Map<String, dynamic>> notifications = [
     "date": "23 May 2024",
     "notificationItems": [
       {
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image1.jpeg",
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
@@ -137,7 +137,7 @@ List<Map<String, dynamic>> notifications = [
         "isPost": false,
       },
       {
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image2.jpg",
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
@@ -145,7 +145,7 @@ List<Map<String, dynamic>> notifications = [
         "isPost": false,
       },
       {
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image3.jpg",
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
@@ -158,7 +158,7 @@ List<Map<String, dynamic>> notifications = [
     "date": "22 May 2024",
     "notificationItems": [
       {
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image10.jpg",
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
@@ -166,7 +166,7 @@ List<Map<String, dynamic>> notifications = [
         "isPost": true,
       },
       {
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image9.jpg",
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
@@ -174,7 +174,7 @@ List<Map<String, dynamic>> notifications = [
         "isPost": true,
       },
       {
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image8.jpg",
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
@@ -187,7 +187,7 @@ List<Map<String, dynamic>> notifications = [
     "date": "22 May 2024",
     "notificationItems": [
       {
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image7.jpg",
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
@@ -195,7 +195,7 @@ List<Map<String, dynamic>> notifications = [
         "isPost": true,
       },
       {
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image6.png",
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
@@ -203,7 +203,7 @@ List<Map<String, dynamic>> notifications = [
         "isPost": true,
       },
       {
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image5.png",
         "profilePic": "assets/NotificationPage/profile.png",
         "name": "Lofi Girl",
         "time": "22:15",
@@ -217,70 +217,70 @@ List<Map<String, dynamic>> notifications = [
 List<Map<String, dynamic>> exploreCatalogue = [
   {
     "id": 1,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image10.jpg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
     "id": 2,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image8.jpg",
     "title": "Funiculi Funicula 2",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
     "id": 3,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image6.jpg",
     "title": "Funiculi Funicula 3",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
     "id": 4,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image4.jpg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
     "id": 5,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image2.jpg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
     "id": 6,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image9.jpg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
     "id": 7,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image7.jpg",
     "title": "Funiculi Funicula 2",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
     "id": 8,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image5.png",
     "title": "Funiculi Funicula 3",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
     "id": 9,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image3.jpg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
   },
   {
     "id": 10,
-    "imagePath": "assets/HomePage/image1.png",
+    "imagePath": "assets/HomePage/image1.jpeg",
     "title": "Funiculi Funicula",
     "author": "Toshikazu Kawaguchi",
     "rating": 4.5,
@@ -348,7 +348,7 @@ List<Map<String, dynamic>> histories = [
         'maxChapter': 100,
         'time': '22:15',
         'progress': 75,
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image1.jpeg",
       },
       {
         'title': 'Funiculi Funicula',
@@ -356,7 +356,7 @@ List<Map<String, dynamic>> histories = [
         'maxChapter': 100,
         'time': '22:15',
         'progress': 75,
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image2.jpg",
       },
       {
         'title': 'Funiculi Funicula',
@@ -364,7 +364,7 @@ List<Map<String, dynamic>> histories = [
         'maxChapter': 100,
         'time': '22:15',
         'progress': 75,
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image3.jpg",
       },
       {
         'title': 'Funiculi Funicula',
@@ -372,7 +372,7 @@ List<Map<String, dynamic>> histories = [
         'maxChapter': 100,
         'time': '22:15',
         'progress': 75,
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image10.jpg",
       },
     ],
   },
@@ -385,7 +385,7 @@ List<Map<String, dynamic>> histories = [
         'maxChapter': 100,
         'time': '22:15',
         'progress': 75,
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image9.jpg",
       },
       {
         'title': 'Funiculi Funicula',
@@ -393,7 +393,7 @@ List<Map<String, dynamic>> histories = [
         'maxChapter': 100,
         'time': '22:15',
         'progress': 75,
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image8.jpg",
       },
       {
         'title': 'Funiculi Funicula',
@@ -401,7 +401,7 @@ List<Map<String, dynamic>> histories = [
         'maxChapter': 100,
         'time': '22:15',
         'progress': 75,
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image7.jpg",
       },
       {
         'title': 'Funiculi Funicula',
@@ -409,7 +409,7 @@ List<Map<String, dynamic>> histories = [
         'maxChapter': 100,
         'time': '22:15',
         'progress': 75,
-        "imagePath": "assets/HomePage/image1.png",
+        "imagePath": "assets/HomePage/image4.jpg",
       },
     ],
   },
@@ -421,7 +421,7 @@ List<Map<String, dynamic>> collections = [
     "details": {
       'name': 'Downloaded',
       'novelCount': 1,
-      'imagePath': 'assets/LibraryPage/image1.png',
+      'imagePath': 'assets/LibraryPage/image1.jpeg',
       'visibility': 'Public',
       'owner': 'Peterpad',
       'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
@@ -432,7 +432,7 @@ List<Map<String, dynamic>> collections = [
     "details": {
       'name': 'My Collection 1',
       'novelCount': 10,
-      'imagePath': 'assets/LibraryPage/image1.png',
+      'imagePath': 'assets/LibraryPage/image2.jpg',
       'visibility': 'Public',
       'owner': 'Peterpad 2',
       'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
@@ -443,7 +443,7 @@ List<Map<String, dynamic>> collections = [
     "details": {
       'name': 'My Collection 2',
       'novelCount': 15,
-      'imagePath': 'assets/LibraryPage/image1.png',
+      'imagePath': 'assets/LibraryPage/image3.png',
       'visibility': 'Public',
       'owner': 'Peterpad 3',
       'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
@@ -454,7 +454,7 @@ List<Map<String, dynamic>> collections = [
     "details": {
       'name': 'My Collection 3',
       'novelCount': 7,
-      'imagePath': 'assets/LibraryPage/image1.png',
+      'imagePath': 'assets/LibraryPage/image4.jpg',
       'visibility': 'Public',
       'owner': 'Peterpad',
       'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
@@ -465,7 +465,7 @@ List<Map<String, dynamic>> collections = [
     "details": {
       'name': 'My Collection 1',
       'novelCount': 10,
-      'imagePath': 'assets/LibraryPage/image1.png',
+      'imagePath': 'assets/LibraryPage/image5.jpg',
       'visibility': 'Public',
       'owner': 'Peterpad 2',
       'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
@@ -476,7 +476,7 @@ List<Map<String, dynamic>> collections = [
     "details": {
       'name': 'My Collection 2',
       'novelCount': 15,
-      'imagePath': 'assets/LibraryPage/image1.png',
+      'imagePath': 'assets/LibraryPage/image6.jpg',
       'visibility': 'Public',
       'owner': 'Peterpad 3',
       'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
@@ -487,7 +487,7 @@ List<Map<String, dynamic>> collections = [
     "details": {
       'name': 'My Collection 3',
       'novelCount': 7,
-      'imagePath': 'assets/LibraryPage/image1.png',
+      'imagePath': 'assets/LibraryPage/image7.jpg',
       'visibility': 'Public',
       'owner': 'Peterpad',
       'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
@@ -508,7 +508,7 @@ List<Map<String, dynamic>> novelDetails = [
       "comments": 3300,
       "synopsis":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
-      "imagePath": "assets/HomePage/image1.png",
+      "imagePath": "assets/HomePage/image1.jpeg",
     },
   },
   {
@@ -523,7 +523,7 @@ List<Map<String, dynamic>> novelDetails = [
       "comments": 5000,
       "synopsis":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
-      "imagePath": "assets/HomePage/image1.png",
+      "imagePath": "assets/HomePage/image2.jpg",
     },
   },
   {
@@ -538,7 +538,7 @@ List<Map<String, dynamic>> novelDetails = [
       "comments": 3300,
       "synopsis":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
-      "imagePath": "assets/HomePage/image1.png",
+      "imagePath": "assets/HomePage/image3.jpg",
     },
   },
   {
@@ -553,7 +553,7 @@ List<Map<String, dynamic>> novelDetails = [
       "comments": 3300,
       "synopsis":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
-      "imagePath": "assets/HomePage/image1.png",
+      "imagePath": "assets/HomePage/image4.jpg",
     },
   },
   {
@@ -568,7 +568,7 @@ List<Map<String, dynamic>> novelDetails = [
       "comments": 3300,
       "synopsis":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
-      "imagePath": "assets/HomePage/image1.png",
+      "imagePath": "assets/HomePage/image5.png",
     },
   },
   {
@@ -583,7 +583,7 @@ List<Map<String, dynamic>> novelDetails = [
       "comments": 3300,
       "synopsis":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
-      "imagePath": "assets/HomePage/image1.png",
+      "imagePath": "assets/HomePage/image6.jpg",
     },
   },
   {
@@ -598,7 +598,7 @@ List<Map<String, dynamic>> novelDetails = [
       "comments": 3300,
       "synopsis":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
-      "imagePath": "assets/HomePage/image1.png",
+      "imagePath": "assets/HomePage/image7.jpg",
     },
   },
   {
@@ -613,7 +613,7 @@ List<Map<String, dynamic>> novelDetails = [
       "comments": 3300,
       "synopsis":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
-      "imagePath": "assets/HomePage/image1.png",
+      "imagePath": "assets/HomePage/image8.jpg",
     },
   },
   {
@@ -628,7 +628,7 @@ List<Map<String, dynamic>> novelDetails = [
       "comments": 3300,
       "synopsis":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
-      "imagePath": "assets/HomePage/image1.png",
+      "imagePath": "assets/HomePage/image9.jpg",
     },
   },
   {
@@ -643,7 +643,7 @@ List<Map<String, dynamic>> novelDetails = [
       "comments": 3300,
       "synopsis":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit adipiscing bibendum est ultricies integer quis auctor. Magna ac placerat vestibulum lectus mauris ultrices eros in. Donec ultrices tincidunt arcu non sodales neque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Massa sapien faucibus et molestie ac feugiat. Orci porta non pulvinar neque laoreet suspendisse interdum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed adipiscing diam donec adipiscing tristique risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Est velit egestas dui id ornare arcu.",
-      "imagePath": "assets/HomePage/image1.png",
+      "imagePath": "assets/HomePage/image10.jpg",
     },
   },
 ];
@@ -2211,7 +2211,7 @@ List<Map<String, dynamic>> writes = [
       "views": "300K",
       "rating": 4.5,
       "comments": "3.3K",
-      "imagePath": "assets/WritePage/image.png",
+      "imagePath": "assets/HomePage/image5.png",
       "synopsis":
           "Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
       "genre": "Science Fiction",
@@ -2228,7 +2228,7 @@ List<Map<String, dynamic>> writes = [
       "views": "400K",
       "rating": 4.2,
       "comments": "3.5K",
-      "imagePath": "assets/WritePage/image.png",
+      "imagePath": "assets/HomePage/image4.jpg",
       "synopsis":
           "2 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
       "genre": "Science Fiction",
@@ -2245,7 +2245,7 @@ List<Map<String, dynamic>> writes = [
       "views": "400K",
       "rating": 4.2,
       "comments": "3.5K",
-      "imagePath": "assets/WritePage/image.png",
+      "imagePath": "assets/HomePage/image3.jpg",
       "synopsis":
           "3 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
       "genre": "Science Fiction",
@@ -2262,7 +2262,7 @@ List<Map<String, dynamic>> writes = [
       "views": "400K",
       "rating": 4.2,
       "comments": "3.5K",
-      "imagePath": "assets/WritePage/image.png",
+      "imagePath": "assets/HomePage/image2.jpg",
       "synopsis":
           "4 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
       "genre": "Science Fiction",
@@ -2279,7 +2279,7 @@ List<Map<String, dynamic>> writes = [
       "views": "400K",
       "rating": 4.2,
       "comments": "3.5K",
-      "imagePath": "assets/WritePage/image.png",
+      "imagePath": "assets/HomePage/image1.jpeg",
       "synopsis":
           "5 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
       "genre": "Science Fiction",
@@ -2296,7 +2296,7 @@ List<Map<String, dynamic>> writes = [
       "views": "400K",
       "rating": 4.2,
       "comments": "3.5K",
-      "imagePath": "assets/WritePage/image.png",
+      "imagePath": "assets/HomePage/image10.jpg",
       "synopsis":
           "6 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
       "genre": "Science Fiction",
@@ -2313,7 +2313,7 @@ List<Map<String, dynamic>> writes = [
       "views": "400K",
       "rating": 4.2,
       "comments": "3.5K",
-      "imagePath": "assets/WritePage/image.png",
+      "imagePath": "assets/HomePage/image9.jpg",
       "synopsis":
           "7 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
       "genre": "Science Fiction",
@@ -2330,7 +2330,7 @@ List<Map<String, dynamic>> writes = [
       "views": "400K",
       "rating": 4.2,
       "comments": "3.5K",
-      "imagePath": "assets/WritePage/image.png",
+      "imagePath": "assets/HomePage/image8.jpg",
       "synopsis":
           "8 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
       "genre": "Science Fiction",
@@ -2347,7 +2347,7 @@ List<Map<String, dynamic>> writes = [
       "views": "400K",
       "rating": 4.2,
       "comments": "3.5K",
-      "imagePath": "assets/WritePage/image.png",
+      "imagePath": "assets/HomePage/image7.jpg",
       "synopsis":
           "9 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
       "genre": "Science Fiction",
@@ -2364,7 +2364,7 @@ List<Map<String, dynamic>> writes = [
       "views": "400K",
       "rating": 4.2,
       "comments": "3.5K",
-      "imagePath": "assets/WritePage/image.png",
+      "imagePath": "assets/HomePage/image6.jpg",
       "synopsis":
           "10 Lorem ipsum odor amet, consectetuer adipiscing elit. Netus mauris litora blandit purus; nisi ridiculus. Placerat sodales commodo lacinia suscipit interdum donec praesent. Eros faucibus ligula vitae senectus taciti potenti litora class class! Consequat natoque curabitur pharetra augue; rhoncus efficitur eu nec. Est nisl habitant condimentum semper fermentum inceptos non quam a.",
       "genre": "Science Fiction",
@@ -2500,7 +2500,7 @@ List<Map<String, dynamic>> adds = [
 List<Map<String, dynamic>> users = [
   {
     "userId": 1,
-    "imagePath": "assets/LibraryPage/image1.png",
+    "imagePath": "assets/LibraryPage/image7.jpg",
     "profilePic": "assets/NovelPage/profilepic.png",
     "name": "Peterpad",
     "followerCount": 30,
@@ -2512,7 +2512,7 @@ List<Map<String, dynamic>> users = [
   },
   {
     "userId": 2,
-    "imagePath": "assets/LibraryPage/image1.png",
+    "imagePath": "assets/LibraryPage/image6.jpg",
     "profilePic": "assets/NovelPage/profilepic.png",
     "name": "Toshikazu Kawaguchi",
     "followerCount": 30,
@@ -2524,7 +2524,7 @@ List<Map<String, dynamic>> users = [
   },
   {
     "userId": 3,
-    "imagePath": "assets/LibraryPage/image1.png",
+    "imagePath": "assets/LibraryPage/image5.jpg",
     "profilePic": "assets/NovelPage/profilepic.png",
     "name": "Lofi Girl 2",
     "followerCount": 30,
