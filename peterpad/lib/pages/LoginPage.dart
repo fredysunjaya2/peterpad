@@ -277,6 +277,7 @@ class LoginPageState extends State<LoginPage> {
                           style: TextStyle(
                             fontFamily: 'outfit-light',
                             fontSize: 14,
+                            color: Colors.black,
                           ),
                         ),
                       ),

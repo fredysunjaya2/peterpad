@@ -48,7 +48,7 @@ class IndexPageState extends State<IndexPage> {
         ),
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: GNav(
               rippleColor: red,
               hoverColor: red,

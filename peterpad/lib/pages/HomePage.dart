@@ -193,6 +193,7 @@ class HomePageState extends State<HomePage> {
                               ),
                               // ------------------- ------------------- Currently Reading Content Box ------------------- -------------------
                               ResponsiveRowColumnItem(
+                                rowFit: FlexFit.tight,
                                 child: Container(
                                   padding: EdgeInsets.all(12.0),
                                   decoration: BoxDecoration(
@@ -206,14 +207,6 @@ class HomePageState extends State<HomePage> {
                                       ),
                                     ],
                                   ),
-                                  width: ResponsiveValue<double>(
-                                    context,
-                                    defaultValue: 200,
-                                    conditionalValues: [
-                                      Condition.smallerThan(name: DESKTOP, value: screenWidth * 0.49),
-                                      Condition.equals(name: DESKTOP, value: screenWidth * 0.4),
-                                    ],
-                                  ).value,
                                   child: ResponsiveRowColumn(
                                     columnCrossAxisAlignment: CrossAxisAlignment.start,
                                     layout: ResponsiveRowColumnType.COLUMN,
@@ -301,7 +294,7 @@ class HomePageState extends State<HomePage> {
                                           child: TextButton(
                                             onPressed: () {},
                                             child: Padding(
-                                              padding: EdgeInsets.fromLTRB(40, 5, 40, 5),
+                                              padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
                                               child: Text(
                                                 'Continue',
                                                 textAlign: TextAlign.center,

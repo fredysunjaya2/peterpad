@@ -375,6 +375,7 @@ class RegisterPageState extends State<RegisterPage> {
                           style: TextStyle(
                             fontFamily: 'outfit-light',
                             fontSize: 14,
+                            color: Colors.black,
                           ),
                         ),
                       ),
